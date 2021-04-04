@@ -6,6 +6,18 @@
 [YAML Test Matrix Overview](https://matrix.yaml.info/)
 > YAML 的生态很糟糕。不仅很多库是 YAML 1.1 的，不容易知道每个使用 YAML 的地方是否按 YAML 1.2 解析，而且几乎没有完全符合 YAML 1.2 标准的库。这个网站展示了各种语言的 YAML 库分别能通过多少 YAML 1.2 的测试样例，可以看到错误是很多的。
 
+## Scalars
+### Multiple lines
+[syntax - How do I break a string in YAML over multiple lines? - Stack Overflow](https://stackoverflow.com/questions/3790454/how-do-i-break-a-string-in-yaml-over-multiple-lines)
+
+| | |
+| --- |  --- |
+| `>-` | 没有换行 |
+| `>` | 内部无换行，行尾有 |
+| `\|-` | 内部有换行，行尾没有 |
+| `\|` | 内部、行尾都有换行 |
+| <code>"abc\ <br/> def\nhij"</code> |  |
+
 ## [Mappings](https://yaml.org/spec/1.2.2/#mapping)
 > The content of a *mapping* node is an unordered set of *key/value* node *pairs*, with the restriction that each of the keys is [unique](https://yaml.org/spec/1.2.2/#node-comparison). YAML places no further restrictions on the nodes. In particular, keys may be arbitrary nodes, the same node may be used as the value of several key/value pairs and a mapping could even contain itself as a key or a value.
 

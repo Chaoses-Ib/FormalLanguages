@@ -1,16 +1,152 @@
 # Regex Engine API
-Operation | [.NET](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex) | [Python](https://docs.python.org/3/library/re.html)| [Java](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/package-summary.html) | [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) | [C++](https://en.cppreference.com/w/cpp/regex)
---- | --- | ---| --- | --- | ---
-API style | m/o=p.(sr) / m/o=(spr) | m/o=(prs)| o=p.(s).(r) | m/o=s.(pr) / m=p.(s) | (osmpr)
-Match the whole string | `\Ap\z` | [fullmatch(p, s)](https://docs.python.org/3/library/re.html#re.fullmatch)| [matches(p, s)](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Pattern.html#matches(java.lang.String,java.lang.CharSequence))<br />[p.matcher(s).matches()](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#matches()) | `^non_multiline_p$` | [match(s, m, p)](https://en.cppreference.com/w/cpp/regex/regex_match)
-Match at the beginning | `\Ap` | [match(p, s)](https://docs.python.org/3/library/re.html#re.match)| [p.matcher(s).lookingAt()](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#lookingAt()) | `^non_multiline_p` | `^non_ECMA_multiline_p`
-Match one from the beginning | [p.Match(s)](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.match)<br />[Match(s, p)](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.match)<br />[p.IsMatch(s)](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.ismatch)<br />[IsMatch(s, p)](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.ismatch) | [search(p, s)](https://docs.python.org/3/library/re.html#re.search)| [p.matcher(s).find(0)](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#find(int)) | [p.exec(s)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)<br />[s.match(nonglobal_p)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match)<br />[s.search(p)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search)<br />[p.test(s)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)<br /> | [search(s, m, p)](https://en.cppreference.com/w/cpp/regex/regex_search)
-Match iteratively | [p.Matches(s)](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.matches)<br />[Matches(s, p)](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.matches)<br />[last_m.NextMatch()](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.match.nextmatch) | [finditer(p, s)](https://docs.python.org/3/library/re.html#re.finditer)| [p.matcher(s).results()](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#results())<br />[p.matcher(s).find()](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#find(int)) | [s.matchAll(p)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll)<br />[global_p.exec(s)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) | [iterator(s, p)](https://en.cppreference.com/w/cpp/regex/regex_iterator)<br />[token_iterator(s, p, n)](https://en.cppreference.com/w/cpp/regex/regex_token_iterator)<br />[search(last_m.suffix(), m, p))](https://en.cppreference.com/w/cpp/regex/regex_search)
-Match all | [p.Matches(s)](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.matches)<br />[Matches(s, p)](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.matches) | [findall(p, s)](https://docs.python.org/3/library/re.html#re.findall)| [p.matcher(s).results().toList()](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#results()) | [...s.matchAll(p)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll)<br />[s.match(global_p)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) | -
-Replace one from the beginning | [p.Replace(s, r(), count=1)](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.replace)<br />[Replace(s, p, r(), count=1)](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.replace) | [sub(p, r(), s, count=1)](https://docs.python.org/3/library/re.html#re.sub)| [p.matcher(s).replaceFirst(r())](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#replaceFirst(java.util.function.Function)) | [s.replace(nonglobal_p, r())](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) | [replace([o, ]s, p, r, format_first_only)](https://en.cppreference.com/w/cpp/regex/regex_replace)
-Replace all | [p.Replace(s, r())](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.replace)<br />[Replace(s, p, r())](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.replace) | [sub(p, r(), s)](https://docs.python.org/3/library/re.html#re.sub)| [p.matcher(s).replaceAll(r)](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#replaceAll(java.util.function.Function)) | [s.replaceAll(p, r())](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)<br />[s.replace(global_p, r())](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) | [replace([o, ]s, p, r)](https://en.cppreference.com/w/cpp/regex/regex_replace)
-Split | [p.Split(s, count)](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.split)<br />[Split(s, p)](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.split) | [split(p, s)](https://docs.python.org/3/library/re.html#re.split)| [split(s, count)](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Pattern.html#split(java.lang.CharSequence,int))<br />[splitAsStream(s)](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Pattern.html#splitAsStream(java.lang.CharSequence)) | [s.split(p, count)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) | -
-Escape | [Escape(s)](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.escape)<br />[Unescape(s)](https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.unescape) | [escape(s)](https://docs.python.org/3/library/re.html#re.escape)| [quote(s)](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Pattern.html#quote(java.lang.String))<br />[quoteReplacement(s)](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#quoteReplacement(java.lang.String)) | - | -
+<table style="white-space: nowrap;">
+    <thead>
+        <tr>
+            <th>Operation</th>
+            <th><a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex">.NET</a></th>
+            <th><a href="https://docs.python.org/3/library/re.html">Python</a></th>
+            <th><a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/package-summary.html">Java</a></th>
+            <th><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">JavaScript</a></th>
+            <th><a href="https://en.cppreference.com/w/cpp/regex">C++</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>API style</th>
+            <td>m/o=p.(sr) / m/o=(spr)</td>
+            <td>m/o=(prs)</td>
+            <td>o=p.(s).(r)</td>
+            <td>m/o=s.(pr) / m=p.(s)</td>
+            <td>(osmpr)</td>
+        </tr>
+        <tr>
+            <th>Match the whole string</th>
+            <td><code>\Ap\z</code></td>
+            <td><a href="https://docs.python.org/3/library/re.html#re.fullmatch">fullmatch(p, s)</a></td>
+            <td>
+                <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Pattern.html#matches(java.lang.String,java.lang.CharSequence)">matches(p, s)</a><br />
+                <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#matches()">p.matcher(s).matches()</a>
+            </td>
+            <td><code>^non_multiline_p$</code></td>
+            <td><a href="https://en.cppreference.com/w/cpp/regex/regex_match">match(s, m, p)</a></td>
+        </tr>
+        <tr>
+            <th>Match at the beginning</th>
+            <td><code>\Ap</code></td>
+            <td><a href="https://docs.python.org/3/library/re.html#re.match">match(p, s)</a></td>
+            <td><a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#lookingAt()">p.matcher(s).lookingAt()</a></td>
+            <td><code>^non_multiline_p</code></td>
+            <td><code>^non_ECMA_multiline_p</code></td>
+        </tr>
+        <tr>
+            <th>Match one from the beginning</th>
+            <td>
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.match">p.Match(s)</a><br />
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.match">Match(s, p)</a><br />
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.ismatch">p.IsMatch(s)</a><br />
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.ismatch">IsMatch(s, p)</a>
+            </td>
+            <td><a href="https://docs.python.org/3/library/re.html#re.search">search(p, s)</a></td>
+            <td><a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#find(int)">p.matcher(s).find(0)</a></td>
+            <td>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">p.exec(s)</a><br />
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match">s.match(nonglobal_p)</a><br />
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search">s.search(p)</a><br />
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test">p.test(s)</a><br />
+            </td>
+            <td><a href="https://en.cppreference.com/w/cpp/regex/regex_search">search(s, m, p)</a></td>
+        </tr>
+        <tr>
+            <th>Match iteratively</th>
+            <td>
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.matches">p.Matches(s)</a><br />
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.matches">Matches(s, p)</a><br />
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.match.nextmatch">last_m.NextMatch()</a>
+            </td>
+            <td><a href="https://docs.python.org/3/library/re.html#re.finditer">finditer(p, s)</a></td>
+            <td>
+                <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#results()">p.matcher(s).results()</a><br />
+                <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#find(int)">p.matcher(s).find()</a>
+            </td>
+            <td>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll">s.matchAll(p)</a><br />
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">global_p.exec(s)</a>
+            </td>
+            <td>
+                <a href="https://en.cppreference.com/w/cpp/regex/regex_iterator">iterator(s, p)</a><br />
+                <a href="https://en.cppreference.com/w/cpp/regex/regex_token_iterator">token_iterator(s, p, n)</a><br />
+                <a href="https://en.cppreference.com/w/cpp/regex/regex_search">search(last_m.suffix(), m, p))</a>
+            </td>
+        </tr>
+        <tr>
+            <th>Match all</th>
+            <td>
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.matches">p.Matches(s)</a><br />
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.matches">Matches(s, p)</a>
+            </td>
+            <td><a href="https://docs.python.org/3/library/re.html#re.findall">findall(p, s)</a></td>
+            <td><a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#results()">p.matcher(s).results().toList()</a></td>
+            <td>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll">...s.matchAll(p)</a><br />
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match">s.match(global_p)</a>
+            </td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>Replace one from the beginning</th>
+            <td>
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.replace">p.Replace(s, r(), count=1)</a><br />
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.replace">Replace(s, p, r(), count=1)</a>
+            </td>
+            <td><a href="https://docs.python.org/3/library/re.html#re.sub">sub(p, r(), s, count=1)</a></td>
+            <td><a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#replaceFirst(java.util.function.Function)">p.matcher(s).replaceFirst(r())</a></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">s.replace(nonglobal_p, r())</a></td>
+            <td><a href="https://en.cppreference.com/w/cpp/regex/regex_replace">replace([o, ]s, p, r, format_first_only)</a></td>
+        </tr>
+        <tr>
+            <th>Replace all</th>
+            <td>
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.replace">p.Replace(s, r())</a><br />
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.replace">Replace(s, p, r())</a>
+            </td>
+            <td><a href="https://docs.python.org/3/library/re.html#re.sub">sub(p, r(), s)</a></td>
+            <td><a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#replaceAll(java.util.function.Function)">p.matcher(s).replaceAll(r)</a></td>
+            <td>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll">s.replaceAll(p, r())</a><br />
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">s.replace(global_p, r())</a>
+            </td>
+            <td><a href="https://en.cppreference.com/w/cpp/regex/regex_replace">replace([o, ]s, p, r)</a></td>
+        </tr>
+        <tr>
+            <th>Split</th>
+            <td>
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.split">p.Split(s, count)</a><br />
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.split">Split(s, p)</a>
+            </td>
+            <td><a href="https://docs.python.org/3/library/re.html#re.split">split(p, s)</a></td>
+            <td>
+                <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Pattern.html#split(java.lang.CharSequence,int)">split(s, count)</a><br />
+                <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Pattern.html#splitAsStream(java.lang.CharSequence)">splitAsStream(s)</a>
+            </td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">s.split(p, count)</a></td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>Escape</th>
+            <td>
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.escape">Escape(s)</a><br />
+                <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.unescape">Unescape(s)</a>
+            </td>
+            <td><a href="https://docs.python.org/3/library/re.html#re.escape">escape(s)</a></td>
+            <td>
+                <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Pattern.html#quote(java.lang.String)">quote(s)</a><br />
+                <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#quoteReplacement(java.lang.String)">quoteReplacement(s)</a>
+            </td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
 
 Notations:
 - `p`: regular expression pattern

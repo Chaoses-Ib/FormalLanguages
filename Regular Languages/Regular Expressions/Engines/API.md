@@ -101,6 +101,17 @@
             <td><a href="https://docs.python.org/3/library/re.html#re.findall">findall(p, s)</a></td>
         </tr>
         <tr>
+            <th>Match partially</th>
+            <td>-</td>
+            <td><a href="https://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/partial_matches.html">[search(s, m, p, match_partial)]</a></td>
+            <td>
+                <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#hitEnd()">m.hitEnd()</a><br />
+                <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#requireEnd()">m.requireEnd()</a>
+            </td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
             <th>Replace one from the beginning</th>
             <td>
                 <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.replace">p.Replace(s, r(), count=1)</a><br />

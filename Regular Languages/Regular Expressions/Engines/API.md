@@ -13,10 +13,10 @@
     <tbody>
         <tr>
             <th>API style</th>
-            <td>m/o=p.(sr) / m/o=(spr)</td>
+            <td>m/o=p.(sr) | m/o=(spr)</td>
             <td>m/o=(prs)</td>
             <td>o=p.(s).(r)</td>
-            <td>m/o=s.(pr) / m=p.(s)</td>
+            <td>m/o=s.(pr) | m=p.(s)</td>
             <td>(osmpr)</td>
         </tr>
         <tr>

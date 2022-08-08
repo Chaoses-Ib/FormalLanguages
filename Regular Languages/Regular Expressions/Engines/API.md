@@ -110,7 +110,7 @@
                 <a href="https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.replace">Replace(s, p, r())</a>
             </td>
             <td><a href="https://docs.python.org/3/library/re.html#re.sub">sub(p, r(), s)</a></td>
-            <td><a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#replaceAll(java.util.function.Function)">p.matcher(s).replaceAll(r)</a></td>
+            <td><a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#replaceAll(java.util.function.Function)">p.matcher(s).replaceAll(r())</a></td>
             <td>
                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll">s.replaceAll(p, r())</a><br />
                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">s.replace(global_p, r())</a>

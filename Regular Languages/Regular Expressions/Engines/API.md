@@ -140,6 +140,7 @@
             <td><a href="https://docs.python.org/3/library/re.html#re.escape">escape(s)</a></td>
             <td>
                 <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Pattern.html#quote(java.lang.String)">quote(s)</a><br />
+                <code>\Qs\E</code><br />
                 <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/regex/Matcher.html#quoteReplacement(java.lang.String)">quoteReplacement(s)</a>
             </td>
             <td>-</td>

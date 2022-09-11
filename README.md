@@ -3,8 +3,8 @@ In logic, mathematics, computer science, and linguistics, a **formal language** 
 
 [^wiki]: [Formal language - Wikipedia](https://en.wikipedia.org/wiki/Formal_language)
 
-## [Regular Languages](Regular%20Languages/README.md)
-- [Regular Expressions](Regular%20Languages/Regular%20Expressions/README.md)
+## Regular Languages
+- Regular Expressions
   - [Engines](Regular%20Languages/Regular%20Expressions/Engines/README.md)
     - [API](Regular%20Languages/Regular%20Expressions/Engines/API.md)
 

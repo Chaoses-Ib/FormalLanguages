@@ -16,6 +16,8 @@ In logic, mathematics, computer science, and linguistics, a **formal language** 
 - [printf Format](Computer%20Languages/Template%20Languages/printf%20Format.md)
 
 ### [Markup Languages](Computer%20Languages/Markup%20Languages/README.md)
+- [TeX](Computer%20Languages/Markup%20Languages/TeX/README.md)
+  - [LaTeX](Computer%20Languages/Markup%20Languages/TeX/LaTeX.md)
 - [Markdown](Computer%20Languages/Markup%20Languages/Markdown/README.md)
 
 ### Data Exchange Languages

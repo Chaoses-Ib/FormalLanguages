@@ -5,7 +5,33 @@
 3. The input for the third stage is then a stream of characters (including the ones with special meaning) and unexpandable control sequences (typically assignments and visual commands). Here, the characters get assembled into a paragraph, and TeX's paragraph breaking algorithm works by optimizing breakpoints over the whole paragraph.
 4. The fourth stage breaks the vertical list of lines and other material into pages.
 
-The base TeX system understands about 300 commands, called **primitives**. These low-level commands are rarely used directly by users, and most functionality is provided by format files (predumped memory images of TeX after large macro collections have been loaded)[^wiki]:
+The base TeX system understands about 300 commands, called **primitives**. These low-level commands are rarely used directly by users, and most functionality is provided by **formats** (predumped memory images of TeX after large macro collections have been loaded).[^wiki]
+
+## Engines
+[^levels]
+
+- TeX
+- pdfTeX  
+  pdfTeX implements direct PDF output, along with a variety of programming and other extensions.
+- XeTeX  
+  XeTeX does the above, and also supports Unicode natively, OpenType and TrueType fonts, access to system fonts, …
+- LuaTeX  
+  LuaTeX does all the above, and provides access to many internals via the embedded Lua language. Thus it is by far the most programmable engine.
+- upTeX  
+  upTeX provide full support for Japanese typesetting.
+
+Extensions:
+- ConTeXt  
+  ConTeXt contains a format at the level of plain TeX and LaTeX, but unlike the other formats, it is invoked via a separate program (e.g., `context`) which then runs a TeX engine. This makes it possible to support a wide array of advanced features, such as integrated graphics and XML input, since the control program can determine the flow of processing.[^levels]
+- BibTeX
+- MakeIndex
+
+## Packages
+- [CTAN: Packages](https://ctan.org/pkg)
+
+## Formats
+[^wiki]
+
 - The most widely used format is **[LaTeX](LaTeX.md)**, originally developed by Leslie Lamport, which incorporates document styles for books, letters, slides, etc., and adds support for referencing and automatic numbering of sections and equations.
 - Another widely used format, **AMS-TeX**, is produced by the American Mathematical Society and provides many more user-friendly commands, which can be altered by journals to fit with their house style.
 
@@ -24,9 +50,16 @@ Distributions:
   - [KaTeX](https://katex.org/) ([GitHub](https://github.com/KaTeX/KaTeX))
 
 ## Editors
+- [Texmaker](https://www.xm1math.net/texmaker/)
+  - [TeXstudio](https://www.texstudio.org/)
+- TeXworks
 - Visual Studio Code
-- Vim
+  - [LaTeX Workshop](https://github.com/James-Yu/LaTeX-Workshop)
 - Emacs
+- Vim
+
+Online:
+- [Overleaf](https://www.overleaf.com/)
 
 ## Tools
 Visual recognition:
@@ -36,3 +69,4 @@ Visual recognition:
 
 
 [^wiki]: [TeX - Wikipedia](https://en.wikipedia.org/wiki/TeX)
+[^levels]: [Levels of TeX - TeX Users Group](https://tug.org/levels.html)

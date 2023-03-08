@@ -22,3 +22,4 @@ In logic, mathematics, computer science, and linguistics, a **formal language** 
 
 ### Data Exchange Languages
 - [Delimiter-Separated Values](Computer%20Languages/Data%20Exchange%20Languages/Delimiter-Separated%20Values.md)
+- [Protocol Buffers](Computer%20Languages/Data%20Exchange%20Languages/Protocol%20Buffers.md)

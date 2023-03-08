@@ -9,3 +9,6 @@ Formats that use **delimiter-separated values (DSV)** store two-dimensional ar
 ## Libraries
 ### .NET
 - [CsvHelper: A .NET library for reading and writing CSV files. Extremely fast, flexible, and easy to use.](https://joshclose.github.io/CsvHelper/) ([repo](https://github.com/JoshClose/CsvHelper))
+
+### Rust
+- [csv](https://docs.rs/csv/latest/csv/) ([GitHub](https://github.com/BurntSushi/rust-csv))

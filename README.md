@@ -5,9 +5,10 @@
   - [Program Differing](Program/Analysis/Differing.md)
   - [Performance Analysis](Program/Analysis/Performance/README.md)
     - [Profiling](Program/Analysis/Performance/Profiling.md)
-- Binary Analysis
+- [Binary Analysis](Program/Binary/README.md)
   - [Executable Formats](Program/Binary/Executable/README.md)
   - [Binary Code Matching](Program/Binary/Matching.md)
+  - [Binary Diffing](Program/Binary/Diffing.md)
   - [Obfuscation](Program/Binary/Obfuscation/README.md)
     - Controlf-Flow Obfuscation
       - [CFG Art](Program/Binary/Obfuscation/Control-Flow/CFG%20Art.md)

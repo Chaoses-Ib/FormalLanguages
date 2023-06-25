@@ -1,6 +1,5 @@
 # [Formal Languages](Formal%20Languages.md)
-## [Computer Languages](Computer/README.md)
-### [Programming Languages](Computer/Programming/README.md)
+## [Programming Languages](Computer/Programming/README.md)
 - [Identifers](Computer/Programming/Identifers.md)
 - Languages
   - [→Assembly Language](https://github.com/Chaoses-Ib/ComputerHardware#instruction-set-architectures)
@@ -25,18 +24,18 @@
   - 易语言
   - [MATLAB](https://github.com/Chaoses-Ib/ComputationalMathematics/tree/main#matlab)
 
-### Data Exchange Languages
+## Data Exchange Languages
 - [Delimiter-Separated Values](Computer/Data/Delimiter-Separated%20Values.md)
 - [Protocol Buffers](Computer/Data/Protocol%20Buffers.md)
 
-### Regular Expressions
+## Regular Expressions
 - [Engines](Computer/Regular/Engines/README.md)
   - [API](Computer/Regular/Engines/API.md)
 
-### [Template Languages](Computer/Template/README.md)
+## [Template Languages](Computer/Template/README.md)
 - [printf Format](Computer/Template/printf%20Format.md)
 
-### [Markup Languages](Computer/Markup/README.md)
+## [Markup Languages](Computer/Markup/README.md)
 - [TeX](Computer/Markup/TeX/README.md)
   - [LaTeX](Computer/Markup/TeX/LaTeX.md)
 - [Markdown](Computer/Markup/Markdown/README.md)

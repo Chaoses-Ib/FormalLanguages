@@ -1,9 +1,7 @@
 # printf Format
-[^wiki]
+[Wikipedia](https://en.wikipedia.org/wiki/Printf_format_string#Syntax)
 
 `printf` is the name of one of the main C output functions, and stands for "print formatted". Many languages other than C copy the printf format string syntax closely or exactly in their own I/O functions.
-
-[^wiki]: [printf format string - Wikipedia](https://en.wikipedia.org/wiki/Printf_format_string#Syntax)
 
 ## Specification
 ```antlr
@@ -88,13 +86,13 @@ type : [%aAcdeEfFgGinopsuxX] ;
 Integer types:
 Type | Desciption
 --- | ---
-b, B | C++ {fmt}, Python: Binary format<br />Java: Boolean
+b, B | <ul><li>C++ {fmt}, Python: Binary format</li><li>Java: Boolean</li></ul>
 d<br />i | `int` as a signed integer (when used with scanf for input, `%i` will interpret a number as hexadecimal if it's preceded by `0x`, and octal if it's preceded by `0`)
 u | Print decimal unsigned int
-x, X | `unsigned int` as a hexadecimal number
+x, X | `unsigned int` as a hexadecimal number.<br />e.g. `%02X` or `%.2X`
 o | `unsigned int` in octal
 p | `void*` in an implementation-defined format
-n | Prints nothing, but writes the number of characters written so far into an integer pointer parameter.<br />Java: Prints a newline.<br />Python: This is the same as `d`, except that it uses the current locale setting to insert the appropriate number separator characters.
+n | <ul><li>Prints nothing, but writes the number of characters written so far into an integer pointer parameter.</li><li>Java: Prints a newline.</li><li>Python: This is the same as `d`, except that it uses the current locale setting to insert the appropriate number separator characters.</li></ul>
 
 Floating point types:
 Type | Desciption
@@ -127,6 +125,7 @@ s | Null-terminated string
 - R
 - Raku
 - Ruby
+- [Rust](#rust)
 - Tcl
 
 ### C++ {fmt}
@@ -164,3 +163,22 @@ type            ::=  "b" | "c" | "d" | "e" | "E" | "f" | "F" | "g" | "G" | "n" |
 ```
 
 [Python F-Strings Number Formatting Cheat Sheet - Cheatography](https://cheatography.com/brianallan/cheat-sheets/python-f-strings-number-formatting/)
+
+### Rust
+[std::fmt - Rust](https://doc.rust-lang.org/std/fmt/index.html)
+```antlr
+format_string := text [ maybe_format text ] *
+maybe_format := '{' '{' | '}' '}' | format
+format := '{' [ argument ] [ ':' format_spec ] [ ws ] * '}'
+argument := integer | identifier
+
+format_spec := [[fill]align][sign]['#']['0'][width]['.' precision]type
+fill := character
+align := '<' | '^' | '>'
+sign := '+' | '-'
+width := count
+precision := count | '*'
+type := '' | '?' | 'x?' | 'X?' | identifier
+count := parameter | integer
+parameter := argument '$'
+```

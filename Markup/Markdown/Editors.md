@@ -63,7 +63,7 @@
 
 - Keyboard shortcuts
 
-  When text is selected, pressing `*`, `_` and `(` will quote the text with corresponding characters. However, `~` is not supported.
+  When text is selected, pressing `*`, `_`, <code>\`</code> and `(` will quote the text with corresponding characters. However, `~` is not supported.
 
 Extensions:
 - [Markdown Checkboxes](https://github.com/mjbvz/vscode-markdown-checkboxes)
@@ -82,6 +82,18 @@ Extensions:
   - [Markdown Paste](https://github.com/telesoho/vscode-markdown-paste-image)
     - `Ctrl+Alt+V`
     - [Feature request: follow link title · Issue #27 · telesoho/vscode-markdown-paste-image](https://github.com/telesoho/vscode-markdown-paste-image/issues/27)
+
+    Rules:
+    - Remove domain names in link titles (for Edge)
+
+      ```json
+      {
+          // e.g. [telesoho/vscode-markdown-paste-image: Smartly paste for Markdown. (github.com)](https://github.com/telesoho/vscode-markdown-paste-image)
+          "regex": "^(\\[[^\\]]+) \\([^\\s)]+\\.[^\\s)]+\\)\\]",
+          "options": "g",
+          "replace": "$1]"
+      },
+      ```
 
   - [Paste URL](https://github.com/kukushi/PasteURL)
     - `Ctrl+Alt+P`

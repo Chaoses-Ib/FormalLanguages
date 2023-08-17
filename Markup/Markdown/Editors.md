@@ -89,7 +89,7 @@ Extensions:
       ```json
       {
           // e.g. [telesoho/vscode-markdown-paste-image: Smartly paste for Markdown. (github.com)](https://github.com/telesoho/vscode-markdown-paste-image)
-          "regex": "^(\\[[^\\]]+) \\([^\\s)]+\\.[^\\s)]+\\)\\]",
+          "regex": "^(\\[.+?) \\([^\\s)]+\\.[^\\s)]+\\)\\]",
           "options": "g",
           "replace": "$1]"
       },

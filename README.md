@@ -1,6 +1,8 @@
 # [Formal Languages](Formal%20Languages.md)
 ## [Programming Languages](Program/README.md)
 - [Identifers](Program/Identifers.md)
+- [Literals](Program/Literals/README.md)
+  - [String Literals](Program/Literals/Strings.md)
 - [Program Analysis](Program/Analysis/README.md)
   - [Program Differing](Program/Analysis/Differing.md)
   - [Performance Analysis](Program/Analysis/Performance/README.md)

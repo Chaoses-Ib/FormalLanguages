@@ -3,10 +3,20 @@ A **regex engine** is an implementations of regex functionality.[^wiki]
 
 ## Implementations
 C++:
+- [Hyperscan: High-performance regular expression matching library](https://github.com/intel/hyperscan/)
+
+  [Introduction to Hyperscan](https://www.intel.com/content/www/us/en/developer/articles/technical/introduction-to-hyperscan.html)
+
+  《深入浅出 Hyperscan：高性能正则表达式算法原理与设计》
+
+  - Rust: [rust-hyperscan: Hyperscan bindings for Rust with Multiple Pattern and Streaming Scan](https://github.com/flier/rust-hyperscan)
+
 - [Perl Compatible Regular Expressions](https://www.pcre.org/) ([Wikipedia](https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions))
   - [PCRE2](https://github.com/PCRE2Project/pcre2)
     - Rust: [pcre2: High level Rust bindings to PCRE2.](https://github.com/BurntSushi/rust-pcre2)
+
 - [RE2: A fast, safe, thread-friendly alternative to backtracking regular expression engines](https://github.com/google/re2)
+
 - [Oniguruma](https://github.com/kkos/oniguruma)
   - Rust: [Rust Onig: Rust bindings for the Oniguruma regex library](https://github.com/rust-onig/rust-onig)
 
@@ -31,6 +41,9 @@ Rust:
 Benchmarks:
 - [rebar: A biased barometer for gauging the relative speed of some regex engines on a curated set of tasks.](https://github.com/BurntSushi/rebar)
 - [rust-leipzig/regex-performance: Performance comparison of regular expression engines.](https://github.com/rust-leipzig/regex-performance)
+
+  [A comparison of regex engines -- Rust Leipzig](https://rust-leipzig.github.io/regex/2017/03/28/comparison-of-regex-engines/)
+
 - [mariomka/regex-benchmark: It's just a simple regex benchmark of different programming languages.](https://github.com/mariomka/regex-benchmark)
 
 

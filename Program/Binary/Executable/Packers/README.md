@@ -1,0 +1,24 @@
+# Packers
+## Compression packers
+- [UPX](UPX/README.md)
+- [runestubbe/Crinkler](https://github.com/runestubbe/Crinkler)
+
+## Protection packers
+[保护壳简介 - CTF Wiki](https://ctf-wiki.org/reverse/windows/unpack/packer-introduction/)
+
+## Unpacking
+### Original entry point
+- 单步跟踪法
+  
+  跟踪，直到 OEP。
+
+- ESP 定律法
+  
+  如果壳在入口点将上下文保存到了栈上，就可以通过对栈上的上下文内存下断，定位到恢复上下文信息的地址，通常之后就是 OEP 了。
+
+- 出口标志法（一步到达 OEP 法）
+
+  通过查找特征指令（popad），定位到恢复上下文信息的地址。
+
+### Dump
+由 dump 得到的程序会缺少原 IAT 和重定位表。重定位表对于 EXE 并不必需，只要关掉 ASLR 的话没有也无妨；IAT 就需要进行恢复了。

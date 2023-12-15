@@ -12,6 +12,8 @@
 
 [What in you opinion, is the strongest exe protection solution? : ReverseEngineering](https://www.reddit.com/r/ReverseEngineering/comments/h26cm/what_in_you_opinion_is_the_strongest_exe/)
 
+- [guardian-rs: x86-64 code/pe virtualizer](https://github.com/felix-rs/guardian-rs)
+
 ## Unpacking
 ### Original entry point
 - 单步跟踪法

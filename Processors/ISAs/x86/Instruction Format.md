@@ -47,10 +47,16 @@ GS | 65
 --- | ---
 66 | 32位下代表16位操作数<br />16位下代表32位操作数
 
+x86-64:
+- REX.W == 1: 64-bit
+
 ### 地址大小
 前缀字节 | 地址大小
 --- | ---
 67 | 
+
+### VEX prefix
+[Wikipedia](https://en.wikipedia.org/wiki/VEX_prefix)
 
 ## OP
 - 
@@ -74,6 +80,8 @@ GS | 65
   --- | ---
 
 ## Mod R/M
+[Wikipedia](https://en.wikipedia.org/wiki/ModR/M)
+
 Mod(2) | Reg/OP(3) | R/M(3)
 --- | --- | ---
 寻址方式 | 寄存器/扩展操作码 | 操作数
@@ -90,8 +98,16 @@ Mod(2) | Reg/OP(3) | R/M(3)
   - R/M == 100: `[SIB+disp32]`
 - Mod == 11: `REG`
 
+x86-64:
+- REX.R == 1: `0b1000 | Reg`
+- REX.B == 1: `0b1000 | R/M`
+
 ## SIB
 Scale(2) | index(3) | Base(3)
 --- | --- | ---
 
 $Addr = R[Base] + R[index] << Scale$
+
+x86-64:
+- REX.B == 1: `0b1000 | Base`
+- REX.X == 1: `0b1000 | index`

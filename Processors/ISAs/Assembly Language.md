@@ -1,4 +1,6 @@
 # Assembly Language
+[Wikipedia](https://en.wikipedia.org/wiki/Assembly_language)
+
 ## Syntax
 [^syntax-wiki]
 - Intel syntax
@@ -27,3 +29,17 @@ Configuration:
 [^syntax-gcc-so-1]: [c - Can I use Intel syntax of x86 assembly with GCC? - Stack Overflow](https://stackoverflow.com/questions/9347909/can-i-use-intel-syntax-of-x86-assembly-with-gcc)
 [^syntax-gcc-so-2]: [assembly - How to set gcc or clang to use Intel syntax permanently for inline asm() statements? - Stack Overflow](https://stackoverflow.com/questions/38953951/how-to-set-gcc-or-clang-to-use-intel-syntax-permanently-for-inline-asm-stateme)
 [^syntax-objdump]: [linux - How can objdump emit intel syntax - Stack Overflow](https://stackoverflow.com/questions/10362630/how-can-objdump-emit-intel-syntax)
+
+## Assemblers
+[Wikipedia](https://en.wikipedia.org/wiki/Assembly_language#Assembler)
+
+- [iced: Blazing fast and correct x86/x64 disassembler, assembler, decoder, encoder for Rust, .NET, Java, Python, Lua](https://github.com/icedland/iced)
+- [Keystone assembler framework: Core (Arm, Arm64, Hexagon, Mips, PowerPC, Sparc, SystemZ & X86) + bindings](https://github.com/keystone-engine/keystone)
+- [Zydis: Fast and lightweight x86/x86-64 disassembler and code generation library](https://github.com/zyantific/zydis)
+- [AsmJit: Low-latency machine code generation](https://github.com/asmjit/asmjit)
+- [Xbyak: a JIT assembler for x86(IA-32)/x64(AMD64, x86-64) MMX/SSE/SSE2/SSE3/SSSE3/SSE4/FPU/AVX/AVX2/AVX-512 by C++ header](https://github.com/herumi/xbyak)
+- [lend: Tiny x86 Length Disassembler](https://github.com/greenbender/lend)
+
+## IDEs
+- Visual Studio
+  - [AsmDude2: Visual Studio extension for assembly syntax highlighting and code completion in assembly files and the disassembly window](https://github.com/HJLebbink/asm-dude)

@@ -26,6 +26,7 @@
     - Data-Flow Obfuscation
       - [String Obfuscation](Program/Binary/Obfuscation/Data/String.md)
     - ISA-level Obfuscation
+      - [Mixed Boolean-Arithmetic](Program/Binary/Obfuscation/ISA/MBA.md)
       - [M/o/Vfuscator](Program/Binary/Obfuscation/ISA/MoVfuscator.md)
   - [Binary Exploitation](Program/Binary/Exploitation/README.md)
     - [Return-Oriented Programming](Program/Binary/Exploitation/Return-Oriented%20Programming.md)

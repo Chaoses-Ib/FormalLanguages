@@ -1,4 +1,16 @@
-# VMProtect
+# [VMProtect](https://vmpsoft.com/)
+- v3.5.1
+  - 2022-09 [\[调查\]VMProtect Source Code Leak-资源下载-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-274475.htm)
+  - 2023-12 [\[原创\]VMP完整源码大放送-编程技术-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-279796-1.htm)
+  - 2023-12 [jmpoep/vmprotect-3.5.1](https://github.com/jmpoep/vmprotect-3.5.1)
+
+  [\[原创\]VMP源码之我见-编程技术-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-279792.htm)
+
+  [\[原创\]VMP源码泄露后的一些分析和用途-编程技术-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-279763.htm)
+
+## Analysis
+[x64Unpack: Hybrid Emulation Unpacker for 64-bit Windows Environments and Detailed Analysis Results on VMProtect 3.4](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9139515)
+
 [\[原创\]利用机器学习分析vmp的思路 - 看雪论坛](https://bbs.pediy.com/thread-268964.htm)
 
 [VMP 核心原理 - So who are you](https://kms.app/archives/247/)
@@ -8,8 +20,6 @@
 [vmp 相关的问题-软件逆向-看雪论坛-安全社区|安全招聘|bbs.pediy.com](https://bbs.pediy.com/thread-269976.htm)
 
 [看雪精品新课，重磅上线！《VMProtect分析与还原》 - 看雪学苑](https://mp.weixin.qq.com/s/dZzGyU-HVADSzloMKEHpKg)
-
-[VMProtect Software Protection](https://vmpsoft.com/)
 
 ~~[VMProtect 2 - Detailed Analysis of the Virtual Machine Architecture - 看雪论坛](https://bbs.pediy.com/thread-267731.htm)~~
 

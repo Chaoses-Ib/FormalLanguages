@@ -1,10 +1,16 @@
 # Packers
-## Compression packers
+[Wikipedia](https://en.wikipedia.org/wiki/Executable_compression)
+
+[List of executable packers - Wikipedia](https://en.wikipedia.org/wiki/Executable_compression#List_of_executable_packers)
+
+## Compressors
 - [UPX](UPX/README.md)
 - [runestubbe/Crinkler](https://github.com/runestubbe/Crinkler)
 
-## Protection packers
+## Protecters
 [保护壳简介 - CTF Wiki](https://ctf-wiki.org/reverse/windows/unpack/packer-introduction/)
+
+[What in you opinion, is the strongest exe protection solution? : ReverseEngineering](https://www.reddit.com/r/ReverseEngineering/comments/h26cm/what_in_you_opinion_is_the_strongest_exe/)
 
 ## Unpacking
 ### Original entry point

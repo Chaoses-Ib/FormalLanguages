@@ -111,3 +111,6 @@ $Addr = R[Base] + R[index] << Scale$
 x86-64:
 - REX.B == 1: `0b1000 | Base`
 - REX.X == 1: `0b1000 | index`
+
+## Assemblers
+- [Intel® XED](https://intelxed.github.io/) ([GitHub](https://github.com/intelxed/xed))

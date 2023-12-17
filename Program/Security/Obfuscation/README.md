@@ -39,7 +39,7 @@ The key to the success of control transformations is the resilience of opaque pr
 ## Data-flow obfuscation
 - Convert static to procedural data
   
-  将静态数据转化为动态计算结果，例如 [string obfuscation](Data/String/String%20Obfuscation.md)。
+  将静态数据转化为动态计算结果，例如 [string obfuscation](Data/String.md)。
 - Split variables
   
   将一个变量拆分为多个变量，对原有变量的操作转换为对拆分变量的操作。[^survey]

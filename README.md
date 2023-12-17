@@ -4,19 +4,30 @@
   - [Benchmarking](Processors/Performance/Benchmarking.md)
 - [Tools](Processors/Tools.md)
 
-### Instruction Set Architectures
-- [Assembly Language](Processors/ISAs/Assembly%20Language.md)
-- [Application Binary Interface](Processors/ISAs/ABI/README.md)
+### Instructions
+- [Assembly Language](Processors/Instructions/Assembly/README.md)
+- [Application Binary Interface](Processors/Instructions/Interface/README.md)
+  - [Calling Conventions](Processors/Instructions/Interface/Calling.md)
+- [Matching](Processors/Instructions/Matching.md)
+- [Diffing](Processors/Instructions/Diffing.md)
 
-#### x86
-- [Modes of Operation](Processors/ISAs/x86/Modes%20of%20Operation.md)
-- [Execution Environment](Processors/ISAs/x86/Execution%20Environment.md)
-- [Instruction Format](Processors/ISAs/x86/Instruction%20Format.md)
-- [General-Purpose Instructions](Processors/ISAs/x86/General-Purpose%20Instructions/README.md)
-  - [No Operation](Processors/ISAs/x86/General-Purpose%20Instructions/No%20Operation.md)
-- [Calling Conventions](Processors/ISAs/x86/Calling%20Conventions.md)
-- [Memory Management](Processors/ISAs/x86/Memory/README.md)
-  - [Memory Alignment](Processors/ISAs/x86/Memory/Alignment.md)
+### [Security](Processors/Security/README.md)
+- [Return-Oriented Programming](Processors/Security/Return-Oriented%20Programming.md)
+- [Pwntools](Processors/Security/Pwntools.md)
+- Obfuscation
+  - [Mixed Boolean-Arithmetic](Processors/Security/Obfuscation/MBA.md)
+  - [M/o/Vfuscator](Processors/Security/Obfuscation/MoVfuscator.md)
+
+### x86
+- [Modes of Operation](Processors/x86/Modes%20of%20Operation.md)
+- [Execution Environment](Processors/x86/Execution%20Environment.md)
+- Instructions
+  - [Instruction Format](Processors/x86/Instructions/Format.md)
+  - [General-Purpose Instructions](Processors/x86/Instructions/General/README.md)
+    - [No Operation](Processors/x86/Instructions/General/No%20Operation.md)
+- [Calling Conventions](Processors/x86/Calling%20Conventions.md)
+- [Memory Management](Processors/x86/Memory/README.md)
+  - [Memory Alignment](Processors/x86/Memory/Alignment.md)
 
 ## [Programming Languages](Program/README.md)
 - [Identifers](Program/Identifers.md)
@@ -26,33 +37,24 @@
   - [Program Differing](Program/Analysis/Differing.md)
   - [Performance Analysis](Program/Analysis/Performance/README.md)
     - [Profiling](Program/Analysis/Performance/Profiling.md)
-- [Binary Analysis](Program/Binary/README.md)
-  - [Calling Conventions](Program/Binary/Calling%20Conventions.md)
-  - [Executable Formats](Program/Binary/Executable/README.md)
-    - [Protable Executable](Program/Binary/Executable/Portable/README.md)
-    - Packers
-      - [UPX](Program/Binary/Executable/Packers/UPX/README.md)
-      - [ASPack](Program/Binary/Executable/Packers/ASPack/README.md)
-      - [Code Virtualizer](Program/Binary/Executable/Packers/Code%20Virtualizer/README.md)
-      - [Safengine](Program/Binary/Executable/Packers/Safengine/README.md)
-      - [The Enigma Protector](Program/Binary/Executable/Packers/Enigma/README.md)
-      - [Themida](Program/Binary/Executable/Packers/Themida/README.md)
-      - [VMProtect](Program/Binary/Executable/Packers/VMProtect/README.md)
-  - [Binary Code Matching](Program/Binary/Matching.md)
-  - [Binary Diffing](Program/Binary/Diffing.md)
-  - [Obfuscation](Program/Binary/Obfuscation/README.md)
+- [Executable Formats](Program/Executable/README.md)
+  - [Protable Executable](Program/Executable/Portable/README.md)
+  - Packers
+    - [UPX](Program/Executable/Packers/UPX/README.md)
+    - [ASPack](Program/Executable/Packers/ASPack/README.md)
+    - [Code Virtualizer](Program/Executable/Packers/Code%20Virtualizer/README.md)
+    - [Safengine](Program/Executable/Packers/Safengine/README.md)
+    - [The Enigma Protector](Program/Executable/Packers/Enigma/README.md)
+    - [Themida](Program/Executable/Packers/Themida/README.md)
+    - [VMProtect](Program/Executable/Packers/VMProtect/README.md)
+- Security
+  - [Obfuscation](Program/Security/Obfuscation/README.md)
     - Controlf-Flow Obfuscation
-      - [CFG Art](Program/Binary/Obfuscation/Control-Flow/CFG%20Art.md)
+      - [CFG Art](Program/Security/Obfuscation/Control/CFG%20Art.md)
     - Data-Flow Obfuscation
-      - [String Obfuscation](Program/Binary/Obfuscation/Data/String.md)
-    - ISA-level Obfuscation
-      - [Mixed Boolean-Arithmetic](Program/Binary/Obfuscation/ISA/MBA.md)
-      - [M/o/Vfuscator](Program/Binary/Obfuscation/ISA/MoVfuscator.md)
-  - [Binary Exploitation](Program/Binary/Exploitation/README.md)
-    - [Return-Oriented Programming](Program/Binary/Exploitation/Return-Oriented%20Programming.md)
-    - [Pwntools](Program/Binary/Exploitation/Pwntools.md)
+      - [String Obfuscation](Program/Security/Obfuscation/Data/String.md)
   - Tools
-    - [IDA](Program/Binary/Tools/IDA/README.md)
+    - [IDA](Program/Security/Tools/IDA/README.md)
 
 ## Data Exchange Languages
 - [Data Comparison](Data/Comparison.md)

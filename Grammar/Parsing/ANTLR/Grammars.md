@@ -6,12 +6,12 @@ Syntax | Description
 --- | ---
 `x` | Match token, rule reference, or subrule x.
 `x y ... z` | Match a sequence of rule elements.
-`(...|...|...)` | Subrule with multiple alternatives.
+`(...\|...\|...)` | Subrule with multiple alternatives.
 `x?` | Match x or skip it.
 `x*` | Match x zero or more times.
 `x+` | Match x one or more times.
 `r:...;` | Define rule r.
-`r:...|...|...;` | Define rule r with multiple alternatives.
+`r:...\|...\|...;` | Define rule r with multiple alternatives.
 `.` | Wildcard operator
 `~` | Not operator
 `'a'..'z'` | Range operator

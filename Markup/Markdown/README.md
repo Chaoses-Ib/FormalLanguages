@@ -12,6 +12,28 @@ Markdown is a lightweight markup language for creating formatted text using a pl
 
     Strict superset of CommonMark, following its specification exactly except for tables, strikethrough, autolinks and task lists, which GFM adds as extensions.
 
+    - Alerts: [\[Markdown\] An option to highlight a "Note" and "Warning" using blockquote (Beta) - community - Discussion #16925](https://github.com/orgs/community/discussions/16925)
+
+      > [!NOTE]
+      > `[!NOTE]`
+      
+      > [!TIP]
+      > `[!TIP]`
+
+      > [!IMPORTANT]
+      > `[!IMPORTANT]`
+
+      > [!WARNING]
+      > `[!WARNING]`
+
+      > [!CAUTION]
+      > `[!CAUTION]`
+
+      [⚠️ GitHub is beta testing their own Admonition syntax. We should weigh in - Extensions - CommonMark Discussion](https://talk.commonmark.org/t/github-is-beta-testing-their-own-admonition-syntax-we-should-weigh-in/4173/5)
+
+## HTML elements
+[How can I wrap my markdown in an HTML div? - Stack Overflow](https://stackoverflow.com/questions/29368902/how-can-i-wrap-my-markdown-in-an-html-div)
+
 ## Parsers
 JavaScript:
 - [markdown-it: Markdown parser, done right. 100% CommonMark support, extensions, syntax plugins & high speed](https://github.com/markdown-it/markdown-it)

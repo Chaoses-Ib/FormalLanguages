@@ -12,7 +12,7 @@ parser for that language that can automatically build parse trees, which are
 data structures representing how a grammar matches the input. ANTLR also
 automatically generates tree walkers (*listener and visitor*) that you can use to visit the nodes of those trees to execute application-specific code.
 
-Garmmer:
+Grammar:
 - Adaptive LL(\*)
 - Left-recursion
 

@@ -8,6 +8,8 @@ Markdown is a lightweight markup language for creating formatted text using a pl
 
   A standard, unambiguous syntax specification for Markdown, along with a suite of comprehensive tests to validate Markdown implementations against this specification.
 
+  [CommonMark Spec](https://spec.commonmark.org/current)
+
   - [GitHub Flavored Markdown](https://github.github.com/gfm/)
 
     Strict superset of CommonMark, following its specification exactly except for tables, strikethrough, autolinks and task lists, which GFM adds as extensions.
@@ -33,6 +35,29 @@ Markdown is a lightweight markup language for creating formatted text using a pl
 
 ## HTML elements
 [How can I wrap my markdown in an HTML div? - Stack Overflow](https://stackoverflow.com/questions/29368902/how-can-i-wrap-my-markdown-in-an-html-div)
+
+## Comments
+[Comments | Markdown Guide](https://www.markdownguide.org/hacks/#comments)
+
+- `<!-- -->` :
+
+  <!-- This is a comment that will be hidden. -->
+
+- `[This is a comment that will be hidden.]: #` :
+
+  [This is a comment that will be hidden.]: #
+
+- `<div style="visibility:hidden">` :
+
+  <div style="visibility:hidden">This is a comment that will be hidden.</div>
+
+  Not work on GitHub.
+
+- `<details>`
+
+- Link title: `[link](http://example.com "title")`
+
+  Not work on GitBook.
 
 ## Parsers
 JavaScript:

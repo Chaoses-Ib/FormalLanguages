@@ -24,3 +24,7 @@ Optional:
     - ~~[Inconsistent behaviour with google.protobuf.Struct - Issue #33](https://github.com/fdeantoni/prost-wkt/issues/33)~~
   
   [prost-reflect: A protobuf library extending prost with reflection support and dynamic messages.](https://github.com/andrewhickman/prost-reflect)
+
+- [rust-protobuf: Rust implementation of Google protocol buffers](https://github.com/stepancheg/rust-protobuf)
+
+- [quick-protobuf: A rust implementation of protobuf parser](https://github.com/tafia/quick-protobuf)

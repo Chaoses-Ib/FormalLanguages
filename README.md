@@ -56,7 +56,7 @@
   - [LLVM](Program/Compilers/LLVM/README.md)
   - [GNU Compiler Collection](Program/Compilers/GCC/README.md)
 - [Executable Formats](Program/Executable/README.md)
-  - [Protable Executable](Program/Executable/Portable/README.md)
+  - [Protable Executable](Program/Executable/PE/README.md)
   - Packers
     - [UPX](Program/Executable/Packers/UPX/README.md)
     - [ASPack](Program/Executable/Packers/ASPack/README.md)

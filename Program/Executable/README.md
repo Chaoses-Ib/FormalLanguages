@@ -1,4 +1,16 @@
 # Executable Formats
+## Relocation
+[Wikipedia](https://en.wikipedia.org/wiki/Relocation_(computing))
+
+### PE
+[A dive into the PE file format - PE file structure - Part 6: PE Base Relocations - 0xRick's Blog](https://0xrick.github.io/win-internals/pe7/)
+
+[executable - How are PE Base Relocations build up? - Stack Overflow](https://stackoverflow.com/questions/17436668/how-are-pe-base-relocations-build-up)
+
+![](images/README/relocation-pe.png)
+
+[PE relocation Table | MalwareID Unpacking Guide](http://malwareid.in/unpack/unpacking-basics/pe-relocation-table)
+
 ## Debugging information
 ### PDB
 - [sonyps5201314/pdb: ida pdb plugin with enhance and bugfix](https://github.com/sonyps5201314/pdb)

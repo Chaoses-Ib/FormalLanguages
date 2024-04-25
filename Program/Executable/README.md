@@ -29,3 +29,10 @@ An **overlay (附加数据段)** is the auxiliary data attached after the logica
 
 [^upx]: [upx(1): compress/expand executable files - Linux man page](https://linux.die.net/man/1/upx)
 [^overlay-upx-linux]: [UPX - a powerful executable packer / Discussion / Help: Overlay data problem in linux/elf386 binaries](https://sourceforge.net/p/upx/discussion/6806/thread/79e2a6b8/)
+
+## Libraries
+- LIEF
+  
+  [lief-project/LIEF: LIEF - Library to Instrument Executable Formats](https://github.com/lief-project/LIEF)
+
+  [09 - How to use frida on a non-rooted device --- LIEF Documentation](https://lief-project.github.io/doc/latest/tutorials/09_frida_lief.html)

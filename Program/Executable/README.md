@@ -1,4 +1,6 @@
 # Executable Formats
+[Wikipedia](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format)
+
 ## Relocation
 [Wikipedia](https://en.wikipedia.org/wiki/Relocation_(computing))
 
@@ -31,8 +33,16 @@ An **overlay (附加数据段)** is the auxiliary data attached after the logica
 [^overlay-upx-linux]: [UPX - a powerful executable packer / Discussion / Help: Overlay data problem in linux/elf386 binaries](https://sourceforge.net/p/upx/discussion/6806/thread/79e2a6b8/)
 
 ## Libraries
-- LIEF
-  
-  [lief-project/LIEF: LIEF - Library to Instrument Executable Formats](https://github.com/lief-project/LIEF)
+- [LIEF: Library to Instrument Executable Formats](https://github.com/lief-project/LIEF)
+  - Formats: ELF, PE, MachO, OAT, DEX, VDEX, ART
+  - Languages: C, C++, Python
 
   [09 - How to use frida on a non-rooted device --- LIEF Documentation](https://lief-project.github.io/doc/latest/tutorials/09_frida_lief.html)
+
+Rust:
+- [goblin: An impish, cross-platform binary parsing crate, written in Rust](https://github.com/m4b/goblin)
+  - Formats: ELF, PE, MachO
+
+Python:
+- LIEF
+- [FileBytes: Library to read and edit files in the following formats: Executable and Linking Format (ELF), Portable Executable (PE), MachO and OAT (Android Runtime)](https://github.com/sashs/filebytes)

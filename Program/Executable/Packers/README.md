@@ -3,6 +3,8 @@
 
 [List of executable packers - Wikipedia](https://en.wikipedia.org/wiki/Executable_compression#List_of_executable_packers)
 
+[packing-box/awesome-executable-packing: A curated list of awesome resources related to executable packing](https://github.com/packing-box/awesome-executable-packing)
+
 ## Compressors
 - [UPX](UPX/README.md)
 - [runestubbe/Crinkler](https://github.com/runestubbe/Crinkler)

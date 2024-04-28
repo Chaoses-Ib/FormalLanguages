@@ -14,6 +14,7 @@ C/C++:
 - LIEF
 - [pe-parse: Principled, lightweight C/C++ PE parser](https://github.com/trailofbits/pe-parse)
 - [readpe: The PE file analysis toolkit](https://github.com/mentebinaria/readpe)
+- [linux-pe: COFF and Portable Executable format described using standard C++ with no dependencies.](https://github.com/can1357/linux-pe)
 - [libexe: Library and tools to access the executable (EXE) format](https://github.com/libyal/libexe)
 - [mgeeky/PE-library: Lightweight Portable Executable parsing library and a demo peParser application.](https://github.com/mgeeky/PE-library)
 

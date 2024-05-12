@@ -53,8 +53,11 @@
   - [Performance Analysis](Program/Analysis/Performance/README.md)
     - [Profiling](Program/Analysis/Performance/Profiling.md)
 - [Compilers](Program/Compilers/README.md)
+  - Optimization
+    - [Interprocedural Optimization](Program/Compilers/Optimization/Interprocedural.md)
   - [LLVM](Program/Compilers/LLVM/README.md)
   - [GNU Compiler Collection](Program/Compilers/GCC/README.md)
+  - [Microsoft Visual C++](Program/Compilers/MSVC/README.md)
 - [Executable Formats](Program/Executable/README.md)
   - [Protable Executable](Program/Executable/PE/README.md)
   - Packers

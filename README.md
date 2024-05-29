@@ -81,6 +81,7 @@
 - [Data Comparison](Data/Comparison.md)
 - [Delimiter-Separated Values](Data/Delimiter-Separated%20Values.md)
 - [Protocol Buffers](Data/Protocol%20Buffers.md)
+- [Apache Arrow](Data/Arrow.md)
 
 ## [Regular Expressions](Regular/README.md)
 - [Engines](Regular/Engines/README.md)

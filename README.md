@@ -71,10 +71,11 @@
     - [VMProtect](Program/Formats/Packers/VMProtect/README.md)
 - Security
   - [Obfuscation](Program/Security/Obfuscation/README.md)
-    - Controlf-Flow Obfuscation
+    - [Controlf-flow Obfuscation](Program/Security/Obfuscation/Control/README.md)
       - [CFG Art](Program/Security/Obfuscation/Control/CFG%20Art.md)
-    - Data-Flow Obfuscation
+    - Data-flow Obfuscation
       - [String Obfuscation](Program/Security/Obfuscation/Data/String.md)
+    - [ISA-level Obfuscation](Program/Security/Obfuscation/ISA/README.md)
   - Tools
     - [IDA](Program/Security/Tools/IDA/README.md)
 

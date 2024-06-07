@@ -66,6 +66,9 @@ the dimensions of the array)
 
   The fundamental idea is to convert a portion of the code to a diﬀerent machine code. This new code is then executed by a new virtual machine interpreter included in the obfuscated code. There is usually one to two orders of magnitude slowdown for each level of interpretation, and so this transformation should only be used for those sections of code that consumes a small part of the total runtime.[^survey]
 
+## Tools
+- [xObf: Simple x86/x86\_64 instruction level obfuscator based on a basic SBI engine](https://github.com/d35ha/xObf)
+
+
 [^survey]: Balakrishnan, Arini, and Chloe Schulze. “Code Obfuscation Literature Survey,” n.d., 10.
-[^protect]: Christian S. Collberg and Clark Thomborson. Watermarking, tamper-prooﬁng, and
-obfuscation - tools for software protection. In IEEE Transactions on Software Engineering, volume 28, pages 735–746, August 2002.
+[^protect]: Christian S. Collberg and Clark Thomborson. Watermarking, tamper-prooﬁng, and obfuscation - tools for software protection. In IEEE Transactions on Software Engineering, volume 28, pages 735–746, August 2002.

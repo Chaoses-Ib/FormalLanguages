@@ -13,12 +13,6 @@
 
 [PE relocation Table | MalwareID Unpacking Guide](http://malwareid.in/unpack/unpacking-basics/pe-relocation-table)
 
-## Debugging information
-### PDB
-- [sonyps5201314/pdb: ida pdb plugin with enhance and bugfix](https://github.com/sonyps5201314/pdb)
-  
-  [PDB 插件修复增强](https://bbs.pediy.com/thread-266189.htm)
-
 ## Overlay
 An **overlay (附加数据段)** is the auxiliary data attached after the logical end of an executable, and it often contains application specific data (this is a common practice to avoid an extra data file, though it would be better to use resource sections).[^overlay-upx]
 

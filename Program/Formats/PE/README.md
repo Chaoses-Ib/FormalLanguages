@@ -18,6 +18,9 @@ C/C++:
 - [libexe: Library and tools to access the executable (EXE) format](https://github.com/libyal/libexe)
 - [mgeeky/PE-library: Lightweight Portable Executable parsing library and a demo peParser application.](https://github.com/mgeeky/PE-library)
 
+Rust:
+- [PeLite: Lightweight, memory-safe, zero-allocation library for reading and navigating PE binaries.](https://github.com/CasualX/pelite)
+
 .NET:
 - [AsmResolver: A library for creating, reading and editing PE files and .NET modules.](https://github.com/Washi1337/AsmResolver)
 - [PeNet: Portable Executable (PE) library written in .Net](https://github.com/secana/PeNet)

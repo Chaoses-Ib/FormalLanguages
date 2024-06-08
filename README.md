@@ -61,6 +61,7 @@
   - [Microsoft Visual C++](Program/Compilers/MSVC/README.md)
 - [Executable Formats](Program/Formats/README.md)
   - [Shellcode](Program/Formats/Shellcode/README.md)
+  - [Debugging Information](Program/Formats/Debugging/README.md)
   - [Protable Executable](Program/Formats/PE/README.md)
   - Packers
     - [UPX](Program/Formats/Packers/UPX/README.md)

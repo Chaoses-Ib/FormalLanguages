@@ -1,5 +1,5 @@
 # Calling Conventions
-## [→x86](../../x86/Calling%20Conventions.md)
+## [→x86](../../x86/Interface/Calling.md)
 
 ## Tools
 - IDA

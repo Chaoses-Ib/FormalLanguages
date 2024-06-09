@@ -54,6 +54,7 @@
   - [Performance Analysis](Program/Analysis/Performance/README.md)
     - [Profiling](Program/Analysis/Performance/Profiling.md)
 - [Compilers](Program/Compilers/README.md)
+  - [Name Mangling](Program/Compilers/Name.md)
   - Optimization
     - [Interprocedural Optimization](Program/Compilers/Optimization/Interprocedural.md)
   - [LLVM](Program/Compilers/LLVM/README.md)

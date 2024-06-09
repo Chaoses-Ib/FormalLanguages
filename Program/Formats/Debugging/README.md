@@ -14,8 +14,31 @@
     - [Does this support PDB Version 2.0? - Issue #5 - wbenny/pdbex](https://github.com/wbenny/pdbex/issues/5)
   - Rust: [microsoft/dia-rs: Rust for Debug Interface Access (DIA) SDK](https://github.com/microsoft/dia-rs)
 
-- Sym (Dbghelp, Imagehlp)
+    [windows-rs support for Microsoft DIA SDK (Debug Interface Access) - Issue #1327 - microsoft/windows-rs](https://github.com/microsoft/windows-rs/issues/1327)
+
+- [Debug Help Library](https://learn.microsoft.com/en-us/windows/win32/debug/debug-help-library) (Dbghelp, Imagehlp, Sym)
+
+  [Writing a Primitive Debugger: Part 4 (Symbols) « RCE Endeavors](https://www.codereversing.com/archives/176)
+
+  Issues:
+  - [DbgHelp Versions - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/debug/dbghelp-versions)
+
+    > Although this DLL is included in all supported versions of Windows, it is rarely the most current version of DbgHelp available. Furthermore, the version of DbgHelp that ships in Windows has reduced functionality from the other releases-- specifically, it lacks support for Symbol Server and Source Server.
+
+    [Enumerating symbols with SymEnumSymbols() doesn't always work](https://groups.google.com/g/microsoft.public.windbg/c/awQF03Fwr58)
+
+  - ≥ 10.0.15007.1000: `/DEBUG:FASTLINK`
+  
+    [`SymEnumSymbols` returns `ERROR_SUCCESS` but gives no results - Stack Overflow](https://stackoverflow.com/questions/44842328/symenumsymbols-returns-error-success-but-gives-no-results)
+
+  - [\[DBGHELP\] question about SymEnumSymbols to retrieve all exported function of a module](https://microsoft.public.vsnet.debugging.narkive.com/1DW9PX0G/dbghelp-question-about-symenumsymbols-to-retrieve-all-exported-function-of-a-module)
+
+  Bindings:
   - [TinyPDBParser: Windows PDB Parser using Imagehlp library.](https://github.com/Coldzer0/TinyPDBParser)
+
+  Tools:
+  - [DBH](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/dbh)
+  - Cheat Engine[^dbghelp-ce]
 
 C++:
 - [RawPDB: A C++11 library for reading Microsoft Program DataBase PDB files](https://github.com/MolecularMatters/raw_pdb)
@@ -43,5 +66,11 @@ Tools:
   
   [PDB 插件修复增强](https://bbs.pediy.com/thread-266189.htm)
 
+### Generation
+- [PdbGen: Generate dummy debug symbols (PDB) with a specified list of public symbols.](https://github.com/gix/PdbGen)
+
 ## [DWARF](https://dwarfstd.org/)
 - [gimli: A library for reading and writing the DWARF debugging format](https://github.com/gimli-rs/gimli)
+
+
+[^dbghelp-ce]: [Cheat Engine :: View topic - How does Cheat Engine load debug symbols from a PDB?](https://forum.cheatengine.org/viewtopic.php?p=5775416/1000)

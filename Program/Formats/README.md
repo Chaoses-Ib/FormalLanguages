@@ -40,6 +40,16 @@ An **overlay (附加数据段)** is the auxiliary data attached after the logica
 Rust:
 - [goblin: An impish, cross-platform binary parsing crate, written in Rust](https://github.com/m4b/goblin)
   - Formats: ELF, PE, MachO
+  - Always `log`
+  
+  PE:
+  - `cargo add goblin --no-default-features --features std,pe32,pe64`
+  - `is_executable_32_bit()`
+    ```rust
+    fn is_executable_32_bit<P: AsRef<Path>>(path: P) -> Result<bool, anyhow::Error> {
+        Ok(!goblin::pe::PE::parse(&std::fs::read(path)?)?.is_64)
+    }
+    ```
 
 Python:
 - LIEF

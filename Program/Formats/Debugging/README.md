@@ -68,16 +68,24 @@ Rust:
   - [Add support for small MSF file format - Issue #150 - getsentry/pdb](https://github.com/getsentry/pdb/issues/150)
   - [Support for .NET PDBs - Issue #145 - getsentry/pdb](https://github.com/getsentry/pdb/issues/145)
   - [Modifying PDBs - Issue #16 - getsentry/pdb](https://github.com/getsentry/pdb/issues/16)
+  - [`#![no_std]` support - Issue #112 - getsentry/pdb](https://github.com/getsentry/pdb/issues/112)
   
   Forks:
+  - [Vector35/pdb-rs: A parser for Microsoft PDB (Program Database) debugging information](https://github.com/Vector35/pdb-rs)
   - [ergrelet/pdb at 0.8.0-resym](https://github.com/ergrelet/pdb/tree/0.8.0-resym)
 
     `pdb = { git = "https://github.com/ergrelet/pdb.git", branch = "0.8.0-resym"}`
   
   Libraries:
   - [pdb-addr2line: A rust crate to symbolicate addresses from PDBs, like addr2line. Uses the `pdb` crate.](https://github.com/mstange/pdb-addr2line)
+  
+  Tools:
+  - [pdbview: dump all available information from PDBs](https://github.com/landaire/pdbview)
 
 - [Elderscroll: PDB Rewriting Rust Library](https://github.com/backengineering/elderscroll)
+
+JS:
+- [pdb-guid: 💻🪟👀 Peek into Windows symbol files to read their unique identifiers](https://github.com/BugSplat-Git/pdb-guid)
 
 Servers:
 - [Microsoft public symbol server](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/microsoft-public-symbols)

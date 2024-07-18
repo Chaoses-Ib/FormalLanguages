@@ -4,9 +4,22 @@
 
 Libraries:
 - [symbolic: Stack trace symbolication library written in Rust](https://github.com/getsentry/symbolic)
+- [compiledfiles: Rust library to get a list of files from a native binary](https://github.com/schultetwin1/compiledfiles)
+
+Tools:
+- [mozilla/dump\_syms: Rewrite of breakpad dump\_syms tools in Rust](https://github.com/mozilla/dump_syms)
 
 ## Program database (PDB)
 [Wikipedia](https://en.wikipedia.org/wiki/Program_database)
+
+[The PDB File Format --- LLVM documentation](https://llvm.org/docs/PDB/index.html)
+
+[microsoft-pdb: Information from Microsoft about the PDB format. We'll try to keep this up to date. Just trying to help the CLANG/LLVM community get onto Windows.](https://github.com/Microsoft/microsoft-pdb) (discontinued)
+
+- Vesions
+  - Version 2: `Microsoft C/C++ program database 2.00\r\n\032JG\0\0` (JG)
+  - Version 7: `Microsoft C/C++ MSF 7.00\r\n\x1ADS\0\0\0` (DS)
+    - BigMsf: `BlockSize == 4096`
 
 - PDB ID: `{GUID}-{age}`
 
@@ -65,24 +78,62 @@ C++:
 
 Rust:
 - [pdb: A parser for Microsoft PDB (Program Database) debugging information](https://github.com/getsentry/pdb)
-  - [Add support for small MSF file format - Issue #150 - getsentry/pdb](https://github.com/getsentry/pdb/issues/150)
+  - Version 2: [Add support for small MSF file format - Issue #150 - getsentry/pdb](https://github.com/getsentry/pdb/issues/150)
   - [Support for .NET PDBs - Issue #145 - getsentry/pdb](https://github.com/getsentry/pdb/issues/145)
   - [Modifying PDBs - Issue #16 - getsentry/pdb](https://github.com/getsentry/pdb/issues/16)
   - [`#![no_std]` support - Issue #112 - getsentry/pdb](https://github.com/getsentry/pdb/issues/112)
   
   Forks:
-  - [Vector35/pdb-rs: A parser for Microsoft PDB (Program Database) debugging information](https://github.com/Vector35/pdb-rs)
-  - [ergrelet/pdb at 0.8.0-resym](https://github.com/ergrelet/pdb/tree/0.8.0-resym)
+  - [Vector35/pdb-rs](https://github.com/Vector35/pdb-rs) ([#141](https://github.com/getsentry/pdb/pull/141))
+    - [ergrelet/pdb at 0.8.0-resym](https://github.com/ergrelet/pdb/tree/0.8.0-resym)
+  
+      [CHANGELOG_RESYM.md](https://github.com/ergrelet/pdb/blob/0.8.0-resym/CHANGELOG_RESYM.md):
+      - Add support for VirtualFunctionTable and VirtualTableShape (@CouleeApps)
+      - Add support for DefRange, DefRangeSubField and DefRangeRegister (@CouleeApps)
+      - Add support for DefRangeFramePointerRelative, DefRangeFramePointerRelativeFullScope, DefRangeSubFieldRegister and DefRangeRegisterRelative (@CouleeApps)
+      - Add support for BasePointerRelative, FrameProcedure (@CouleeApps)
+      - Add support for CallSiteInfo (@CouleeApps)
+      - Add support for pdb register list (@CouleeApps)
+      - Add support for LF_CLASS19, LF_INTERFACE19, LF_UNION19 (@CouleeApps)
+      - Add support for S_STATICLOCAL, S_BPREL32_INDIR, S_REGREL32_INDIR, S_GPROC32EX, S_LPROC32EX, S_GPROC32EX_ID and S_LPROC32EX_ID (@CouleeApps)
+      - Add support for S_HOTPATCHFUNC, S_DEFRANGE_REGISTER_REL_INDIR, S_RECTYPE_MAX and S_RECTYPE_PAD (@CouleeApps)
+      - Add support for char8_t (@ergrelet)
+      - Add support for small MSF (2.0) file format (@jon-zu)
 
-    `pdb = { git = "https://github.com/ergrelet/pdb.git", branch = "0.8.0-resym"}`
+      `pdb = { git = "https://github.com/ergrelet/pdb.git", branch = "0.8.0-resym"}`
+    - [Ryan-rsm-McKenzie](https://github.com/Ryan-rsm-McKenzie/pdb-rs)
+      - Add support for `S_COFFGROUP`, `S_SECTION`, `S_ENVBLOCK`, `S_HEAPALLOCSITE`, `S_CALLEES`, `S_CALLERS`, and `S_INLINEES`
+  - [michal-kapala/pdb](https://github.com/michal-kapala/pdb) ([#146](https://github.com/getsentry/pdb/pull/146))
+    - Add support for managed procedures
+    - Add OEM symbols
+    - Add support for managed local variable slots
+    - Add support for `S_COFFGROUP`, `S_SECTION`, `S_ENVBLOCK`
+  - [afranchuk/pdb2](https://github.com/afranchuk/pdb)
+    - Allow `PDB` to impl `Send`. ([#148](https://github.com/getsentry/pdb/pull/148))
+  - [evanrichter/pdb](https://github.com/evanrichter/pdb) / [mayhemheroes/pdb](https://github.com/mayhemheroes/pdb)
+    - pdb fuzz harness
+  - [suttonbradley/pdb](https://github.com/suttonbradley/pdb)
+    - Retain u64 size for class and union sizes
+  - [fkloiber/pdb](https://github.com/fkloiber/pdb)
   
   Libraries:
   - [pdb-addr2line: A rust crate to symbolicate addresses from PDBs, like addr2line. Uses the `pdb` crate.](https://github.com/mstange/pdb-addr2line)
   
   Tools:
   - [pdbview: dump all available information from PDBs](https://github.com/landaire/pdbview)
+  - [symbolizer-rs: A fast execution trace symbolizer for Windows that runs on all major platforms and doesn't depend on any Microsoft libraries.](https://github.com/0vercl0k/symbolizer-rs)
+
+- ~~[legolas](https://crates.io/crates/legolas)~~
+
+- [pdb\_wrapper: LLVM PDB Wrapper](https://github.com/not-wlan/pdb_wrapper)
+  - [bao: the PDB compiler](https://github.com/not-wlan/bao)
 
 - [Elderscroll: PDB Rewriting Rust Library](https://github.com/backengineering/elderscroll)
+
+- [natvis-pdbs: A metabuild / build.rs compatible crate to embed .natvis debug visualizer files into your executable's .pdbs, for ease of debugging.](https://github.com/MaulingMonkey/natvis-pdbs)
+
+Python:
+- [pdbparse: Python code to parse Microsoft PDB files](https://github.com/moyix/pdbparse)
 
 JS:
 - [pdb-guid: 💻🪟👀 Peek into Windows symbol files to read their unique identifiers](https://github.com/BugSplat-Git/pdb-guid)
@@ -90,6 +141,8 @@ JS:
 Servers:
 - [Microsoft public symbol server](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/microsoft-public-symbols)
   - [SYMCN: Windows符号服务器镜像节点，用于国内加速](https://github.com/BlackINT3/symcn-site)
+
+- [symsrv: Download pdbs from symbol servers and cache locally, parse symbol paths from env vars](https://github.com/mstange/symsrv/)
 
 - [query-pdb: A server-side software for parsing PDB files. The software provides PDB online parsing service.](https://github.com/zouxianyu/query-pdb)
 

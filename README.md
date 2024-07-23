@@ -51,6 +51,7 @@
   - [String Literals](Program/Literals/Strings.md)
 - [Program Analysis](Program/Analysis/README.md)
   - [Program Differing](Program/Analysis/Differing.md)
+  - [Tracing](Program/Analysis/Tracing.md)
   - [Performance Analysis](Program/Analysis/Performance/README.md)
     - [Profiling](Program/Analysis/Performance/Profiling.md)
 - [Compilers](Program/Compilers/README.md)

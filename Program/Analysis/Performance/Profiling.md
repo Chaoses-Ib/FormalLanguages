@@ -10,5 +10,10 @@
 - [AMD CodeXL](https://en.wikipedia.org/wiki/CodeXL) (discontinued)
 - [AMD CodeAnalyst](https://en.wikipedia.org/wiki/AMD_CodeAnalyst) (discontinued)
 
+Linux:
+- perf
+
+  [Perf Wiki](https://perf.wiki.kernel.org/index.php/Main_Page)
+
 
 [^wiki]: [Profiling - Wikipedia](https://en.wikipedia.org/wiki/Profiling_(computer_programming))

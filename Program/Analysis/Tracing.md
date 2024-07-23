@@ -56,3 +56,16 @@ Tools:
 
 Security:
 - Ge, Xinyang, Weidong Cui, and Trent Jaeger. “GRIFFIN: Guarding Control Flows Using Intel Processor Trace.” In Proceedings of the Twenty-Second International Conference on Architectural Support for Programming Languages and Operating Systems, 585–98. Xi’an China: ACM, 2017. https://doi.org/10.1145/3037697.3037716.
+
+## Reverse execution
+- GDB: [rr: Record and Replay Framework](https://github.com/rr-debugger/rr)
+  - Linux
+
+- WinDbg
+  - Time Travel Debug (TTD)
+
+    [A new (and old) Reverse Debugger -- Microsoft WinDbg -- Observations from Uppsala](https://jakob.engbloms.se/archives/2649)
+
+  - Intel Processor Trace: Reverse Execution with Processor Trace (REPT)
+
+    [Microsoft REPT: You CAN Reverse from a Core Dump! -- Observations from Uppsala](https://jakob.engbloms.se/archives/2876)

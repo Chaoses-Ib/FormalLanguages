@@ -36,6 +36,13 @@ Tools:
   file_id = hex(timestamp).replace('0x', '').zfill(8).upper() + hex(virtual_size).replace('0x', '')
   ```
 
+Samples:
+- [getsentry/pdb/fixtures/self](https://github.com/getsentry/pdb/tree/master/fixtures/self)
+
+  `git submodule add -b 0.8.0-resym "https://github.com/ergrelet/pdb.git" tests/pdb`
+
+- Windows
+
 ### Libraries
 - [Debug Interface Access SDK](https://learn.microsoft.com/en-us/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk?view=vs-2022)
   - `IDiaSymbol::findChildren()` is much slower than `IDiaSession::getSymbolsByAddr()` for enumerating symbols (tens of seconds vs 50ms).
@@ -75,6 +82,8 @@ Tools:
 
 C++:
 - [RawPDB: A C++11 library for reading Microsoft Program DataBase PDB files](https://github.com/MolecularMatters/raw_pdb)
+- [libpdb: Parser for Microsoft Program Database (PDB) files](https://github.com/shareef12/libpdb)
+- [libmspdb: Parsing library for the Microsoft Program Database files](https://github.com/IntroVirt/libmspdb)
 
 Rust:
 - [pdb: A parser for Microsoft PDB (Program Database) debugging information](https://github.com/getsentry/pdb)
@@ -132,6 +141,11 @@ Rust:
 
 - [natvis-pdbs: A metabuild / build.rs compatible crate to embed .natvis debug visualizer files into your executable's .pdbs, for ease of debugging.](https://github.com/MaulingMonkey/natvis-pdbs)
 
+.NET:
+- [SharpPdb: Library for reading PDB files, both Windows and PortablePDBs.](https://github.com/southpolenator/SharpPdb)
+  - [EatPdb: Export all symbol from PDB!](https://github.com/codehz/EatPdb)
+- [PDBSharp: Fast and cross-platform parser for Microsoft PDB files](https://github.com/smx-smx/PDBSharp)
+
 Python:
 - [pdbparse: Python code to parse Microsoft PDB files](https://github.com/moyix/pdbparse)
 
@@ -150,6 +164,7 @@ Servers:
 
 ### Tools
 - [PDBRipper: A utility for extract an information from PDB-files.](https://github.com/horsicq/PDBRipper)
+  - Only structs.
 
 - [microsoft/pdblister: Faster version of `symchk /om` for generating PDB manifests of offline machines](https://github.com/microsoft/pdblister)
 

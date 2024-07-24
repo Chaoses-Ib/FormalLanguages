@@ -91,6 +91,7 @@
     - [VMProtect](Program/Formats/Packers/VMProtect/README.md)
 - [Binary Rewriting](Program/Rewriting/README.md)
 - [Hooking](Program/Hooking.md)
+- [Virtualization](Program/Virtualization/README.md)
 - Security
   - [Obfuscation](Program/Security/Obfuscation/README.md)
     - [Controlf-flow Obfuscation](Program/Security/Obfuscation/Control/README.md)

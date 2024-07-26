@@ -36,6 +36,8 @@ Tools:
   file_id = hex(timestamp).replace('0x', '').zfill(8).upper() + hex(virtual_size).replace('0x', '')
   ```
 
+- PDB does not include ImageBase, but include sections.
+
 Samples:
 - [getsentry/pdb/fixtures/self](https://github.com/getsentry/pdb/tree/master/fixtures/self)
 

@@ -5,11 +5,63 @@
 
 ![](https://upload.wikimedia.org/wikipedia/commons/1/1b/Portable_Executable_32_bit_Structure_in_SVG_fixed.svg)
 
+[PE File Format :: TheDoom](https://k0deless.github.io/posts/pe-file-format/)
+
+[A dive into the PE file format - Introduction - 0xRick's Blog](https://0xrick.github.io/win-internals/pe1/)
+- [part 1: Overview](https://0xrick.github.io/win-internals/pe2/)
+- [part 2: DOS Header, DOS Stub and Rich Header](https://0xrick.github.io/win-internals/pe3/)
+- [part 3: NT Headers](https://0xrick.github.io/win-internals/pe4/)
+- [part 4: Data Directories, Section Headers and Sections](https://0xrick.github.io/win-internals/pe5/)
+- [part 5: PE Imports (Import Directory Table, ILT, IAT)](https://0xrick.github.io/win-internals/pe6/)
+- [part 6: PE Base Relocations](https://0xrick.github.io/win-internals/pe7/)
+- [lab1: Writing a PE Parser](https://0xrick.github.io/win-internals/pe8/)
+
 [Portable executable explained throught rust code](https://itehax.com/blog/portable-executable-explained-throught-rust-code) ([GitHub](https://github.com/itehax/pe_parser), [r/rust](https://www.reddit.com/r/rust/comments/182pwcc/rust_and_winapi_pe_explained_throught_rust_code/))
 
 Samples:
 - [Windows PE Artifact Library: Contains over 375 samples of Windows Portable Executable (PE) files ranging from the common to the completely esoteric with detailed origin information for each sample. Spans decades of computing in roughly 64MB of disk storage. Unique, ultra-rare PE file format artifacts. Any researcher's most delightful find!](https://github.com/cubiclesoft/windows-pe-artifact-library)
 - [corkami/pocs/PE](https://github.com/corkami/pocs/tree/master/PE)
+
+## Addresses
+- Image base (base address)
+
+  > When our binary is loaded in memory, the loader will load the file at a specific memory (virtual memory) location, this must be multiple of 64k, depending of architecture (32 bits or 64 bits) this value will have a size of 4 or 8 bytes (size for a pointer), and it can be any value in the user memory space but usually it will have the next values: 0x10000000 for a DLL, 0x00010000 for a Windows CE EXE, and 0x00400000 default for Windows NT EXEs.
+
+  - [/BASE (Base address)](https://learn.microsoft.com/en-us/cpp/build/reference/base-base-address?view=msvc-170)
+    ```c
+    #pragma comment(linker,"/BASE:0x15000000")
+    ```
+  - [/FIXED (Fixed Base Address)](https://learn.microsoft.com/en-us/cpp/build/reference/fixed-fixed-base-address?view=msvc-170)
+
+- Virtual address (VA, linear address)
+
+  > This is the address used in the binary to reference data or code in an absolute way, this value is dependent on the base address value.
+
+- Relative virtual address (RVA): Relative address to the image base.
+
+  > This value is widely used on PE Header to avoid the dependency of the base address. This value is added to the base address to get the virtual address, so in this way it will be easy to get values from the binary.
+
+  $$\text{RVA} = \text{VA} - \text{ImageBase}$$
+
+  - ≤ `u32::MAX`
+
+    What if a section's RVA + size is greater than `u32::MAX`?
+
+  - `IMAGE_SECTION_HEADER.VirtualAddress`
+
+    > The documentation states that for executable images this field holds the address of the first byte of the section relative to the image base when loaded in memory, and for object files it holds the address of the first byte of the section before relocation is applied.
+
+- File offset
+
+  > Value which tells us the physical place of something in the binary.
+
+[Understanding Concepts of VA, RVA and File Offsets](https://tech-zealots.com/malware-analysis/understanding-concepts-of-va-rva-and-offset/)
+
+[VA (Virtual Address) & RVA (Relative Virtual Address) - Stack Overflow](https://stackoverflow.com/questions/2170843/va-virtual-address-rva-relative-virtual-address)
+
+## Sections
+- [/SECTION (Specify Section Attributes)](https://learn.microsoft.com/en-us/cpp/build/reference/section-specify-section-attributes?view=msvc-170)
+- [/ALIGN (Section alignment)](https://learn.microsoft.com/en-us/cpp/build/reference/align-section-alignment?view=msvc-170)
 
 ## Loaders
 - Windows

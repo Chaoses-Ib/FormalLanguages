@@ -44,6 +44,7 @@ Rust:
   
   PE:
   - `cargo add goblin --no-default-features --features std,pe32,pe64`
+    - Wasm: ≈69KiB, `pe32,pe64` ≈68KiB
   - `is_executable_32_bit()`
     ```rust
     fn is_executable_32_bit<P: AsRef<Path>>(path: P) -> Result<bool, anyhow::Error> {

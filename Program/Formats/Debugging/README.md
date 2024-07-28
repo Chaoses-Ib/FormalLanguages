@@ -21,7 +21,16 @@ Tools:
   - Version 7: `Microsoft C/C++ MSF 7.00\r\n\x1ADS\0\0\0` (DS)
     - BigMsf: `BlockSize == 4096`
 
-- PDB ID: `{GUID}-{age}`
+- `PDBInformation`
+  - `signature`: A 32-bit timestamp
+  - `age`: The number of times this PDB file has been written. It is bumped by the linker and other tools every time the PDB is modified. It does not necessarily correspond to the age declared in the image. Consider using `DBIHeader::age` for a better match.
+  - `guid`
+
+- `DBIHeader` (optional, e.g. `vc140.pdb`)
+  - `signature`
+  - `age`
+
+- PDB ID: `{PDBInformation.guid}-{DBIHeader.age}`
 
   e.g. `3003763b-afcb-4a97-aae3-28de8f188d7c-2`
 
@@ -37,6 +46,15 @@ Tools:
   ```
 
 - PDB does not include ImageBase, but include sections.
+
+PE:
+- [`PDB70DebugInfo`](https://llvm.org/doxygen/CVDebugRecord_8h_source.html)
+  - `CVSignature`
+  - `Signature` (GUID)
+  - `Age`
+  - `PDBFileName`
+- [`IMAGE_DEBUG_DIRECTORY`](https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-image_debug_directory)
+  - `TimeDateStamp`
 
 Samples:
 - [getsentry/pdb/fixtures/self](https://github.com/getsentry/pdb/tree/master/fixtures/self)

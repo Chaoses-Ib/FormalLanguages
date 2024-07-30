@@ -182,7 +182,14 @@ Notations:
 - `o`: replace result
 
 ## Rust
+- `match` is a keyword and cannot be used as an identifier.
 - [regex](https://docs.rs/regex/latest/regex/index.html)
   - Both [`find_at`](https://docs.rs/regex/latest/regex/struct.Regex.html#method.find_at) and [`is_match_at`](https://docs.rs/regex/latest/regex/struct.Regex.html#method.is_match_at) will search to the end of the string. There is no API to only test at a specified position, which is a weird design in a performance-first language.
     - `regex-automata` actually supports [anchored searches](https://docs.rs/regex-automata/latest/regex_automata/struct.Input.html#method.anchored).
   - `escape` says "The string returned may be safely used as a literal in a regular expression", but this is wrong. When Unicode mode is disabled, any Unicode char will make the regex failed to compile.
+  - No `bytes::escape`: [regex::bytes::escape - Issue #451](https://github.com/rust-lang/regex/issues/451)
+
+  [PSA: regex 1.3 permits disabling Unicode/performance things, which can decrease binary size by over 1MB, cut compile times in half and decrease the dependency tree down to a single crate : rust](https://www.reddit.com/r/rust/comments/cz7u0j/psa_regex_13_permits_disabling_unicodeperformance/)
+  - 最新版本下只能减少 0.4 MB？
+
+  `perf-dfa-full` needs ~0.18 MiB.

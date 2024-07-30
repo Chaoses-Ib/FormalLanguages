@@ -68,6 +68,8 @@ Samples:
 - [aaaddress1/RunPE-In-Memory: Run a Exe File (PE Module) in memory (like an Application Loader)](https://github.com/aaaddress1/RunPE-In-Memory)
 
 ## Libraries
+[→Executable formats libraries](../README.md#libraries)
+
 C/C++:
 - LIEF
 - [pe-parse: Principled, lightweight C/C++ PE parser](https://github.com/trailofbits/pe-parse)
@@ -78,6 +80,10 @@ C/C++:
 
 Rust:
 - [PeLite: Lightweight, memory-safe, zero-allocation library for reading and navigating PE binaries.](https://github.com/CasualX/pelite)
+  - PE32 and PE64 are different types, but there is a [Wrap](https://docs.rs/pelite/latest/pelite/enum.Wrap.html).
+
+    [Add pelite::Wrap to the top level crate documentation - Issue #250 - CasualX/pelite](https://github.com/CasualX/pelite/issues/250)
+
 - [exe-rs: The PE Executable Library, but for Rust!](https://github.com/frank2/exe-rs)
 - [pe-parser: PE Parsing, but blazing fast](https://github.com/IsaacMarovitz/pe-parser)
 

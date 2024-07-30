@@ -3,4 +3,13 @@
 
 A **markup language** is a set of rules governing what markup information may be included in a document and how it is combined with the content of the document in a way to facilitate use by humans and computer programs.[^wiki]
 
+## Convertion
+- [Pandoc: Universal markup converter](https://github.com/jgm/pandoc) ([Homepage](https://pandoc.org/))
+  
+  [How can I use pandoc for all files in the folder in Windows? - Stack Overflow](https://stackoverflow.com/questions/41471253/how-can-i-use-pandoc-for-all-files-in-the-folder-in-windows)
+
+  - Web: [Try pandoc!](https://pandoc.org/try/)
+  - Python: [Pandoc (Python Library)](https://github.com/boisgera/pandoc) (inactive)
+
+
 [^wiki]: [Markup language - Wikipedia](https://en.wikipedia.org/wiki/Markup_language)

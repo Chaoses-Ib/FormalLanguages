@@ -4,6 +4,12 @@
 **Protocol Buffers (Protobuf)** is a free and open-source cross-platform data format used to serialize structured data.
 
 [Language Guide (proto 3)](https://protobuf.dev/programming-guides/proto3/)
+- `optional`
+  - [Why Protobuf 3 made all fields on the messages optional? - Software Engineering Stack Exchange](https://softwareengineering.stackexchange.com/questions/350443/why-protobuf-3-made-all-fields-on-the-messages-optional)
+  - [How to define an optional field in protobuf 3 - Stack Overflow](https://stackoverflow.com/questions/42622015/how-to-define-an-optional-field-in-protobuf-3)
+  - [Is it a good practice in protobuf3 using optional to check nullability? - Stack Overflow](https://stackoverflow.com/questions/69441101/is-it-a-good-practice-in-protobuf3-using-optional-to-check-nullability)
+  - C#: [Consider exposing protobuf optional fields as nullable properties - Issue #9083 - protocolbuffers/protobuf](https://github.com/protocolbuffers/protobuf/issues/9083)
+
 - `enum`
   - The first enum value must be zero.
 
@@ -36,10 +42,6 @@
   ```
 
 [Style Guide](https://protobuf.dev/programming-guides/style/)
-
-Optional:
-- [protocol buffers - How to define an optional field in protobuf 3 - Stack Overflow](https://stackoverflow.com/questions/42622015/how-to-define-an-optional-field-in-protobuf-3)
-- [protocol buffers - Is it a good practice in protobuf3 using optional to check nullability? - Stack Overflow](https://stackoverflow.com/questions/69441101/is-it-a-good-practice-in-protobuf3-using-optional-to-check-nullability)
 
 ## Rust
 - [prost: A Protocol Buffers implementation for the Rust Language](https://github.com/tokio-rs/prost)

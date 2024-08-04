@@ -1,10 +1,39 @@
-# [Protocol Buffers](https://protobuf.dev/)
+# [Protocol Buffers](https://protobuf.dev/) (Protobuf)
 [GitHub](https://github.com/protocolbuffers/protobuf), [Wikipedia](https://en.wikipedia.org/wiki/Protocol_Buffers)
 
 **Protocol Buffers (Protobuf)** is a free and open-source cross-platform data format used to serialize structured data.
 
 [Language Guide (proto 3)](https://protobuf.dev/programming-guides/proto3/)
+- `enum`
+  - The first enum value must be zero.
+
+- Union: `oneof`
+  - > Basically, oneof is poorly named. It means "at most one of". There's always a possible null value.
+  - Rust: `Option<sample_message::TestOneof>`
+
 - [Streaming services vs. repeated fields - gRPC for WCF developers | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/architecture/grpc-for-wcf-developers/streaming-versus-repeated)
+
+- 2D array
+  
+  [2D array of strings in proto3](https://groups.google.com/g/protobuf/c/15cQIumEVtI)
+  ```proto
+  message Embedding {
+    repeated float embedding = 1;
+  }
+
+  message EmbedChunksResponse {
+    repeated Embedding embeddings = 1;
+  }
+  ```
+
+  [c++ - protocol buffers - store an double array, 1D, 2D and 3D - Stack Overflow](https://stackoverflow.com/questions/6825196/protocol-buffers-store-an-double-array-1d-2d-and-3d)
+  ```proto
+  message DoubleMatrix {
+    required uint32 rows = 1;
+    required uint32 cols = 2;
+    repeated double data = 3 [packed=true];
+  }
+  ```
 
 [Style Guide](https://protobuf.dev/programming-guides/style/)
 
@@ -28,3 +57,13 @@ Optional:
 - [rust-protobuf: Rust implementation of Google protocol buffers](https://github.com/stepancheg/rust-protobuf)
 
 - [quick-protobuf: A rust implementation of protobuf parser](https://github.com/tafia/quick-protobuf)
+
+## Python
+[Python Generated Code Guide | Protocol Buffers Documentation](https://protobuf.dev/reference/python/python-generated/)
+
+The generated code is shit.
+
+- [How to assign to repeated field? - Stack Overflow](https://stackoverflow.com/questions/23726335/how-to-assign-to-repeated-field)
+- [Question: How to set oneof fields in python? - Issue #5012 - protocolbuffers/protobuf](https://github.com/protocolbuffers/protobuf/issues/5012)
+
+  `test.a.CopyFrom(...)`

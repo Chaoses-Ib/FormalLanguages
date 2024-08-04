@@ -87,7 +87,7 @@
 ## Data Exchange Languages
 - [Data Comparison](Data/Comparison.md)
 - [Delimiter-Separated Values](Data/Delimiter-Separated%20Values.md)
-- [Protocol Buffers](Data/Protocol%20Buffers.md)
+- [Protocol Buffers (Protobuf)](Data/Protobuf.md)
 - [Apache Arrow](Data/Arrow.md)
 
 ## [Regular Expressions](Regular/README.md)

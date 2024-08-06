@@ -98,6 +98,7 @@
 - [printf Format](Template/printf%20Format.md)
 
 ## [Markup Languages](Markup/README.md)
+- [Extensible Markup Language (XML)](Markup/Extensible/README.md)
 - [TeX](Markup/TeX/README.md)
   - [LaTeX](Markup/TeX/LaTeX.md)
 - [Markdown](Markup/Markdown/README.md)

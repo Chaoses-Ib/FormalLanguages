@@ -33,6 +33,10 @@ Markdown is a lightweight markup language for creating formatted text using a pl
 
       [⚠️ GitHub is beta testing their own Admonition syntax. We should weigh in - Extensions - CommonMark Discussion](https://talk.commonmark.org/t/github-is-beta-testing-their-own-admonition-syntax-we-should-weigh-in/4173/5)
 
+- [MDX](MDX/README.md)
+
+- [MDsveX: A markdown preprocessor for Svelte.](https://github.com/pngwn/mdsvex) (inactive)
+
 ## HTML elements
 [How can I wrap my markdown in an HTML div? - Stack Overflow](https://stackoverflow.com/questions/29368902/how-can-i-wrap-my-markdown-in-an-html-div)
 
@@ -64,6 +68,7 @@ JavaScript:
 - [markdown-it: Markdown parser, done right. 100% CommonMark support, extensions, syntax plugins & high speed](https://github.com/markdown-it/markdown-it)
 - [Showdown: A bidirectional Markdown to HTML to Markdown converter](https://github.com/showdownjs/showdown)
 - [remark: remark is a popular tool that transforms markdown with plugins. These plugins can inspect and change your markup. You can use remark on the server, the client, CLIs, deno, etc.](https://github.com/remarkjs/remark)
+  - [remark-gfm: remark plugin to support GFM (autolink literals, footnotes, strikethrough, tables, tasklists)](https://github.com/remarkjs/remark-gfm)
 - [remarkable: Markdown parser, done right. Commonmark support, extensions, syntax plugins, high speed - all in one. Gulp and metalsmith plugins available.](https://github.com/jonschlinkert/remarkable)
 
 PHP:

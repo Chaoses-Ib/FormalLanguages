@@ -122,4 +122,5 @@
 - [TeX](Markup/TeX/README.md)
   - [LaTeX](Markup/TeX/LaTeX.md)
 - [Markdown](Markup/Markdown/README.md)
+  - [MDX](Markup/Markdown/MDX/README.md)
   - [Editors](Markup/Markdown/Editors.md)

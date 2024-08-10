@@ -7,8 +7,22 @@
 [fckilfkscwusoopguhi7i6yg3l6tknaz7lrumvlhg5mvtxzxbbxlimid.onion](http://fckilfkscwusoopguhi7i6yg3l6tknaz7lrumvlhg5mvtxzxbbxlimid.onion/)
 - [\[分享\]IDA 版本历代记-资源下载-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-277984.htm)
 
+### v8
 v8.3:
 - [IDA Pro 8.3 (x86, x86\_64) - 『逆向资源区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn](https://www.52pojie.cn/thread-1861384-1-1.html)
+
+### v9
+[Welcome to IDA 9.0 Beta](https://out5.hex-rays.com/beta90_6ba923/)
+- Headless processing with IDAlib
+- WASM Disassembler and File Format Loader
+- nanoMIPS Disassembler and Decompiler + md1rom Loader
+- New RISC-V Decompiler and Disassembler Extensions
+- C++ Exceptions Support in the Decompiler
+- IDAPython Improvements
+- FLIRT Updates
+- Metadata Descriptors for Plugins
+- No more IDA32
+- UI Improvements
 
 ## Security
 - [IdaMeme: Crashes ida on static analyses.](https://github.com/Azvanzed/IdaMeme)

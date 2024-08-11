@@ -1,0 +1,4 @@
+# [YAML](https://yaml.org/)
+[Wikipedia](https://en.wikipedia.org/wiki/YAML)
+
+> YAML (/ˈjæməl/, rhymes with camel) was first proposed by Clark Evans in 2001, who designed it together with Ingy döt Net and Oren Ben-Kiki. Originally YAML was said to mean **Yet Another Markup Language**, because it was released in an era that saw a proliferation of markup languages for presentation and connectivity (HTML, XML, SGML, etc). Its initial name was intended as a tongue-in-cheek reference to the technology landscape, referencing its purpose as a markup language with the yet another construct, but it was then repurposed as **YAML Ain't Markup Language**, a recursive acronym, to distinguish its purpose as data-oriented, rather than document markup.

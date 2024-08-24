@@ -65,6 +65,7 @@
   - [Shellcode](Program/Formats/Shellcode/README.md)
   - [Debugging Information](Program/Formats/Debugging/README.md)
   - [Protable Executable](Program/Formats/PE/README.md)
+  - [Memory Dumps](Program/Formats/Dumps/README.md)
   - Packers
     - [UPX](Program/Formats/Packers/UPX/README.md)
     - [ASPack](Program/Formats/Packers/ASPack/README.md)
@@ -83,6 +84,7 @@
     - [ISA-level Obfuscation](Program/Security/Obfuscation/ISA/README.md)
   - Tools
     - [IDA](Program/Security/Tools/IDA/README.md)
+    - [WinDbg](Program/Security/Tools/WinDbg/README.md)
 
 ## Data Exchange Languages
 - [Data Comparison](Data/Comparison.md)

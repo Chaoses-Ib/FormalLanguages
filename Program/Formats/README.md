@@ -29,7 +29,7 @@ An **overlay (附加数据段)** is the auxiliary data attached after the logica
 ## Libraries
 - [LIEF: Library to Instrument Executable Formats](https://github.com/lief-project/LIEF)
   - Formats: ELF, PE, MachO, OAT, DEX, VDEX, ART
-  - Languages: C++, Python, Rust, C (limited)
+  - Languages: C++, Python, [Rust](https://lief.re/doc/stable/api/rust/index.html), C (limited)
   
   PE:
   - Addresses: `Binary::{rva_to_offset, va_to_offset, offset_to_virtual_address}` (in `uint64_t`)

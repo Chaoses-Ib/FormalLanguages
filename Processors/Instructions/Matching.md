@@ -16,6 +16,10 @@
   - Does not output multiple signatures for one function.
   - Does not output matching results when generating signatures.
 
+- [A200K/IDA Pro SigMaker: Signature maker plugin for IDA 8.x](https://github.com/A200K/IDA-Pro-SigMaker)
+
+  ![](https://camo.githubusercontent.com/2b5d257f59685b1a148d62d5c2eda378f64a681a7479802c7462a009b4b4ccce/68747470733a2f2f692e696d6775722e636f6d2f4b6565556154472e706e67)
+
 - [SigMakerEx](https://github.com/kweatherman/sigmakerex)
   
   ![](https://github.com/kweatherman/sigmakerex/blob/ad4182201abff782faa2be3b8a47af1e36b2c20b/images/main.png?raw=true)

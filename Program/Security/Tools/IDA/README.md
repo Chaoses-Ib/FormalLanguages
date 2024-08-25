@@ -15,6 +15,8 @@ v8.3:
 [Welcome to IDA 9.0 Beta](https://out5.hex-rays.com/beta90_6ba923/)
 - Headless processing with IDAlib
 - WASM Disassembler and File Format Loader
+  - 不能反编译
+  - 不支持部分特性：`mutable-globals`、`sign-ext`
 - nanoMIPS Disassembler and Decompiler + md1rom Loader
 - New RISC-V Decompiler and Disassembler Extensions
 - C++ Exceptions Support in the Decompiler
@@ -23,18 +25,24 @@ v8.3:
 - Metadata Descriptors for Plugins
 - No more IDA32
 - UI Improvements
+- 仍然只能单线程分析
+- [IDA 9.0 BETA-资源下载-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-282834.htm)
+- [\[分享\]IDA BETA 9.0 crack-资源下载-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-282835.htm)
 
 ## Security
-- [IdaMeme: Crashes ida on static analyses.](https://github.com/Azvanzed/IdaMeme)
+- CVE-2024-44083
+  - [IdaMeme: Crashes ida on static analyses.](https://github.com/Azvanzed/IdaMeme)
 
-  Massive chained JMPs at the entry point will result in stack overflow and high peak memory usage.
-  - 8k → 4M (default `SizeOfStackReserve`), 2.5G
-  - 20k → <40M, 5G
+    Massive chained JMPs at the entry point will result in stack overflow and high peak memory usage.
+    - 8k → 4M (default `SizeOfStackReserve`), 2.5G
+    - 20k → <40M, 5G
 
-  Also work on Ghidra's Auto Analysis, though it won't crash.
-  - 20k → ?, >2.2G
+    Also work on Ghidra's Auto Analysis, though it won't crash.
+    - 20k → ?, >2.2G
 
-  [\[Source\] IdaMeme](https://www.unknowncheats.me/forum/anti-cheat-bypass/578797-idameme.html)
+    [\[Source\] IdaMeme](https://www.unknowncheats.me/forum/anti-cheat-bypass/578797-idameme.html)
+
+  - [CVE-2024-44083: Makes IDA (all versions) to crash upon opening it.](https://github.com/Azvanzed/CVE-2024-44083)
 
 - [The Dukes R&D Finds a New Anti-Analysis Technique](https://unit42.paloaltonetworks.com/unit42-the-dukes-rd-finds-a-new-anti-analysis-technique/)
 

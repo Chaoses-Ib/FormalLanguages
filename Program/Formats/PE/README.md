@@ -85,6 +85,8 @@ Rust:
     [Add pelite::Wrap to the top level crate documentation - Issue #250 - CasualX/pelite](https://github.com/CasualX/pelite/issues/250)
 
 - [exe-rs: The PE Executable Library, but for Rust!](https://github.com/frank2/exe-rs)
+  - Modifying: `add_section()`, `fix_image_size()`...
+
 - [pe-parser: PE Parsing, but blazing fast](https://github.com/IsaacMarovitz/pe-parser)
 
   > Goblin is probably going to be more useful for an actual production project. I did notice a couple of differences in design choices.

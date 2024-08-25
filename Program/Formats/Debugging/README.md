@@ -1,4 +1,8 @@
 # Debugging Information
+[Debugging data format - Wikipedia](https://en.wikipedia.org/wiki/Debugging_data_format)
+
+[Debug symbol - Wikipedia](https://en.wikipedia.org/wiki/Debug_symbol)
+
 [Debug Information Files | Sentry for Minidumps](https://docs.sentry.io/platforms/native/guides/minidumps/data-management/debug-files/)
 - [Debug Identifiers](https://docs.sentry.io/platforms/native/guides/minidumps/data-management/debug-files/identifiers/)
 
@@ -104,6 +108,7 @@ C++:
 - [RawPDB: A C++11 library for reading Microsoft Program DataBase PDB files](https://github.com/MolecularMatters/raw_pdb)
 - [libpdb: Parser for Microsoft Program Database (PDB) files](https://github.com/shareef12/libpdb)
 - [libmspdb: Parsing library for the Microsoft Program Database files](https://github.com/IntroVirt/libmspdb)
+- [LIEF::pdb](https://lief.re/doc/stable/extended/pdb/index.html)
 
 Rust:
 - [pdb: A parser for Microsoft PDB (Program Database) debugging information](https://github.com/getsentry/pdb)
@@ -151,6 +156,8 @@ Rust:
   Tools:
   - [pdbview: dump all available information from PDBs](https://github.com/landaire/pdbview)
   - [symbolizer-rs: A fast execution trace symbolizer for Windows that runs on all major platforms and doesn't depend on any Microsoft libraries.](https://github.com/0vercl0k/symbolizer-rs)
+
+- [lief::pdb](https://lief.re/doc/stable/extended/pdb/index.html)
 
 - ~~[legolas](https://crates.io/crates/legolas)~~
 

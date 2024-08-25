@@ -29,11 +29,15 @@ An **overlay (附加数据段)** is the auxiliary data attached after the logica
 ## Libraries
 - [LIEF: Library to Instrument Executable Formats](https://github.com/lief-project/LIEF)
   - Formats: ELF, PE, MachO, OAT, DEX, VDEX, ART
-  - Languages: C++, Python, [Rust](https://lief.re/doc/stable/api/rust/index.html), C (limited)
+  - Languages: [C++](https://lief.re/doc/stable/api/cpp/index.html), [Python](https://lief.re/doc/stable/api/python/index.html), [Rust](https://lief.re/doc/stable/api/rust/index.html), [C](https://lief.re/doc/stable/api/c/index.html) (limited)
   
   PE:
   - Addresses: `Binary::{rva_to_offset, va_to_offset, offset_to_virtual_address}` (in `uint64_t`)
   - Raw: `Binary::{patch_address(addr_type), get_content_from_virtual_address}`
+  - Relocations: `add_relocation()`, `remove_all_relocations()`
+  - Exports: Cannot modify 
+
+    [Unable to change exported function name - Issue #527 - lief-project/LIEF](https://github.com/lief-project/LIEF/issues/527)
 
   [09 - How to use frida on a non-rooted device --- LIEF Documentation](https://lief-project.github.io/doc/latest/tutorials/09_frida_lief.html)
 

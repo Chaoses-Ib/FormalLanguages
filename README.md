@@ -48,12 +48,12 @@
 ## [Programming Languages](Program/README.md)
 - [Identifers](Program/Identifers.md)
 - Data
-  - Strings
+  - [Literals](Program/Data/Literals.md)
+  - [Strings](Program/Data/Strings/README.md)
+    - [Literals](Program/Data/Strings/Literals.md)
     - [Compilation](Program/Data/Strings/Compilation.md)
     - [Inline](Program/Data/Strings/Inline.md)
     - [Obfuscation](Program/Data/Strings/Obfuscation/README.md)
-- [Literals](Program/Literals/README.md)
-  - [String Literals](Program/Literals/Strings.md)
 - [Program Analysis](Program/Analysis/README.md)
   - [Program Differing](Program/Analysis/Differing.md)
   - [Tracing](Program/Analysis/Tracing.md)
@@ -84,8 +84,6 @@
   - [Obfuscation](Program/Security/Obfuscation/README.md)
     - [Controlf-flow Obfuscation](Program/Security/Obfuscation/Control/README.md)
       - [CFG Art](Program/Security/Obfuscation/Control/CFG%20Art.md)
-    - Data-flow Obfuscation
-      - [String Obfuscation](Program/Security/Obfuscation/Data/String.md)
     - [ISA-level Obfuscation](Program/Security/Obfuscation/ISA/README.md)
   - Tools
     - [IDA](Program/Security/Tools/IDA/README.md)

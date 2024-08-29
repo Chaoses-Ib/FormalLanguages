@@ -7,6 +7,16 @@
 
 [awesome-llvm-security: awesome llvm security](https://github.com/gmh5225/awesome-llvm-security)
 
+## IR
+Rust:
+- [Vicis: Manipulate LLVM-IR in Pure Rust](https://github.com/maekawatoshiki/vicis)
+
 ## Backends
 - C++
   - [LLIL Transpiler: transpile llil to c++ for execution and testing](https://github.com/Vector35/llil_transpiler)
+
+## Passes
+- [llvm-passgen: A small tool for quickly generating LLVM passes](https://github.com/woodruffw/llvm-passgen)
+
+Rust:
+- [Custom LLVM Pass : r/rust](https://www.reddit.com/r/rust/comments/tyfb2n/custom_llvm_pass/)

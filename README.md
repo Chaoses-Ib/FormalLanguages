@@ -47,6 +47,11 @@
 
 ## [Programming Languages](Program/README.md)
 - [Identifers](Program/Identifers.md)
+- Data
+  - Strings
+    - [Compilation](Program/Data/Strings/Compilation.md)
+    - [Inline](Program/Data/Strings/Inline.md)
+    - [Obfuscation](Program/Data/Strings/Obfuscation/README.md)
 - [Literals](Program/Literals/README.md)
   - [String Literals](Program/Literals/Strings.md)
 - [Program Analysis](Program/Analysis/README.md)

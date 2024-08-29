@@ -54,6 +54,7 @@
     - [Compilation](Program/Data/Strings/Compilation.md)
     - [Inline](Program/Data/Strings/Inline.md)
     - [Obfuscation](Program/Data/Strings/Obfuscation/README.md)
+  - [Obfuscation](Program/Data/Obfuscation.md)
 - [Program Analysis](Program/Analysis/README.md)
   - [Program Differing](Program/Analysis/Differing.md)
   - [Tracing](Program/Analysis/Tracing.md)

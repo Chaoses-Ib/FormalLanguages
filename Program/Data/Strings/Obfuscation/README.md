@@ -1,13 +1,21 @@
 # String Obfuscation
+- Cryptography-based
+- Program-based
+- NLP/Unicode-based
+
+Symbols:
+- [Imports](../../../Formats/README.md#imports)
+
 ## C++
 - constexpr/consteval
+  - [JustasMasiulis/xorstr: heavily vectorized c++17 compile time string encryption.](https://github.com/JustasMasiulis/xorstr)
   - [adamyaxley/Obfuscate: Guaranteed compile-time string literal obfuscation header-only library for C++14](https://github.com/adamyaxley/Obfuscate)  
   - [skCrypter: Compile-time, Usermode + Kernelmode, safe and lightweight string crypter library for C++11+](https://github.com/skadro-official/skCrypter)
   - [katursis/StringObfuscator: Simple header-only compile-time library for string obfuscation (C++14)](https://github.com/katursis/StringObfuscator)
   - [String Obfuscator in Compile Time: C++ Header only string obfuscator library using metaprogramming. Affine Cipher technique is used for encryption and decryption.](https://github.com/Snowapril/String-Obfuscator-In-Compile-Time)
   - [pyj2323/StrCrypt: Compile-time string crypter library for C++](https://web.archive.org/web/20220620020218/https://github.com/pyj2323/StrCrypt) (C++20)
-
-    即使开了 `/O2` 也会生成几个多余的 lambda。不过链接时可能会优化掉。
+    - unterumarmung/fixed\_string
+    - 即使开了 `/O2` 也会生成几个多余的 lambda。不过链接时可能会优化掉。
 
     [StrCrypt.cpp](StrCrypt.cpp)
 
@@ -93,3 +101,14 @@ for line in range(65536):
     except UnicodeDecodeError:
         pass
 ```
+
+## Rust
+- [obfstr: Compiletime string literal obfuscation for Rust.](https://github.com/CasualX/obfstr)
+  - ~~[IDA 7.5 can see through obfstr 0.2 obfuscation - Issue #29 - CasualX/obfstr](https://github.com/CasualX/obfstr/issues/29)~~
+  - ~~[Break ghidra constant folding through inline-never fns by roblabla - Pull Request #46 - CasualX/obfstr](https://github.com/CasualX/obfstr/pull/46)~~
+- [muddy: A static string obfuscation library for rust projects](https://github.com/orph3usLyre/muddy-waters)
+- [litcrypt: A Rust compiler plugin to encrypt string literal at compile time.](https://github.com/Kudaes/litcrypt.rs)
+- [encrust](https://github.com/emiltayl/encrust/)
+- [include-crypt-bytes: Rust macro to embed encrypted files in compiled binary](https://github.com/breakpointninja/include-crypt-bytes)
+- [goldberg: A Rust-based obfuscation macro library!](https://github.com/frank2/goldberg)
+- [rust-obfuscator: Automatic Rust Obfuscator and Macro Library](https://github.com/dronavallipranav/rust-obfuscator)

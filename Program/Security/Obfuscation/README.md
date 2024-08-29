@@ -67,7 +67,13 @@ the dimensions of the array)
   The fundamental idea is to convert a portion of the code to a diﬀerent machine code. This new code is then executed by a new virtual machine interpreter included in the obfuscated code. There is usually one to two orders of magnitude slowdown for each level of interpretation, and so this transformation should only be used for those sections of code that consumes a small part of the total runtime.[^survey]
 
 ## Tools
+- [EgeBalci/deoptimizer: Evasion by machine code de-optimization.](https://github.com/EgeBalci/deoptimizer)
 - [xObf: Simple x86/x86\_64 instruction level obfuscator based on a basic SBI engine](https://github.com/d35ha/xObf)
+
+Rust:
+- [goldberg: A Rust-based obfuscation macro library!](https://github.com/frank2/goldberg)
+- [rust-obfuscator: Automatic Rust Obfuscator and Macro Library](https://github.com/dronavallipranav/rust-obfuscator)
+- [debugoff: Linux anti-debugging and anti-analysis rust library](https://github.com/0xor0ne/debugoff)
 
 
 [^survey]: Balakrishnan, Arini, and Chloe Schulze. “Code Obfuscation Literature Survey,” n.d., 10.

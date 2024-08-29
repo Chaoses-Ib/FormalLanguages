@@ -1,6 +1,14 @@
 # Executable Formats
 [Wikipedia](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format)
 
+## Imports
+C++:
+- [lazy\_importer: library for importing functions from dlls in a hidden, reverse engineer unfriendly way](https://github.com/JustasMasiulis/lazy_importer)
+
+Rust:
+- [DInvoke\_rs: Dynamically invoke arbitrary unmanaged code](https://github.com/Kudaes/DInvoke_rs)
+- [razy\_importer: Rust implementation of lazy\_importer](https://github.com/kkent030315/razy_importer)
+
 ## Relocation
 [Wikipedia](https://en.wikipedia.org/wiki/Relocation_(computing))
 

@@ -8,6 +8,14 @@
 
   [\[原创\]VMP源码泄露后的一些分析和用途-编程技术-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-279763.htm)
 
+  [\[原创\]VMP泄露编译的一些注意事项-编程技术-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-279803.htm)
+
+[\[讨论\]VMP全保护带VM脱壳演示-加壳脱壳-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-283102.htm)
+
+## Anti-debugging
+[VMP源码分析：反调试与绕过方法-加壳脱壳-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-282244.htm)
+- `wine_get_version`
+
 ## Analysis
 [x64Unpack: Hybrid Emulation Unpacker for 64-bit Windows Environments and Detailed Analysis Results on VMProtect 3.4](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9139515)
 

@@ -43,6 +43,14 @@
 
 [Style Guide](https://protobuf.dev/programming-guides/style/)
 
+## Scalar value types
+- `string`: UTF-8, len < u32::MAX
+- `bytes`: len < u32::MAX
+  - C++: `string`
+  - Rust: `Vec<u8>`
+  - C#/Java: `ByteString`
+  - Python: `bytes`
+
 ## Rust
 - [prost: A Protocol Buffers implementation for the Rust Language](https://github.com/tokio-rs/prost)
 

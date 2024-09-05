@@ -71,6 +71,7 @@
   - [Shellcode](Program/Formats/Shellcode/README.md)
   - [Debugging Information](Program/Formats/Debugging/README.md)
   - [Protable Executable](Program/Formats/PE/README.md)
+    - [Resources](Program/Formats/PE/Resources.md)
   - [Memory Dumps](Program/Formats/Dumps/README.md)
   - Packers
     - [UPX](Program/Formats/Packers/UPX/README.md)

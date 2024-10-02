@@ -6,6 +6,9 @@ Minidumps may cannot use:
 - `!runaway`
 
 ## Tools
+- [ProcDump](https://learn.microsoft.com/en-us/sysinternals/downloads/procdump)
+  - `-t` requires debugging
+
 - WinDbg
 
   [Module versions in a crash dump - Stack Overflow](https://stackoverflow.com/questions/182365/module-versions-in-a-crash-dump)

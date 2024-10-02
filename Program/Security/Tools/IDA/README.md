@@ -12,7 +12,7 @@ v8.3:
 - [IDA Pro 8.3 (x86, x86\_64) - 『逆向资源区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn](https://www.52pojie.cn/thread-1861384-1-1.html)
 
 ### v9
-[Welcome to IDA 9.0 Beta](https://out5.hex-rays.com/beta90_6ba923/)
+[Welcome to IDA 9.0 Beta](https://out5.hex-rays.com/beta90_6ba923/) (240807)
 - Headless processing with IDAlib
 - WASM Disassembler and File Format Loader
   - 不能反编译
@@ -29,20 +29,29 @@ v8.3:
 - [IDA 9.0 BETA-资源下载-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-282834.htm)
 - [\[分享\]IDA BETA 9.0 crack-资源下载-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-282835.htm)
 
+v9.0-RC1+240925:
+- magnet:?xt=urn:btih:920c1a578e815e9d0e4b843179306cdcb5e8e00d&dn=idapro90rc1
+- [\[下载\] IDA Pro 9.0 RC1-资源下载-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-283752.htm)
+
+[IDA 9.0 | Hex-Rays Docs](https://docs.hex-rays.com/release-notes/9_0)
+- BUGFIX: debugger: win32: IDA's debugger could be detected by a file lock on the modules being loaded into the process
+
 ## Security
-- CVE-2024-44083
+- CVE-2024-44083: Aggressively convert jumps to thunks (v7.7~9.0-beta)
+
+  If `Aggressively convert jumps to thunks` is on, massive chained JMPs at the entry point will result in stack overflow and high peak memory usage.
+  - 8k → 4M (default `SizeOfStackReserve`), 2.5G
+  - 20k → <40M, 5G
+
+  Also work on Ghidra's Auto Analysis, though it won't crash.
+  - 20k → ?, >2.2G
+
+  Tools:
   - [IdaMeme: Crashes ida on static analyses.](https://github.com/Azvanzed/IdaMeme)
-
-    Massive chained JMPs at the entry point will result in stack overflow and high peak memory usage.
-    - 8k → 4M (default `SizeOfStackReserve`), 2.5G
-    - 20k → <40M, 5G
-
-    Also work on Ghidra's Auto Analysis, though it won't crash.
-    - 20k → ?, >2.2G
 
     [\[Source\] IdaMeme](https://www.unknowncheats.me/forum/anti-cheat-bypass/578797-idameme.html)
 
-  - [CVE-2024-44083: Makes IDA (all versions) to crash upon opening it.](https://github.com/Azvanzed/CVE-2024-44083)
+  - [CVE-2024-44083: Makes IDA (most versions) to crash upon opening it.](https://github.com/Azvanzed/CVE-2024-44083)
 
 - [The Dukes R&D Finds a New Anti-Analysis Technique](https://unit42.paloaltonetworks.com/unit42-the-dukes-rd-finds-a-new-anti-analysis-technique/)
 

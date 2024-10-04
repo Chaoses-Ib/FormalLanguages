@@ -46,7 +46,8 @@
   - [Memory Alignment](Processors/x86/Memory/Alignment.md)
 
 ## [Programming Languages](Program/README.md)
-- [Identifers](Program/Identifers.md)
+- [Identifers](Program/Identifiers/README.md)
+  - [Name Mangling](Program/Identifiers/Mangling.md)
 - Data
   - [Literals](Program/Data/Literals.md)
   - [Strings](Program/Data/Strings/README.md)
@@ -61,7 +62,6 @@
   - [Performance Analysis](Program/Analysis/Performance/README.md)
     - [Profiling](Program/Analysis/Performance/Profiling.md)
 - [Compilers](Program/Compilers/README.md)
-  - [Name Mangling](Program/Compilers/Name.md)
   - Optimization
     - [Interprocedural Optimization](Program/Compilers/Optimization/Interprocedural.md)
   - [LLVM](Program/Compilers/LLVM/README.md)

@@ -1,6 +1,8 @@
 # UPX
 [upx/upx: UPX - the Ultimate Packer for eXecutables](https://github.com/upx/upx)
 
+[\[原创\] UPX源码学习和简单修改-加壳脱壳-看雪](https://bbs.kanxue.com/thread-275753.htm)
+
 `scoop install upx`
 
 适合用于 使用少且硬盘占用大 的软件
@@ -22,6 +24,8 @@ UPX 可以看作是智能存储需求下的初代解决方案。
 
 Anti-anti-unpacking:
 - Manual unpacking
+
+- [DosX-dev/UPX-Patcher: Make "upx -d" unpacking impossible!](https://github.com/DosX-dev/UPX-Patcher)
 
 - [JPCERTCC/upx-mod: Modified from UPX to allow unpacking of ELF binary using the UPX anti-unpacking technique.](https://github.com/JPCERTCC/upx-mod)
 

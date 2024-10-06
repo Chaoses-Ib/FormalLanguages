@@ -51,6 +51,76 @@ Tools:
 
 - PDB does not include ImageBase, but include sections.
 
+Symbols:
+- Public: Functions with mangled function names (with arguments)
+  - Occur before procedures
+
+  ```rust
+  /// A public symbol with a mangled name.
+  ///
+  /// Symbol kind `S_PUB32`, or `S_PUB32_ST`.
+  #[derive(Clone, Copy, Debug, Eq, PartialEq)]
+  pub struct PublicSymbol<'t> {
+      /// The public symbol refers to executable code.
+      pub code: bool,
+      /// The public symbol is a function.
+      pub function: bool,
+      /// The symbol is in managed code (native or IL).
+      pub managed: bool,
+      /// The symbol is managed IL code.
+      pub msil: bool,
+      /// Start offset of the symbol.
+      pub offset: PdbInternalSectionOffset,
+      /// Mangled name of the symbol.
+      pub name: RawString<'t>,
+  }
+  ```
+- Procedures: Functions with unmangled names (no arguments)
+
+  ```rust
+  /// A procedure, such as a function or method.
+  ///
+  /// Symbol kinds:
+  ///  - `S_GPROC32`, `S_GPROC32_ST` for global procedures
+  ///  - `S_LPROC32`, `S_LPROC32_ST` for local procedures
+  ///  - `S_LPROC32_DPC` for DPC procedures
+  ///  - `S_GPROC32_ID`, `S_LPROC32_ID`, `S_LPROC32_DPC_ID` for procedures referencing types from the
+  ///    ID stream rather than the Type stream.
+  #[derive(Clone, Copy, Debug, Eq, PartialEq)]
+  pub struct ProcedureSymbol<'t> {
+      /// Whether this is a global or local procedure.
+      pub global: bool,
+      /// Indicates Deferred Procedure Calls (DPC).
+      pub dpc: bool,
+      /// The parent scope that this procedure is nested in.
+      pub parent: Option<SymbolIndex>,
+      /// The end symbol of this procedure.
+      pub end: SymbolIndex,
+      /// The next procedure symbol.
+      pub next: Option<SymbolIndex>,
+      /// The length of the code block covered by this procedure.
+      pub len: u32,
+      /// Start offset of the procedure's body code, which marks the end of the prologue.
+      pub dbg_start_offset: u32,
+      /// End offset of the procedure's body code, which marks the start of the epilogue.
+      pub dbg_end_offset: u32,
+      /// Identifier of the procedure type.
+      ///
+      /// The type contains the complete signature, including parameters, modifiers and the return
+      /// type.
+      pub type_index: TypeIndex,
+      /// Code offset of the start of this procedure.
+      pub offset: PdbInternalSectionOffset,
+      /// Detailed flags of this procedure.
+      pub flags: ProcedureFlags,
+      /// The full, demangled name of the procedure.
+      pub name: RawString<'t>,
+  }
+  ```
+  `dbg_start_offset` and `dbg_end_offset` are 0 for Rust functions.
+
+[MSVC PDBs Are Filled With Stale Debug Info](https://www.computerenhance.com/p/msvc-pdbs-are-filled-with-stale-debug)
+
 Samples:
 - [getsentry/pdb/fixtures/self](https://github.com/getsentry/pdb/tree/master/fixtures/self)
 

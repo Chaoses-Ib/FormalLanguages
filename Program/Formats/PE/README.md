@@ -22,6 +22,37 @@ Samples:
 - [Windows PE Artifact Library: Contains over 375 samples of Windows Portable Executable (PE) files ranging from the common to the completely esoteric with detailed origin information for each sample. Spans decades of computing in roughly 64MB of disk storage. Unique, ultra-rare PE file format artifacts. Any researcher's most delightful find!](https://github.com/cubiclesoft/windows-pe-artifact-library)
 - [corkami/pocs/PE](https://github.com/corkami/pocs/tree/master/PE)
 
+## Architectures
+- PeLite
+  ```rust
+  let pe = pelite::PeFile::from_bytes(bytes)?;
+  let is_32_bit = match pe {
+      pelite::Wrap::T32(_) => true,
+      pelite::Wrap::T64(_) => false,
+  };
+  let image_base = match pe.optional_header() {
+      pelite::Wrap::T32(pe) => pe.ImageBase as u64,
+      pelite::Wrap::T64(pe) => pe.ImageBase,
+  };
+  ```
+  ```rust
+  pub enum ImageBase {
+      X32(u32),
+      X64(u64),
+  }
+
+  match pe.optional_header() {
+      pelite::Wrap::T32(pe) => ImageBase::X32(pe.ImageBase),
+      pelite::Wrap::T64(pe) => ImageBase::X64(pe.ImageBase),
+  }
+  ```
+- goblin
+  ```rust
+  fn is_executable_32_bit<P: AsRef<Path>>(path: P) -> Result<bool, anyhow::Error> {
+      Ok(!goblin::pe::PE::parse(&std::fs::read(path)?)?.is_64)
+  }
+  ```
+
 ## Addresses
 - Image base (base address)
 

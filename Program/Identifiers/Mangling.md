@@ -1,12 +1,92 @@
 # Name Mangling
 [Wikipedia](https://en.wikipedia.org/wiki/Name_mangling)
 
+Tools:
+- [Compiler Explorer](https://godbolt.org/)
+- LLM
+
 ## Languages
 - C
 - C++
   - GCC: Start with `_Z`, `__Z`, `___Z` or `____Z`
+  - Clang
   - MSVC: Start with `?` or `@?`
     - RTTI: Start with `.`
+
+    [Visual C++ name mangling - Wikiversity](https://en.m.wikiversity.org/wiki/Visual_C%2B%2B_name_mangling)
+    - No arguments in name-only names
+    - Include the return type
+    - 父函数有参数时 lambda 会变成全局的，但 method 不会
+    - 函数内 method 和空参数函数内的 lambda 从属于 `` `func' ``
+
+  GCC vs. Clang:
+  - [Mangling difference between GCC and clang - Issue #55171 - llvm/llvm-project](https://github.com/llvm/llvm-project/issues/55171)
+  - [Different mangled name for template specialization for clang and gcc - Issue #62765 - llvm/llvm-project](https://github.com/llvm/llvm-project/issues/62765)
+
+  GCC, Clang vs. MSVC:
+  - `func()`
+    - GCC/Clang: `_Z4funcv`
+      - `func()`
+    - MSVC: `?func@@YAHXZ`
+      - `int __cdecl func(void)`
+        - `func`
+  - `func(int)`
+    - Clang: `_Z4funci`
+      - `func(int)`
+    - MSVC: `?func@@YAHH@Z`
+      - `int __cdecl func(int)`
+        - `func`
+  - `func()` lambda
+    - GCC: `_ZZ4funcvENKUlvE_clEv`
+      - `func()::{lambda()#1}::operator()() const`
+    - Clang: `_ZZ4funcvENK3$_0clEv`
+      - `func()::$_0::operator()() const`
+    - MSVC: `??R<lambda_1>@?1??func@@YAHXZ@QEBA@XZ`
+      - ``public: __cdecl `int __cdecl func(void)'::`2'::<lambda_1>::operator()(void) const``
+        - `` `func'::`2'::<lambda_1>::operator() ``
+  - `func(int)` lambda
+    - Clang: `_ZZ4funciENK3$_0clEv`
+      - `func(int)::$_0::operator()() const`
+    - MSVC: `??R<lambda_fab226a428f701539bd67a4d25ef65c8>@@QEBA@XZ`
+      - ``public: __cdecl <lambda_fab226a428f701539bd67a4d25ef65c8>::operator()(void) const``
+        - `<lambda_fab226a428f701539bd67a4d25ef65c8>::operator()`
+  - `func()` method
+    - GCC/Clang: `_ZZ4funcvEN5Class6methodEv`
+      - `func()::Class::method()`
+    - MSVC: `?method@Class@?1??func@@YAHXZ@QEAAHXZ`
+      - ``public: int __cdecl `int __cdecl func(void)'::`2'::Class::method(void)``
+        - `` `func'::`2'::Class::method ``
+  - `func(int)` method
+    - Clang: `_ZZ4funciEN5Class6methodEv`
+      - `func(int)::Class::method()`
+    - MSVC: `?method@Class@?1??func@@YAHH@Z@QEAAHXZ`
+      - ``public: int __cdecl `int __cdecl func(int)'::`2'::Class::method(void)``
+        - `` `func'::`2'::Class::method ``
+
+  ```cpp
+  #include <stdio.h>
+
+  int func(int a) {
+      auto lambda = [](){
+          return 123;
+      };
+      struct Class {
+          int method() {
+              return 456;
+          }
+      } obj;
+      printf("%d %d", lambda(), obj.method());
+      return 456;
+  }
+
+  int main() {
+      func(789);
+  }
+  ```
+  [Convert GCC under Cygwin Name Mangling to VC++ Name Mangling](https://gcc-help.gcc.gnu.narkive.com/8ikYYHZN/convert-gcc-under-cygwin-name-mangling-to-vc-name-mangling)
+
+  要是有天才混编 GCC/Clang 和 MSVC 的话就更乱了。
+
 - Rust
   - `legacy`: Start with `_ZN`, and filename hashes are used for disambiguation
     ```regex
@@ -48,6 +128,8 @@
 - Pascal
 - Fortran
 
+[Anyone use "pretty" name mangling in their language implementation? : r/ProgrammingLanguages](https://www.reddit.com/r/ProgrammingLanguages/comments/12m738n/anyone_use_pretty_name_mangling_in_their_language/)
+
 ## Mangling
 Rust:
 - [What about manually mangling rust symbols (NOT demangling) : r/rust](https://www.reddit.com/r/rust/comments/1ay6bop/what_about_manually_mangling_rust_symbols_not/)
@@ -68,6 +150,7 @@ C++:
 - [pharos-demangle: Demangles C++ symbol names genarated by Microsoft Visual C++ in order to retrieve the original C++ declarations.](https://github.com/cmu-sei/pharos-demangle)
 - Rust
   - [cpp\_demangle: A crate for demangling C++ symbols](https://github.com/gimli-rs/cpp_demangle)
+    - AST
     - [MSVC demangling - Issue #36 ](https://github.com/gimli-rs/cpp_demangle/issues/36)
     - [Add Rust demangling mode - Issue #63](https://github.com/gimli-rs/cpp_demangle/issues/63)
 
@@ -90,7 +173,7 @@ C++:
   Neither by both | 6,322
   By both | 49,931
 
-  undname performs much better than msvc-demangler. I think it's worth the 22 KiB cost.
+  undname performs much better than msvc-demangler. I think it's worth the 13 KiB cost.
 
 - Wine: [undname.c](https://gitlab.winehq.org/wine/wine/-/blob/HEAD/dlls/msvcrt/undname.c)
   - VMProtect

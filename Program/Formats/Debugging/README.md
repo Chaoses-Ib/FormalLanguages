@@ -51,21 +51,69 @@ Tools:
 
 - PDB does not include ImageBase, but include sections.
 
-PE:
-- [`PDB70DebugInfo`](https://llvm.org/doxygen/CVDebugRecord_8h_source.html)
-  - `CVSignature`
-  - `Signature` (GUID)
-  - `Age`
-  - `PDBFileName`
-- [`IMAGE_DEBUG_DIRECTORY`](https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-image_debug_directory)
-  - `TimeDateStamp`
-
 Samples:
 - [getsentry/pdb/fixtures/self](https://github.com/getsentry/pdb/tree/master/fixtures/self)
 
   `git submodule add -b 0.8.0-resym "https://github.com/ergrelet/pdb.git" tests/pdb`
 
 - Windows
+
+### PE
+- [`IMAGE_DEBUG_DIRECTORY`](https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-image_debug_directory)
+  - `TimeDateStamp`
+
+- `CV_INFO_PDB70` ([`PDB70DebugInfo`](https://llvm.org/doxygen/CVDebugRecord_8h_source.html))
+  - `CVSignature`
+  - `Signature` (GUID)
+  - `Age`
+  - `PDBFileName`
+
+  Libraries:
+  - PeLite: Only `pdb_file_name()`, no `signature()`
+    ```rust
+    let pe = pelite::PeFile::from_bytes(bytes)?;
+    let debug = pe.debug().ok();
+    let pdb_id = debug.and_then(|d| {
+            d.iter().find_map(|dir| {
+                dir.entry()
+                    .ok()
+                    .and_then(|e| e.as_code_view())
+                    .and_then(|cv| match cv {
+                        pelite::pe64::debug::CodeView::Cv20 { .. } => None,
+                        pelite::pe64::debug::CodeView::Cv70 { image, .. } => Some((
+                            Uuid::from_fields(
+                                image.Signature.Data1,
+                                image.Signature.Data2,
+                                image.Signature.Data3,
+                                &image.Signature.Data4,
+                            ),
+                            image.Age,
+                        )),
+                    })
+            })
+        });
+    let debug_info_path: debug.and_then(|d| d.pdb_file_name()).map(|s| s.to_string());
+    ```
+    `pelite::wrap::debug` is private, but `pelite::{pe32, pe64}::debug` is public.
+  - goblin:
+    ```rust
+    let pe = goblin::pe::PE::parse(bytes)?;
+    let pdb_info = pe.debug_data.and_then(|debug_data| {
+        // info!("debug_data: {:?}", debug_data);
+        debug_data.codeview_pdb70_debug_info
+    });
+    let pdb_id = pdb_info
+        .map(|pdb_info| (Uuid::from_bytes_le(pdb_info.signature), pdb_info.age));
+    let debug_info_path = pdb_info.map(|pdb_info| {
+        String::from_utf8_lossy(
+            pdb_info
+                .filename
+                .strip_suffix(&[0])
+                .unwrap_or(pdb_info.filename),
+        )
+        .to_string()
+    });
+    ```
 
 ### Libraries
 - [Debug Interface Access SDK](https://learn.microsoft.com/en-us/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk?view=vs-2022)

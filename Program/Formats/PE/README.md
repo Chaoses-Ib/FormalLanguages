@@ -79,12 +79,17 @@ C/C++:
 - [mgeeky/PE-library: Lightweight Portable Executable parsing library and a demo peParser application.](https://github.com/mgeeky/PE-library)
 
 Rust:
-- [PeLite: Lightweight, memory-safe, zero-allocation library for reading and navigating PE binaries.](https://github.com/CasualX/pelite)
+- [PeLite: Lightweight, memory-safe, zero-allocation library for reading and navigating PE binaries.](https://github.com/CasualX/pelite) (inactive)
+  - Usable, but the API is fucked up.
+  - Wasm: 6 KiB
   - PE32 and PE64 are different types, but there is a [Wrap](https://docs.rs/pelite/latest/pelite/enum.Wrap.html).
 
     [Add pelite::Wrap to the top level crate documentation - Issue #250 - CasualX/pelite](https://github.com/CasualX/pelite/issues/250)
+  - What's the difference between `PeFile<'a>` and `PeView<'a>`?
 
-- [exe-rs: The PE Executable Library, but for Rust!](https://github.com/frank2/exe-rs)
+    `PeFile` is unmapped (on disk), `PeView` is mapped (loaded in memory).
+
+- [exe-rs: The PE Executable Library, but for Rust!](https://github.com/frank2/exe-rs) (inactive)
   - Modifying: `add_section()`, `fix_image_size()`...
 
 - [pe-parser: PE Parsing, but blazing fast](https://github.com/IsaacMarovitz/pe-parser)

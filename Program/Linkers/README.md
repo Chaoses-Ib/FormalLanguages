@@ -1,14 +1,38 @@
 # Linkers
 [Wikipedia](https://en.wikipedia.org/wiki/Linker_(computing))
 
+## Function sections
+- GCC/Clang: `-ffunction-sections`
+
+- MSVC: COMDAT by [`/Gy`](https://learn.microsoft.com/en-us/cpp/build/reference/gy-enable-function-level-linking)
+
+  [visual c++ - Relation between MSVC Compiler & linker option for COMDAT folding - Stack Overflow](https://stackoverflow.com/questions/40554894/relation-between-msvc-compiler-linker-option-for-comdat-folding)
+
+- Rust
+  
+  [How to use "--gc-sections" link option to reduce target binary size? - help - The Rust Programming Language Forum](https://users.rust-lang.org/t/how-to-use-gc-sections-link-option-to-reduce-target-binary-size/71374/3)
+  > Rustc already tells LLVM to use what amounts to `-ffunction-sections -fdata-sections` and passes `-Wl,--gc-sections` to the linker. You don't need to pass them yourself.
+
+  PE: Every function/data is in its own `.text`/`.text$unlikely`/`.[rxp]data` section
+
+  [Rust staticlibs and optimizing for size - Rust Internals](https://internals.rust-lang.org/t/rust-staticlibs-and-optimizing-for-size/5746)
+
 ## Function orders
+Function sections + section ordering.
+
+Section ordering:
+- LLD `--symbol-ordering-file`
+- GOLD `--section-ordering-file`
+- BFD linker scripts
+- MOLD: N/A
 - MSVC
   - [/ORDER (Put Functions in Order) | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/build/reference/order-put-functions-in-order)
-    - COMDAT by `/Gy`
 
     > The linker *automatically* prepends an underscore (`_`) to function names in the response file unless the name starts with a question mark (`?`) or at sign (`@`).
 
     "automatically" means cdecl?
+
+    对链接速度有不小影响？
 
   - `.text$X`
 
@@ -16,13 +40,7 @@
 
     [visual c++ - How to control the order of sections in MSVC x86 compiled binaries? - Stack Overflow](https://stackoverflow.com/questions/47704336/how-to-control-the-order-of-sections-in-msvc-x86-compiled-binaries)
 
-- GCC/Clang `-ffunction-sections`
-  - LLD `--symbol-ordering-file`
-  - GOLD `--section-ordering-file`
-  - BFD linker scripts
-  - MOLD: N/A
-
-  [A practical guide to linker section ordering | Red Hat Developer](https://developers.redhat.com/articles/2024/06/13/practical-guide-linker-section-ordering#linker_section_ordering)
+[A practical guide to linker section ordering | Red Hat Developer](https://developers.redhat.com/articles/2024/06/13/practical-guide-linker-section-ordering#linker_section_ordering)
 
 [linker - How can I force the order of functions in a binary with the gcc toolchain? - Stack Overflow](https://stackoverflow.com/questions/6614209/how-can-i-force-the-order-of-functions-in-a-binary-with-the-gcc-toolchain)
 

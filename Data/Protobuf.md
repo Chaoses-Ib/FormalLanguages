@@ -31,6 +31,12 @@
     repeated Embedding embeddings = 1;
   }
   ```
+  - Python
+    ```python
+    tensors: numpy.ndarray = model.encode(request.chunks)
+    embeddings = [python_server_pb2.Embedding(embedding=list(tensors[i])) for i in range(tensors.shape[0])]
+    return python_server_pb2.EmbedChunksResponse(embeddings=embeddings)
+    ```
 
   [c++ - protocol buffers - store an double array, 1D, 2D and 3D - Stack Overflow](https://stackoverflow.com/questions/6825196/protocol-buffers-store-an-double-array-1d-2d-and-3d)
   ```proto
@@ -74,6 +80,7 @@
 The generated code is shit.
 
 - [How to assign to repeated field? - Stack Overflow](https://stackoverflow.com/questions/23726335/how-to-assign-to-repeated-field)
+- Assign to a message: `m.CopyFrom(...)`
 - [Question: How to set oneof fields in python? - Issue #5012 - protocolbuffers/protobuf](https://github.com/protocolbuffers/protobuf/issues/5012)
 
   `test.a.CopyFrom(...)`

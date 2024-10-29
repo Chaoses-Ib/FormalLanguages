@@ -29,7 +29,7 @@
 ### [Security](Processors/Security/README.md)
 - [Return-Oriented Programming](Processors/Security/Return-Oriented%20Programming.md)
 - [Pwntools](Processors/Security/Pwntools.md)
-- Obfuscation
+- [Obfuscation](Processors/Security/Obfuscation/README.md)
   - [Mixed Boolean-Arithmetic](Processors/Security/Obfuscation/MBA.md)
   - [M/o/Vfuscator](Processors/Security/Obfuscation/MoVfuscator.md)
 
@@ -82,6 +82,7 @@
     - [The Enigma Protector](Program/Formats/Packers/Enigma/README.md)
     - [Themida](Program/Formats/Packers/Themida/README.md)
     - [VMProtect](Program/Formats/Packers/VMProtect/README.md)
+- [Binary Rewriting](Program/Rewriting/README.md)
 - [Hooking](Program/Hooking.md)
 - Security
   - [Obfuscation](Program/Security/Obfuscation/README.md)

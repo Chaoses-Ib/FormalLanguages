@@ -284,6 +284,8 @@ Rust:
 
 - [Elderscroll: PDB Rewriting Rust Library](https://github.com/backengineering/elderscroll)
 
+- [fts\_pdbsrc: Embed and extract source code into .pdb files on the Windows platform](https://github.com/forrestthewoods/fts_pdbsrc)
+
 - [natvis-pdbs: A metabuild / build.rs compatible crate to embed .natvis debug visualizer files into your executable's .pdbs, for ease of debugging.](https://github.com/MaulingMonkey/natvis-pdbs)
 
 .NET:

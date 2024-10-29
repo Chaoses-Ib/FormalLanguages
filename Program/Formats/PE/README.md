@@ -119,6 +119,7 @@ Rust:
   - What's the difference between `PeFile<'a>` and `PeView<'a>`?
 
     `PeFile` is unmapped (on disk), `PeView` is mapped (loaded in memory).
+  - Unaligned: [backengineering/pelite](https://github.com/backengineering/pelite)
 
 - [exe-rs: The PE Executable Library, but for Rust!](https://github.com/frank2/exe-rs) (inactive)
   - Modifying: `add_section()`, `fix_image_size()`...

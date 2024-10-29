@@ -38,6 +38,18 @@ Program analysis can be performed without executing the program ([static program
 Libraries:
 - [Triton: A dynamic binary analysis library. Build your own program analysis tools, automate your reverse engineering, perform software verification or just emulate code.](https://github.com/JonathanSalwan/Triton)
 
+Rust:
+- [lancelot: intel x86(-64) code analysis library that reconstructs control flow](https://github.com/williballenthin/lancelot) ([Docs.rs](https://docs.rs/lancelot/latest/lancelot/))
+  - Almost zero docs...
+
+  九年的项目，九万行代码，但却基本没有文档，why open source then?
+
+  Python: [python-lancelot - PyPI](https://pypi.org/project/python-lancelot/)
+
+  [williballenthin: "I reimplemented the #Ghidra ma..." - Mastodon](https://mastodon.social/@williballenthin/111633995924760195)
+
+- [sleigh-rs: Ghidra Sleight (PCode) parsing library in Rust.](https://github.com/rbran/sleigh-rs)
+
 Reddit:
 - [r/ReverseEngineering](https://www.reddit.com/r/ReverseEngineering/)
 - [r/REGames](https://www.reddit.com/r/REGames/)

@@ -1,4 +1,6 @@
 # x86
+[Crafting the Impossible: X86 Virtualization in the Browser with WebAssembly by Alessandro Pignotti](https://gitnation.com/contents/crafting-the-impossible-x86-virtualization-in-the-browser-with-webassembly)
+
 ## Implementations
 ### Intel
 [Intel® 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html):

@@ -45,6 +45,10 @@ e9patch 这种只进行 jmp 修改的兼容性最好，但是只能用来加代�
 - ddisasm
 - Retrowrite
 - Uroboros
+- Ramblr[^wangRamblrMakingReassembly2017a]
+- Angr
+
+  [Binary rewriting - Issue #1118 - angr/angr](https://github.com/angr/angr/issues/1118)
 
 ## LLVM rewriting
 > lift binaries to LLVM IR
@@ -67,3 +71,4 @@ e9patch 这种只进行 jmp 修改的兼容性最好，但是只能用来加代�
 
 [^schulteBroadComparativeEvaluation2022]: Schulte, E., Brown, M. D., & Folts, V. (2022). A Broad Comparative Evaluation of x86-64 Binary Rewriters. Proceedings of the 15th Workshop on Cyber Security Experimentation and Test, 129–144. https://doi.org/10.1145/3546096.3546112
 [^hiserZiprHighImpactRobust2023]: Hiser, J. D., Nguyen-Tuong, A., & Davidson, J. W. (2023). Zipr: A High-Impact, Robust, Open-source, Multi-platform, Static Binary Rewriter (No. arXiv:2312.00714; Version 1). arXiv. https://doi.org/10.48550/arXiv.2312.00714
+[^wangRamblrMakingReassembly2017a]: Wang, R., Shoshitaishvili, Y., Bianchi, A., Machiry, A., Grosen, J., Grosen, P., Kruegel, C., & Vigna, G. (2017). Ramblr: Making Reassembly Great Again. Proceedings 2017 Network and Distributed System Security Symposium. Network and Distributed System Security Symposium, San Diego, CA. https://doi.org/10.14722/ndss.2017.23225

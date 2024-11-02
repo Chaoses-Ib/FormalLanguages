@@ -39,6 +39,8 @@ Libraries:
 - [Triton: A dynamic binary analysis library. Build your own program analysis tools, automate your reverse engineering, perform software verification or just emulate code.](https://github.com/JonathanSalwan/Triton)
 
 Rust:
+- [Falcon: Binary Analysis Framework in Rust](https://github.com/falconre/falcon) (inactive)
+- [Fugue: A binary analysis framework written in Rust.](https://github.com/fugue-re/fugue-core/tree/crates-io) (inactive)
 - [lancelot: intel x86(-64) code analysis library that reconstructs control flow](https://github.com/williballenthin/lancelot) ([Docs.rs](https://docs.rs/lancelot/latest/lancelot/))
   - Almost zero docs...
 
@@ -47,8 +49,6 @@ Rust:
   Python: [python-lancelot - PyPI](https://pypi.org/project/python-lancelot/)
 
   [williballenthin: "I reimplemented the #Ghidra ma..." - Mastodon](https://mastodon.social/@williballenthin/111633995924760195)
-
-- [sleigh-rs: Ghidra Sleight (PCode) parsing library in Rust.](https://github.com/rbran/sleigh-rs)
 
 Reddit:
 - [r/ReverseEngineering](https://www.reddit.com/r/ReverseEngineering/)

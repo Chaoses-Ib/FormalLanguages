@@ -57,10 +57,13 @@
     - [Obfuscation](Program/Data/Strings/Obfuscation/README.md)
   - [Obfuscation](Program/Data/Obfuscation.md)
 - [Program Analysis](Program/Analysis/README.md)
+  - [Intermediate Representations](Program/Analysis/IR/README.md)
   - [Program Differing](Program/Analysis/Differing.md)
   - [Tracing](Program/Analysis/Tracing.md)
   - [Performance Analysis](Program/Analysis/Performance/README.md)
     - [Profiling](Program/Analysis/Performance/Profiling.md)
+  - Tools
+    - [Binary Ninja](Program/Analysis/Tools/Binary%20Ninja/README.md)
 - [Compilers](Program/Compilers/README.md)
   - Optimization
     - [Interprocedural Optimization](Program/Compilers/Optimization/Interprocedural.md)

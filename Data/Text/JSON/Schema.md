@@ -44,10 +44,11 @@ Unnecessarily complex shit.
     - `--src-lang` doesn't work with directory of schemas?
   - Multiple schema files
     - Different from `quicktype` on each file seperately
-  - `schema.json#/definitions`: not supported (or broken?)
+  - `schema.json#/$defs/` / `schema.json#/definitions/`
 
     [Allow multiple schema inputs - Issue #711 - glideapps/quicktype](https://github.com/glideapps/quicktype/issues/711)
-
+  - All in one big schema struct
+    - Type aliases not aliavalbe (`using X = int64_t`), although type aliases will not be used in structs anyway
   - Array of schemas: not supported
 
 - `--src-lang`: `json` by default, which is compatible with `schema` and will lead to confusing results

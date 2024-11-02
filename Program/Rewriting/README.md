@@ -39,6 +39,8 @@ e9patch 这种只进行 jmp 修改的兼容性最好，但是只能用来加代�
 
 - VMProtect (paid)
 
+What are the differences between IRs for binary rewriting and for [binary analysis](../Analysis/IR/README.md#binary-analysis)?
+
 ## Reassemblable disassemblers
 > disassembly to assembly code that can be readily reassembled
 
@@ -67,6 +69,8 @@ e9patch 这种只进行 jmp 修改的兼容性最好，但是只能用来加代�
 - [e9patch: A powerful static binary rewriting tool](https://github.com/GJDuck/e9patch)
 
   [《Binary Rewriting without Control Flow Recovery》论文笔记 | Kiprey's Blog](https://kiprey.github.io/2022/02/e9patch/)
+
+- [BNHook: binary ninja plugin for adding custom hooks to executables](https://github.com/jeffli678/bnhook)
 
 
 [^schulteBroadComparativeEvaluation2022]: Schulte, E., Brown, M. D., & Folts, V. (2022). A Broad Comparative Evaluation of x86-64 Binary Rewriters. Proceedings of the 15th Workshop on Cyber Security Experimentation and Test, 129–144. https://doi.org/10.1145/3546096.3546112

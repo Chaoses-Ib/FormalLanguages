@@ -16,6 +16,9 @@
 
 IRs:
 - IDA: microcode, ctree
+  - Lifting is verbose
+  - Later optimizations
+  - Not designed for reading
 
   [Decompiler internals: microcode](https://i.blackhat.com/us-18/Thu-August-9/us-18-Guilfanov-Decompiler-Internals-Microcode.pdf)
   - No processor specific stuff
@@ -42,6 +45,7 @@ IRs:
   - [HexRaysCodeXplorer: Hex-Rays Decompiler plugin for better code navigation](https://github.com/REhints/HexRaysCodeXplorer)
 
 - Ghidra: P-code
+  - Sleigh definations
 
   [P-Code Reference Manual](https://spinsel.dev/assets/2020-06-17-ghidra-brainfuck-processor-1/ghidra_docs/language_spec/html/pcoderef.html)
 
@@ -58,6 +62,9 @@ IRs:
 
   [BNIL Guide: Overview - Binary Ninja User Documentation](https://docs.binary.ninja/dev/bnil-overview.html)
   - [LLIL](https://docs.binary.ninja/dev/bnil-llil.html)
+    - [Vector35/llil\_transpiler: transpile llil to c++ for execution and testing](https://github.com/Vector35/llil_transpiler)
+
+  [Breaking Down Binary Ninja's Low Level IL | Trail of Bits Blog](https://blog.trailofbits.com/2017/01/31/breaking-down-binary-ninjas-low-level-il/)
 
 - Valgrind: VEX IR
 

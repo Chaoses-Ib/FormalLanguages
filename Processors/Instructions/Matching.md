@@ -9,6 +9,8 @@
 
 ## Tools
 - [Binary Diffing](Diffing.md)
+
+IDA:
 - [SigMaker](https://github.com/ajkhoury/SigMaker-x64)
   
   ![](images/SigMaker.png)
@@ -23,6 +25,9 @@
 - [SigMakerEx](https://github.com/kweatherman/sigmakerex)
   
   ![](https://github.com/kweatherman/sigmakerex/blob/ad4182201abff782faa2be3b8a47af1e36b2c20b/images/main.png?raw=true)
+
+Binary Ninja:
+- [Vector35/sigkit: Function signature matching and signature generation plugin for Binary Ninja](https://github.com/Vector35/sigkit)
 
 ## Library signatures
 Full:

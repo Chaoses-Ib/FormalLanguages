@@ -46,6 +46,9 @@ v9.0-RC1+240925:
   Also work on Ghidra's Auto Analysis, though it won't crash.
   - 20k → ?, >2.2G
 
+  Binary Ninja:
+  - 320k, >3.8G?
+
   Tools:
   - [IdaMeme: Crashes ida on static analyses.](https://github.com/Azvanzed/IdaMeme)
 

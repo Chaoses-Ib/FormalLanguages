@@ -63,7 +63,9 @@
   - [Performance Analysis](Program/Analysis/Performance/README.md)
     - [Profiling](Program/Analysis/Performance/Profiling.md)
   - Tools
+    - [IDA](Program/Analysis/Tools/IDA/README.md)
     - [Binary Ninja](Program/Analysis/Tools/Binary%20Ninja/README.md)
+    - [WinDbg](Program/Analysis/Tools/WinDbg/README.md)
 - [Compilers](Program/Compilers/README.md)
   - Optimization
     - [Interprocedural Optimization](Program/Compilers/Optimization/Interprocedural.md)
@@ -92,9 +94,6 @@
     - [Controlf-flow Obfuscation](Program/Security/Obfuscation/Control/README.md)
       - [CFG Art](Program/Security/Obfuscation/Control/CFG%20Art.md)
     - [ISA-level Obfuscation](Program/Security/Obfuscation/ISA/README.md)
-  - Tools
-    - [IDA](Program/Security/Tools/IDA/README.md)
-    - [WinDbg](Program/Security/Tools/WinDbg/README.md)
 
 ## Data Exchange Languages
 - [Data Comparison](Data/Comparison.md)

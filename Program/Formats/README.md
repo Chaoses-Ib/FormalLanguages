@@ -49,6 +49,9 @@ An **overlay (附加数据段)** is the auxiliary data attached after the logica
 
   [09 - How to use frida on a non-rooted device --- LIEF Documentation](https://lief-project.github.io/doc/latest/tutorials/09_frida_lief.html)
 
+C++:
+- Binary File Descriptor library (BFD) ([Wikipedia](https://en.wikipedia.org/wiki/Binary_File_Descriptor_library))
+
 Rust:
 - [goblin: An impish, cross-platform binary parsing crate, written in Rust](https://github.com/m4b/goblin)
   - Formats: ELF, PE, MachO

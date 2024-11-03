@@ -75,9 +75,11 @@
 - [Linkers](Program/Linkers/README.md)
 - [Executable Formats](Program/Formats/README.md)
   - [Shellcode](Program/Formats/Shellcode/README.md)
+  - [Common Object File Format (COFF)](Program/Formats/COFF/README.md)
+    - [Object Files](Program/Formats/COFF/Object/README.md)
+    - [Protable Executable](Program/Formats/COFF/PE/README.md)
+      - [Resources](Program/Formats/COFF/PE/Resources.md)
   - [Debugging Information](Program/Formats/Debugging/README.md)
-  - [Protable Executable](Program/Formats/PE/README.md)
-    - [Resources](Program/Formats/PE/Resources.md)
   - [Memory Dumps](Program/Formats/Dumps/README.md)
   - Packers
     - [UPX](Program/Formats/Packers/UPX/README.md)

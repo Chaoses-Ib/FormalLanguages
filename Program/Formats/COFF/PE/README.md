@@ -99,7 +99,7 @@ Samples:
 - [aaaddress1/RunPE-In-Memory: Run a Exe File (PE Module) in memory (like an Application Loader)](https://github.com/aaaddress1/RunPE-In-Memory)
 
 ## Libraries
-[→Executable formats libraries](../README.md#libraries)
+[→Executable formats libraries](../../README.md#libraries)
 
 C/C++:
 - LIEF

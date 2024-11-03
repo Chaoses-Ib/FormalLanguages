@@ -123,6 +123,8 @@ Rust:
 
 - [exe-rs: The PE Executable Library, but for Rust!](https://github.com/frank2/exe-rs) (inactive)
   - Modifying: `add_section()`, `fix_image_size()`...
+  - No `CV_INFO_PDB70`
+  - Wasm: 13 KiB
 
 - [pe-parser: PE Parsing, but blazing fast](https://github.com/IsaacMarovitz/pe-parser)
 

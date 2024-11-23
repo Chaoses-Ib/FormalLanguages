@@ -104,6 +104,7 @@
   - [JavaScript Object Notation (JSON)](Data/Text/JSON/README.md)
     - [JSON Schema](Data/Text/JSON/Schema.md)
     - [JSON Type Definition](Data/Text/JSON/Definition.md)
+    - [JSON Streaming](Data/Text/JSON/Streaming.md)
   - [TOML](Data/Text/TOML.md)
   - [YAML](Data/Text/YAML.md)
 - [Protocol Buffers (Protobuf)](Data/Protobuf.md)

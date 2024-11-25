@@ -68,6 +68,7 @@
     - [Controlf-flow Obfuscation](Program/Security/Obfuscation/Control/README.md)
       - [CFG Art](Program/Security/Obfuscation/Control/CFG%20Art.md)
     - [ISA-level Obfuscation](Program/Security/Obfuscation/ISA/README.md)
+- [→Concurrent Computing](https://github.com/Chaoses-Ib/ConcurrentComputing)
 - [→Computer Software](https://github.com/Chaoses-Ib/ComputerSoftware)
 
 ### [Processors](Program/Processors/README.md)

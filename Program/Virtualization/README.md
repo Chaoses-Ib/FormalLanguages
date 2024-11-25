@@ -1,7 +1,7 @@
 # Virtualization
 [Wikipedia](https://en.wikipedia.org/wiki/Virtualization)
 
-Virtualization = program code interpreting (+ environment simulation).
+Virtualization = program code interpreting + environment simulation.
 
 OS is already an virtualizer, using CPU as its program code interpreter. But it may lack certain simulation features, like running another OS, altering some envrionment (CPU/OS) information.
 

@@ -1,4 +1,5 @@
 # [VMProtect](https://vmpsoft.com/)
+## Versions
 - v3.5.1
   - 2022-09 [\[调查\]VMProtect Source Code Leak-资源下载-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-274475.htm)
   - 2023-12 [\[原创\]VMP完整源码大放送-编程技术-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-279796-1.htm)
@@ -10,6 +11,61 @@
 
   [\[原创\]VMP泄露编译的一些注意事项-编程技术-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-279803.htm)
 
+- v3.6.0
+  ```
+  [*] .NET: Improved renaming of virtual methods
+  [*] .NET: Fixed a bug that occurred inside finally blocks of virtualized methods
+  [*] Mach-O: Improved support of macOS 12 Monterey
+  [*] PE: Improved antidebug
+  [+] .NET: Added support of volatile and calli
+  [+] PE: Added support of Windows for ARM (for Intel binaries only)
+  [+] PE: Improved support of WINE
+  [+] PE: Added support of MAP files for Free Pascal and MinGW
+  [+] Added the ability to create segments with random symbols using mask ‘?’
+  ```
+
+- v3.8.1
+  ```
+  [!] PE: Fixed small bugs
+  [*] Updated documentation of Virtual Machine options
+  [*] PE: Improved VMProtectGetCurrentHWID to get HDD serial number
+  ```
+
+- v3.8.4.1754
+  ```
+  FIXES
+  Mach-O: Improved support of Rosetta 2 on M1/M2 NET: Improved support of WPF applications ELF: Improved support of binaries without sections
+  NEW FEATURES
+  Intel: Added disassembling BZHI, ANDN, VFMADDSUB132PD, VFMADDSUB213PD, VFMADDSUB231PD, VFMADDSUB132PS, VFMADDSUB213PS and VFMADDSUB231PS
+  ```
+  - `LiuMing [1900001339@qq.com], Personal License`: `a56bbd58dfe63bfdfc9b6518561eae4c8025d0f5`
+
+- v3.8.5.1879
+
+  - [VMProtect Ultimate 3.8.5.1879 - 吾爱破解 - 52pojie.cn](https://www.52pojie.cn/thread-1863212-1-1.html)
+    ```
+    PasswordHash=b32bff6893a89963d1b08aa381726f61488ff19d
+    PasswordSalt=a420d8ea9365a50f
+    ```
+
+- v3.8.6.1926
+  - [VMProtect Ultimate Retail Licensed 3.8.6.1926 | HvH?](https://hackvshack.net/threads/vmprotect-ultimate-retail-licensed-3-8-6-1926.4649/)
+
+- v3.8.7.2001 Lite
+  ```
+  IMPROVEMENTS
+  PE: Improved anti debug
+  .NET: Improved code mutation
+  NEW FEATURES
+  .NET: Added support of self contained applications
+  .NET: Added Stack Trace Decoder
+  ```
+
+[VMProtect 3.8.7 скачать бесплатно](https://softoroom.org/topic92378.html)
+
+闲鱼
+
+## Packer
 [\[讨论\]VMP全保护带VM脱壳演示-加壳脱壳-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-283102.htm)
 
 ## Anti-debugging

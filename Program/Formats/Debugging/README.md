@@ -54,6 +54,7 @@ Tools:
 Symbols:
 - Public: Functions with mangled function names (with arguments)
   - Occur before procedures
+  - > Static function names are not public symbol names
 
   ```rust
   /// A public symbol with a mangled name.
@@ -346,6 +347,25 @@ Servers:
 
   [Load dbg symbol file into WinDbg - Stack Overflow](https://stackoverflow.com/questions/27562203/load-dbg-symbol-file-into-windbg)
   - `!sym noisy; .reload /f ntdll.dll`
+
+- IDA
+
+  `\n`, `\t` and even emojis (UTF-8) are displayed.
+
+  Windows:
+  ```rust
+  GetFileAttributesW(r"{path}")
+  GetFileAttributesW(r"{pwd}\{lastpart}")
+  GetFileAttributesW(r"{$env:TEMP}\ida\{lastpart}")
+  GetFileAttributesW(r"{$env:TEMP}\ida\index2.txt")
+  GetFileAttributesW(r"{$env:TEMP}\ida\{lastpart}\BA518DB3AC6742D1888E3CB6309550EEE\{lastpart}")
+  GetFileAttributesW(r"{$env:TEMP}\ida\{lastpart}.pdb")
+  GetFileAttributesW(r"{$env:TEMP}\ida\{lastpart}.pdb\BA518DB3AC6742D1888E3CB6309550EEE")
+  InternetOpenUrlA(hInternet, "http://msdl.microsoft.com/download/symbols/{lastpart}.pdb/BA518DB3AC6742D1888E3CB6309550EEE/{lastpart}.pdb", NULL, 0, INTERNET_FLAG_IGNORE_REDIRECT_TO_HTTP | INTERNET_FLAG_IGNORE_REDIRECT_TO_HTTPS | INTERNET_FLAG_NO_AUTH | INTERNET_FLAG_NO_CACHE_WRITE | INTERNET_FLAG_NO_COOKIES | INTERNET_FLAG_NO_UI | INTERNET_FLAG_RELOAD, 0)
+  ```
+  Create empty file at `{$env:TEMP}\ida\{lastpart}.pdb\BA518DB3AC6742D1888E3CB6309550EEE\{lastpart}.$$$`.
+
+- Cheat Engine
 
 ### Generation
 - [PdbGen: Generate dummy debug symbols (PDB) with a specified list of public symbols.](https://github.com/gix/PdbGen)

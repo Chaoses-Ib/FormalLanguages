@@ -68,6 +68,86 @@
 ## Packer
 [\[讨论\]VMP全保护带VM脱壳演示-加壳脱壳-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-283102.htm)
 
+## Lock to serial number
+```cpp
+void IntelVirtualMachine::CompileCommand(IntelVMCommand &vm_command)
+{
+  ...
+  uint32_t crypted_value[4];
+  size_t i;
+  for (i = 0; i < _countof(crypted_value); i++) {
+    crypted_value[i] = rand32();
+  }
+  switch (vm_command.crypt_size()) {
+  case osDWord:
+    crypted_value[3] = static_cast<uint32_t>(value);
+    break;
+  case osQWord:
+    *reinterpret_cast<uint64_t*>(&crypted_value[2]) = value;
+    break;
+  }
+  uint32_t dw = 0;
+  for (i = 1; i < 4; i++) {
+    dw += crypted_value[i];
+  }
+  crypted_value[0] = 0 - dw;
+  EncryptBuffer(crypted_value, vm_command.crypt_key());
+  ...
+}
+```
+- `crypted_value = { -sum(others), rand(), rand() or value >> 32, value }`, so that `sum(crypted_value) == 0`
+
+```cpp
+static void EncryptBuffer(uint32_t *buffer, uint64_t key)
+{
+	uint32_t key0 = static_cast<uint32_t>(key >> 32);
+	uint32_t key1 = static_cast<uint32_t>(key);
+	buffer[0] = _rotr32(buffer[0] - key0, 7) ^ key1;
+	buffer[1] = _rotr32(buffer[1] - key0, 11) ^ key1;
+	buffer[2] = _rotr32(buffer[2] - key0, 17) ^ key1;
+	buffer[3] = _rotr32(buffer[3] - key0, 23) ^ key1;
+}
+```
+- Ciphertext pattern?
+
+```cpp
+void LicensingManager::DecryptBuffer(uint8_t *buffer)
+{
+  // session_key_ = 0 - static_cast<uint32_t>(loader_data->session_key());
+	uint32_t key0 = static_cast<uint32_t>(product_code_);
+	uint32_t key1 = static_cast<uint32_t>(product_code_ >> 32) + session_key_;
+	uint32_t *p = reinterpret_cast<uint32_t*>(buffer);
+
+	p[0] = _rotl32((p[0] + session_key_) ^ key0,  7) + key1;
+	p[1] = _rotl32((p[1] + session_key_) ^ key0, 11) + key1;
+	p[2] = _rotl32((p[2] + session_key_) ^ key0, 17) + key1;
+	p[3] = _rotl32((p[3] + session_key_) ^ key0, 23) + key1;
+
+	if (p[0] + p[1] + p[2] + p[3] != session_key_ * 4) {
+		const VMP_CHAR *message;
+#ifdef VMP_GNU
+		message = VMProtectDecryptStringA(MESSAGE_SERIAL_NUMBER_REQUIRED_STR);
+#else
+		message = VMProtectDecryptStringW(MESSAGE_SERIAL_NUMBER_REQUIRED_STR);
+#endif
+		if (message[0]) 
+			ShowMessage(message);
+
+#if defined(VMP_GNU)
+		exit(0xDEADC0DE);
+#elif defined(WIN_DRIVER)
+		DbgBreakPointWithStatus(0xDEADC0DE);
+#else
+		TerminateProcess(GetCurrentProcess(), 0xDEADC0DE);
+#endif
+	}
+}
+```
+- The key has only 64 bits in total, and `session_key` is derived from `rdtsc` (or `Random().Next()` in .NET), even the algorithm is also very simple. These make it prone to brute force attacks.
+- 进函数锁会给代码加上 session key，而解密用的 session key 是负的，解密算法就相当于 `decrypt(v - session_key_) - session_key_`，后面的 `- session_key_` 会导致解密后的值都负 `session_key` 个值，但是再次进函数锁又会加上 session key，就变成正确代码了
+- 四个 u32 不是直接的代码，而是 `crypted_value = { -sum(others), rand(), rand() or value >> 32, value }`，这样四个加起来就等于 0，所以才会校验 `p[0] + p[1] + p[2] + p[3] != session_key_ * 4`
+- 这样相当于加解密分散了好几处，还带了校验，防逆向确实不错，不过膨胀也很厉害，而且有校验爆破起来也更快了
+
 ## Anti-debugging
 [VMP源码分析：反调试与绕过方法-加壳脱壳-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-282244.htm)
 - `wine_get_version`

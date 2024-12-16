@@ -1,6 +1,8 @@
 # Linkers
 [Wikipedia](https://en.wikipedia.org/wiki/Linker_(computing))
 
+[rems-project/linksem: Semantic model for aspects of ELF static linking and DWARF debug information](https://github.com/rems-project/linksem)
+
 ## Function sections
 - GCC/Clang: `-ffunction-sections`
 

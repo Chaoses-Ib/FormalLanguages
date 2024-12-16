@@ -14,6 +14,9 @@
     - [ANTLRWorks 2](Grammar/Parsing/ANTLR/ANTLRWorks.md)
     - [Web](Grammar/Parsing/ANTLR/Web.md)
 
+## [Semantics](Semantics/README.md)
+- [K](Semantics/K/README.md)
+
 ## [Programs](Program/README.md)
 - [Identifers](Program/Identifiers/README.md)
   - [Name Mangling](Program/Identifiers/Mangling.md)
@@ -90,7 +93,7 @@
   - [Mixed Boolean-Arithmetic](Program/Processors/Security/Obfuscation/MBA.md)
   - [M/o/Vfuscator](Program/Processors/Security/Obfuscation/MoVfuscator.md)
 
-#### x86
+#### [x86](Program/Processors/x86/README.md)
 - [Modes of Operation](Program/Processors/x86/Modes%20of%20Operation.md)
 - [Execution Environment](Program/Processors/x86/Execution%20Environment.md)
 - Instructions

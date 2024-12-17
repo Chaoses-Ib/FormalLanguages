@@ -1,4 +1,4 @@
-# Instruction Format
+# Instruction Encoding
 0~4B | 1~2B | 0~1B | 0~1B | 0/1/2/4B | 0/1/2/4B
 --- | --- | --- | --- | --- | ---
 Prefix | OP | Mod R/M | SIB | Disp | Imm

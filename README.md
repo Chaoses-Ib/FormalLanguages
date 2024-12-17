@@ -97,7 +97,7 @@
 - [Modes of Operation](Program/Processors/x86/Modes%20of%20Operation.md)
 - [Execution Environment](Program/Processors/x86/Execution%20Environment.md)
 - Instructions
-  - [Instruction Format](Program/Processors/x86/Instructions/Format.md)
+  - [Instruction Encoding](Program/Processors/x86/Instructions/Encoding.md)
   - [General-Purpose Instructions](Program/Processors/x86/Instructions/General/README.md)
     - [No Operation](Program/Processors/x86/Instructions/General/No%20Operation.md)
 - [Application Binary Interface](Program/Processors/x86/Interface/README.md)

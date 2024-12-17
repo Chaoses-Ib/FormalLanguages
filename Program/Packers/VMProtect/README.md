@@ -153,6 +153,8 @@ void LicensingManager::DecryptBuffer(uint8_t *buffer)
 - 四个 u32 不是直接的代码，而是 `crypted_value = { -sum(others), rand(), rand() or value >> 32, value }`，这样四个加起来就等于 0，所以才会校验 `p[0] + p[1] + p[2] + p[3] != session_key_ * 4`
 - 这样相当于加解密分散了好几处，还带了校验，防逆向确实不错，不过膨胀也很厉害，而且有校验爆破起来也更快了
 
+[\[原创\]VMP3.2授权分析-软件逆向-看雪](https://bbs.kanxue.com/thread-247442.htm)
+
 ## Anti-debugging
 [VMP源码分析：反调试与绕过方法-加壳脱壳-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-282244.htm)
 - `wine_get_version`

@@ -12,6 +12,12 @@
 ## Protecters
 [保护壳简介 - CTF Wiki](https://ctf-wiki.org/reverse/windows/unpack/packer-introduction/)
 
+- Differential cryptanalysis
+
+  所有公开可用的 protecter 都会面临差分攻击的问题，限制 protect 选项和频次以及增大随机性能够缓解这一问题，SaaS 能进一步缓解。
+
+  e.g. [Vmprotect3.5.1 壹之型 — 暗月·宵之宫 - 看雪学苑](https://mp.weixin.qq.com/s/El1P_Cq-ZIlFXLEwIvp0JA)
+
 [What in you opinion, is the strongest exe protection solution? : ReverseEngineering](https://www.reddit.com/r/ReverseEngineering/comments/h26cm/what_in_you_opinion_is_the_strongest_exe/)
 
 - [guardian-rs: x86-64 code/pe virtualizer](https://github.com/felix-rs/guardian-rs)

@@ -96,6 +96,11 @@ void IntelVirtualMachine::CompileCommand(IntelVMCommand &vm_command)
 }
 ```
 - `crypted_value = { -sum(others), rand(), rand() or value >> 32, value }`, so that `sum(crypted_value) == 0`
+- Only 4.7% `value`s are possible
+  
+  For function headers, this ratio will be even lower. However, virtualization is required to use lock to serial number, which will make a different ratio, though may be still low or even lower.
+
+- The checksum makes attacking this from COA to KPA?
 
 ```cpp
 static void EncryptBuffer(uint32_t *buffer, uint64_t key)

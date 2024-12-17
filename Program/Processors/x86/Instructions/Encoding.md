@@ -20,6 +20,20 @@ Prefix | OP | Mod R/M | SIB | Disp | Imm
 
 	`ADD ECX, [EBX+EDI<<2+66H]`
 
+## Enumerating
+How many valid byte combinations correspond to legal x86-64 architecture instructions of a certain length?[^mahoneyEnumeratingX8664Its2021]
+
+Bytes | Instruction count<br/>(single instruction) | Utilization | Instruction count<br/>(single + multiple) | Utilization
+--- | --- | --- | --- | ---
+1 | 64 | 25% | 64 | 25%
+2 | 7,535 | 11.5%
+3 | 243,697 | 1.5%
+4 | 4,213,695 | 0.1% | 201,550,432 <!-- 4213695 + 243697*64*2 + 7535*7535 + 7535*64*64*3 + 64*64*64*64 --> | 4.7%
+5 | 67,964,490 | 0.006%
+6 | 923,392,709 | 0.0003%
+
+> The search method uses an intelligent addition which looks at the previous string representation that was attempted, skips over bytes that are part of the constants outlined in the table, and increments “in the right place” for the next attempt. It also properly carries into the next (previous) byte.[^mahoneyEnumeratingX8664Its2021]
+
 ## Prefix
 0~1B | 0~1B | 0~1B | 0~1B
 --- | --- | --- | ---
@@ -114,3 +128,6 @@ x86-64:
 
 ## Assemblers
 - [Intel® XED](https://intelxed.github.io/) ([GitHub](https://github.com/intelxed/xed))
+
+
+[^mahoneyEnumeratingX8664Its2021]: Mahoney, W., & McDonald, J. T. (2021). Enumerating x86-64 – It’s Not as Easy as Counting.

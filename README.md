@@ -34,7 +34,7 @@
   - [Tracing](Program/Analysis/Tracing.md)
   - [Performance Analysis](Program/Analysis/Performance/README.md)
     - [Profiling](Program/Analysis/Performance/Profiling.md)
-  - Tools
+  - [Tools](Program/Analysis/Tools/README.md)
     - [IDA](Program/Analysis/Tools/IDA/README.md)
     - [Binary Ninja](Program/Analysis/Tools/Binary%20Ninja/README.md)
     - [WinDbg](Program/Analysis/Tools/WinDbg/README.md)

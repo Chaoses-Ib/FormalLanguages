@@ -19,7 +19,36 @@ Personal installer also inclues commercial features?
 
 ## API
 [Vector35/binaryninja-api: Public API, examples, documentation and issues for Binary Ninja](https://github.com/Vector35/binaryninja-api)
-- C++, Python, Rust
+- C++, Python, [Rust](https://rust.binary.ninja/binaryninja/)
+
+## Automation
+[Automation - Binary Ninja User Documentation](https://docs.binary.ninja/dev/batch.html)
+- Python > 3.9?
+
+## Console
+- Autocomplete is much better than IDA, but still not great
+
+## Analysis
+[User Guide - Binary Ninja User Documentation](https://docs.binary.ninja/guide/index.html#analysis)
+
+- [Settings](https://docs.binary.ninja/guide/settings.html)
+- [Triage mode](https://github.com/Vector35/binaryninja-api/tree/dev/python/examples/triage)
+
+Analysis mode | Linear sweep | Functions | GUI | Python
+--- | --- | --- | --- | ---
+full | autorun,controlFlowGraph | 10661 | 63s | 64s
+basic | autorun,controlFlowGraph | 10329 | 37s | 29s
+controlFlow | autorun,controlFlowGraph | 10329 | | 16.7s
+IDA | | 6312
+full | autorun | 2285 | 14s | 13s
+basic | autorun | 2281 | 5s | 5s
+controlFlow | autorun | 2281 | | 3.7s
+
+(Binary Ninja v4.1, IDA v9.0)
+
+[What would be the recommended settings for large malformed binaries? - Vector35/binaryninja-api - Discussion #3168](https://github.com/Vector35/binaryninja-api/discussions/3168)
+
+[Binary Ninja - Memory Usage and Performance Optimizations](https://binary.ninja/2022/03/24/memory-usage-and-performance-optimizations.html)
 
 ## Plugins
 [Vector35/official-plugins: Repository for officially supported Binary Ninja plugins](https://github.com/Vector35/official-plugins)

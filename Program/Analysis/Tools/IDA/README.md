@@ -36,6 +36,49 @@ v9.0-RC1+240925:
 [IDA 9.0 | Hex-Rays Docs](https://docs.hex-rays.com/release-notes/9_0)
 - BUGFIX: debugger: win32: IDA's debugger could be detected by a file lock on the modules being loaded into the process
 
+## CLI
+[Command line switches | Hex-Rays Docs](https://docs.hex-rays.com/user-guide/configuration/command-line-switches)
+
+- Simply open a file in IDA
+- `-T`: Open a file and auto-select a loader
+- `-A`: Auto-accept any prompts, informational messages or warnings
+- `-B`: Batch disassembly (`-A -Sanalysis.idc`)
+
+  [Igor's tip of the week #08: Batch mode under the hood -- Hex Rays](https://hex-rays.com/blog/igor-tip-of-the-week-08-batch-mode-under-the-hood)
+  ```c
+  #include <idc.idc>
+
+  static main()
+  {
+    // turn on coagulation of data in the final pass of analysis
+    set_inf_attr(INF_AF, get_inf_attr(INF_AF) | AF_DODATA | AF_FINAL);
+    // .. and plan the entire address space for the final pass
+    auto_mark_range(0, BADADDR, AU_FINAL);
+
+    msg("Waiting for the end of the auto analysis...\n");
+    auto_wait();
+
+    msg("\n\n------ Creating the output file.... --------\n");
+    auto file = get_idb_path()[0:-4] + ".asm";
+
+    auto fhandle = fopen(file, "w");
+    gen_file(OFILE_ASM, fhandle, 0, BADADDR, 0); // create the assembler file
+    msg("All done, exiting...\n");
+
+    // the following line instructs IDA to quit without saving the database
+    // process_config_directive("ABANDON_DATABASE=YES");
+
+    qexit(0); // exit to OS, error code 0 - success
+  }
+  ```
+
+  > Even though the UI is not actually displayed in batch mode, it still has to load and initialize all the dependent UI libraries which can take non-negligible time. This is why it is often better to use the text-mode executable (`idat`) which uses lightweight text-mode UI.
+
+- `-p`: Binary file options
+- `-L`: Logging
+
+[Igor's tip of the week #07: IDA command-line options cheatsheet -- Hex Rays](https://hex-rays.com/blog/igor-tip-of-the-week-07-ida-command-line-options-cheatsheet)
+
 ## Security
 - CVE-2024-44083: Aggressively convert jumps to thunks (v7.7~9.0-beta)
 

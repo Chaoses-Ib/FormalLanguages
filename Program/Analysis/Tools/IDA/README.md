@@ -77,6 +77,8 @@ v9.0-RC1+240925:
 - `-p`: Binary file options
 - `-L`: Logging
 
+`ida64` is async, `idat64` is sync.
+
 [Igor's tip of the week #07: IDA command-line options cheatsheet -- Hex Rays](https://hex-rays.com/blog/igor-tip-of-the-week-07-ida-command-line-options-cheatsheet)
 
 ## Security

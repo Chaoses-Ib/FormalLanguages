@@ -39,7 +39,7 @@ Analysis mode | Linear sweep | Functions | GUI | Python
 full | autorun,controlFlowGraph | 10661 | 63s | 64s
 basic | autorun,controlFlowGraph | 10329 | 37s | 29s
 controlFlow | autorun,controlFlowGraph | 10329 | | 16.7s
-IDA | | 6312
+IDA | | 6312 | | 38s
 full | autorun | 2285 | 14s | 13s
 basic | autorun | 2281 | 5s | 5s
 controlFlow | autorun | 2281 | | 3.7s

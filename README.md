@@ -29,6 +29,8 @@
     - [Obfuscation](Program/Data/Strings/Obfuscation/README.md)
   - [Obfuscation](Program/Data/Obfuscation.md)
 - [Program Analysis](Program/Analysis/README.md)
+  - Functions
+    - [Detection](Program/Analysis/Functions/Detection.md)
   - [Intermediate Representations](Program/Analysis/IR/README.md)
   - [Program Differing](Program/Analysis/Differing.md)
   - [Tracing](Program/Analysis/Tracing.md)

@@ -27,7 +27,12 @@ IDA:
   ![](https://github.com/kweatherman/sigmakerex/blob/ad4182201abff782faa2be3b8a47af1e36b2c20b/images/main.png?raw=true)
 
 Binary Ninja:
-- [Vector35/sigkit: Function signature matching and signature generation plugin for Binary Ninja](https://github.com/Vector35/sigkit)
+- [SigKit: Function signature matching and signature generation plugin for Binary Ninja](https://github.com/Vector35/sigkit)
+- [WARP: Common format for transferring and applying function information across binary analysis tools](https://github.com/Vector35/warp) (v4.2)
+  - Rust
+
+  [Applying Annotations - Binary Ninja User Documentation](https://docs.binary.ninja/dev/annotation.html?h=warp#warp-signature-libraries)
+  > The benefit to using WARP over SigKit is that WARP signatures are more comprehensive and as such will have fewer false positives. Alongside fewer false positives WARP will match more functions with less information due to the matching algorithm taking into account function locality (i.e. functions next to each other). After matching has completed WARP functions will be tagged and the types for those functions will be transferred, this means less work for those looking to transfer analysis information from one version of a binary to another version.
 
 ## Library signatures
 Full:

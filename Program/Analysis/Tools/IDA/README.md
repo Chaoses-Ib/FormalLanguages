@@ -36,6 +36,11 @@ v9.0-RC1+240925:
 [IDA 9.0 | Hex-Rays Docs](https://docs.hex-rays.com/release-notes/9_0)
 - BUGFIX: debugger: win32: IDA's debugger could be detected by a file lock on the modules being loaded into the process
 
+## API
+Rust: [binarly-io/idalib: Idiomatic Rust bindings for the IDA SDK, enabling the development of standalone analysis tools using IDA v9.0's idalib](https://github.com/binarly-io/idalib)
+- No doc comments
+- [rhabdomancer: Vulnerability research assistant that locates all calls to potentially insecure API functions in a binary file.](https://github.com/0xdea/rhabdomancer)
+
 ## CLI
 [Command line switches | Hex-Rays Docs](https://docs.hex-rays.com/user-guide/configuration/command-line-switches)
 

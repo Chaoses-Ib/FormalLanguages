@@ -86,6 +86,35 @@ Rust: [binarly-io/idalib: Idiomatic Rust bindings for the IDA SDK, enabling the 
 
 [Igor's tip of the week #07: IDA command-line options cheatsheet -- Hex Rays](https://hex-rays.com/blog/igor-tip-of-the-week-07-ida-command-line-options-cheatsheet)
 
+## Plugins
+[Interactive IDA Plugin List](https://vmallet.github.io/ida-plugins/)
+
+## AI
+- [Gepetto: IDA plugin which queries uses language models to speed up reverse-engineering](https://github.com/JusticeRage/Gepetto)
+  - Explain function
+  - Rename variables
+  - Models: OpenAI, Ollama, Groq, Together, Novita AI
+    - Not support Gemini
+  - GPL3
+
+  [Hex-Rays: Plugin repository](https://plugins.hex-rays.com/gepetto)
+
+- [aidapal: aiDAPal is an IDA Pro plugin that uses a locally running LLM that has been fine-tuned for Hex-Rays pseudocode to assist with code analysis.](https://github.com/atredispartners/aidapal)
+  - Models: Ollama only
+
+- [Binoculars: Binoculars is an IDA PRO plugin with an integrated AI interface](https://github.com/Vis-Wing/Binoculars)
+
+- [ida\_copilot: ChatGPT Agent analyses your IDA pseudocode](https://github.com/Antelcat/ida_copilot) (discontinued)
+
+- [IDA-Assistant: IDA plugin to support automatic reverse engineering](https://github.com/stuxnet147/IDA-Assistant) (discontinued)
+  - Models: Claude
+
+- ~~[lbl4/idallama](https://github.com/lbl4/idallama)~~
+
+Proprietary:
+- [reai-ida: RevEng.AI IDA Pro Plugin](https://github.com/RevEngAI/reai-ida)
+  - Waitlist
+
 ## Security
 - CVE-2024-44083: Aggressively convert jumps to thunks (v7.7~9.0-beta)
 

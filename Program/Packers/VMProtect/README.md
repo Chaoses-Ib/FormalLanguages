@@ -1,6 +1,12 @@
 # [VMProtect](https://vmpsoft.com/)
+> VMProtect has its legitimate uses in the software development community, especially in games and enterprise applications, but it has also been broadly adopted by malware developers to protect malicious payloads - with [multiple](https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Trojan:Win32/VMProtect.A&ThreatID=2147819161) [cybersecurity](https://www.f-secure.com/v-descs/vmprotect.shtml) [companies](https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/trojan.win32.vmprotect.e/) [automatically](https://www.malwarebytes.com/blog/detections/trojan-malpack-vmp) [detecting](https://www.fortiguard.com/encyclopedia/virus/10043399) VMProtect-enveloped software as a potential threat.
+> 
+> Threat actors such as [APT31](https://www.ptsecurity.com/ww-en/analytics/pt-esc-threat-intelligence/apt31-cloud-attacks/), [ZINC (Diamond Sleet, Lazarus)](https://www.microsoft.com/en-us/security/blog/2022/09/29/zinc-weaponizing-open-source-software/), the [Hacking Team](https://otx.alienvault.com/pulse/5e6668757ffe37a447a9a9e7), the [Darkside](https://istrosec.com/blog/darkside-ransomware/) and [Rorschach](https://research.checkpoint.com/2023/rorschach-a-new-sophisticated-and-fast-ransomware/) ransomware gangs, the [PrivateLoader MaaS](https://any.run/cybersecurity-blog/privateloader-analyzing-the-encryption-and-decryption-of-a-modern-loader/), and [others](https://bazaar.abuse.ch/browse/tag/VMProtect/), have all used it.
+
+[MalwareBazaar | VMProtect](https://bazaar.abuse.ch/browse/tag/VMProtect/)
+
 ## Versions
-- v3.5.1
+- v3.5.1 2021-09-19
   - 2022-09 [\[调查\]VMProtect Source Code Leak-资源下载-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-274475.htm)
   - 2023-12 [\[原创\]VMP完整源码大放送-编程技术-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-279796-1.htm)
   - 2023-12 [jmpoep/vmprotect-3.5.1](https://github.com/jmpoep/vmprotect-3.5.1)
@@ -11,7 +17,7 @@
 
   [\[原创\]VMP泄露编译的一些注意事项-编程技术-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-279803.htm)
 
-- v3.6.0
+- v3.6.0 2022-03-24
   ```
   [*] .NET: Improved renaming of virtual methods
   [*] .NET: Fixed a bug that occurred inside finally blocks of virtualized methods
@@ -60,6 +66,8 @@
   .NET: Added support of self contained applications
   .NET: Added Stack Trace Decoder
   ```
+
+[VMProtect Software Protection » Blog](http://vdown.cn/vmpsoft/en/blog/)
 
 [VMProtect 3.8.7 скачать бесплатно](https://softoroom.org/topic92378.html)
 
@@ -154,6 +162,8 @@ void LicensingManager::DecryptBuffer(uint8_t *buffer)
 - 这样相当于加解密分散了好几处，还带了校验，防逆向确实不错，不过膨胀也很厉害，而且有校验爆破起来也更快了
 
 [\[原创\]VMP3.2授权分析-软件逆向-看雪](https://bbs.kanxue.com/thread-247442.htm)
+
+[\[原创\]VMProtect本地授权锁的分析与破解(基于Q\*量子网络验证例子)-软件逆向-看雪](https://bbs.kanxue.com/thread-285076.htm)
 
 ## Anti-debugging
 [VMP源码分析：反调试与绕过方法-加壳脱壳-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-282244.htm)

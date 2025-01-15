@@ -16,7 +16,7 @@
   - Tail call analysis
 
 - Exceptions
-  - FETCH[^pangOptimalUseException2021]
+  - FETCH[^pangOptimalUseException2021] ([GitHub](https://github.com/ruotongyu/FETCH))
 
 - CET IBT[^kimHowdSecurityBenefit2022]
 

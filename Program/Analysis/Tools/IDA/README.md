@@ -12,7 +12,7 @@ v8.3:
 - [IDA Pro 8.3 (x86, x86\_64) - 『逆向资源区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn](https://www.52pojie.cn/thread-1861384-1-1.html)
 
 ### v9
-[Welcome to IDA 9.0 Beta](https://out5.hex-rays.com/beta90_6ba923/) (240807)
+[Welcome to IDA 9.0 Beta](https://web.archive.org/web/20240811074303/https://out5.hex-rays.com/beta90_6ba923/) (240807)
 - Headless processing with IDAlib
 - WASM Disassembler and File Format Loader
   - 不能反编译
@@ -20,6 +20,7 @@ v8.3:
 - nanoMIPS Disassembler and Decompiler + md1rom Loader
 - New RISC-V Decompiler and Disassembler Extensions
 - C++ Exceptions Support in the Decompiler
+  - MSVC x64 only
 - IDAPython Improvements
 - FLIRT Updates
 - Metadata Descriptors for Plugins
@@ -35,6 +36,9 @@ v9.0-RC1+240925:
 
 [IDA 9.0 | Hex-Rays Docs](https://docs.hex-rays.com/release-notes/9_0)
 - BUGFIX: debugger: win32: IDA's debugger could be detected by a file lock on the modules being loaded into the process
+
+2024-12-17 [IDA 9.0sp1 | Hex-Rays Docs](https://docs.hex-rays.com/release-notes/9_0sp1)
+- https://t.me/c1670316433/27760
 
 ## API
 Rust: [binarly-io/idalib: Idiomatic Rust bindings for the IDA SDK, enabling the development of standalone analysis tools using IDA v9.0's idalib](https://github.com/binarly-io/idalib)

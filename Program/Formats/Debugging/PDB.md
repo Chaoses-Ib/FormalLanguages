@@ -107,6 +107,8 @@ Symbols:
 
 [MSVC PDBs Are Filled With Stale Debug Info](https://www.computerenhance.com/p/msvc-pdbs-are-filled-with-stale-debug)
 
+.NET: [What Every Developer Should Know About PDBs - Ken Muse](https://www.kenmuse.com/blog/what-every-developer-should-know-about-pdbs/)
+
 Samples:
 - [getsentry/pdb/fixtures/self](https://github.com/getsentry/pdb/tree/master/fixtures/self)
 
@@ -265,7 +267,7 @@ Rust:
 
 - ~~[legolas](https://crates.io/crates/legolas)~~
 
-- [pdb\_wrapper: LLVM PDB Wrapper](https://github.com/not-wlan/pdb_wrapper)
+- [pdb\_wrapper: Rust library to create fake PDBs](https://github.com/not-wlan/pdb_wrapper)
   - [bao: the PDB compiler](https://github.com/not-wlan/bao)
 
 - [Elderscroll: PDB Rewriting Rust Library](https://github.com/backengineering/elderscroll)
@@ -301,10 +303,6 @@ Servers:
 
 - [microsoft/pdblister: Faster version of `symchk /om` for generating PDB manifests of offline machines](https://github.com/microsoft/pdblister)
 
-- [sonyps5201314/pdb: ida pdb plugin with enhance and bugfix](https://github.com/sonyps5201314/pdb)
-  
-  [PDB 插件修复增强](https://bbs.pediy.com/thread-266189.htm)
-
 - WinDbg
 
   [Get .pdb file path from windbg - Stack Overflow](https://stackoverflow.com/questions/18756009/get-pdb-file-path-from-windbg)
@@ -334,6 +332,11 @@ Servers:
   - `!sym noisy; .reload /f ntdll.dll`
 
 - IDA
+  - [sonyps5201314/pdb: ida pdb plugin with enhance and bugfix](https://github.com/sonyps5201314/pdb)
+  
+    [PDB 插件修复增强](https://bbs.pediy.com/thread-266189.htm)
+
+  - [Determina PDB plugin for IDA Pro](http://www.phreedom.org/software/detpdb/)
 
   `\n`, `\t` and even emojis (UTF-8) are displayed.
 
@@ -352,8 +355,25 @@ Servers:
 
 - Cheat Engine
 
+- Intel VTune profiler
+- AMD μProf profiler
+
 ## Generation
-- [PdbGen: Generate dummy debug symbols (PDB) with a specified list of public symbols.](https://github.com/gix/PdbGen)
+- LLVM
+  - [FakePDB: Tool for PDB generation from IDA Pro database](https://github.com/Mixaill/FakePDB)
+  - pdb_wrapper
+    - [bao: the PDB compiler](https://github.com/not-wlan/bao)
+  - [PdbGen: Generate dummy debug symbols (PDB) with a specified list of public symbols.](https://github.com/gix/PdbGen)
+
+- [SourceSync: Set of plugins and library for dynamic pdb generation and synchronisation](https://github.com/Air14/SourceSync)
+
+  [SourceSync - Dynamic pdb generation and synchronisation between decompiler and debugger : r/ReverseEngineering](https://www.reddit.com/r/ReverseEngineering/comments/1cjhlr4/sourcesync_dynamic_pdb_generation_and/)
+
+- [MAP](MAP.md) to PDB
+  - [map2pdb: Generating Microsoft PDB files from Delphi and C++ Builder MAP files](https://bitbucket.org/anders_melander/map2pdb)
+
+    [MAP2PDB - Profiling with VTune - Page 2 - Delphi Third-Party - Delphi-PRAXiS \[en\]](https://en.delphipraxis.net/topic/4853-map2pdb-profiling-with-vtune/)
+    > As should be evident I decided not to go the DWARF route after all. After using a few days to read the DWARF specification and examine the FPC source I decided that it would be easier to leverage the PDB knowledge I had already acquired. Not that this has been easy. Even though I've been able to use the LLVM PDB implementation and Microsoft's PDB source as a reference LLVM's implementation is incomplete and buggy and the LLVM source  is "modern C++" which means that it's close to unreadable in places. Microsoft's source, while written in clean C and guaranteed to be correct, doesn't compile and is poorly commented. Luckily it was nothing a few all-nighters with a disassembler and a hex editor couldn't solve.
 
 
 [^dbghelp-ce]: [Cheat Engine :: View topic - How does Cheat Engine load debug symbols from a PDB?](https://forum.cheatengine.org/viewtopic.php?p=5775416/1000)

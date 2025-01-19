@@ -54,6 +54,7 @@
     - [Protable Executable](Program/Formats/COFF/PE/README.md)
       - [Resources](Program/Formats/COFF/PE/Resources.md)
   - [Debugging Information](Program/Formats/Debugging/README.md)
+    - [MAP](Program/Formats/Debugging/MAP.md)
     - [Program Database (PDB)](Program/Formats/Debugging/PDB.md)
     - [DWARF](Program/Formats/Debugging/DWARF.md)
   - [Memory Dumps](Program/Formats/Dumps/README.md)

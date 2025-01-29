@@ -1,4 +1,7 @@
 # [Formal Languages](Formal%20Languages.md)
+## [Models](Models/README.md)
+- [Reversible Computing](Models/Reversible.md)
+
 ## Grammar
 - [Parsing Expression Grammar](Grammar/Parsing%20Expression.md)
 - Parsing

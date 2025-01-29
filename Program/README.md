@@ -18,6 +18,9 @@ A programming language is any set of rules that converts strings, or graphical p
 
 [^wiki]: [Programming language - Wikipedia](https://en.wikipedia.org/wiki/Programming_language)
 
+### Programming paradigms
+[Wikipedia](https://en.wikipedia.org/wiki/Programming_paradigm)
+
 ### History
 - [History of programming languages](https://en.wikipedia.org/wiki/History_of_programming_languages)
 - [Timeline of programming languages](https://en.wikipedia.org/wiki/Timeline_of_programming_languages)

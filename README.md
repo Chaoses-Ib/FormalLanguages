@@ -74,6 +74,8 @@
 - [Virtualization](Program/Virtualization/README.md)
   - [QEMU](Program/Virtualization/QEMU/README.md)
     - [Unicorn](Program/Virtualization/QEMU/Unicorn/README.md)
+  - [VMware](Program/Virtualization/VMware/README.md)
+  - [Hyper-V](Program/Virtualization/Hyper-V/README.md)
 - Security
   - [Obfuscation](Program/Security/Obfuscation/README.md)
     - [Controlf-flow Obfuscation](Program/Security/Obfuscation/Control/README.md)

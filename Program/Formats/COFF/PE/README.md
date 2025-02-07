@@ -141,12 +141,23 @@ Rust:
 - [PeNet: Portable Executable (PE) library written in .Net](https://github.com/secana/PeNet)
 
 ## Tools
-- [Detect It Easy: Program for determining types of files for Windows, Linux and MacOS.](https://github.com/horsicq/Detect-It-Easy)
-
-  `scoop install detect-it-easy`
-
-  识别编译器版本效果不错
+- [Detect It Easy: Program for determining types of files for Windows, Linux and MacOS.](https://github.com/horsicq/Detect-It-Easy) (DIE)
+  - `scoop install detect-it-easy`
+  - 识别编译器版本效果不错
+  - Nauz File Detector
+    - Newer than the standalone version?
 
 - [XPEViewer: PE file viewer/editor for Windows, Linux and MacOS.](https://github.com/horsicq/XPEViewer)
 
-- PEiD
+- [Nauz File Detector: Linker/Compiler/Tool detector for Windows, Linux and MacOS.](https://github.com/horsicq/Nauz-File-Detector) (NFD)
+
+- [Exeinfo PE](https://github.com/ExeinfoASL/ASL)
+  - `scoop install exeinfo-pe` (`exeinfope`)
+  - [Plugins for Exeinfo_Pe and others programs](http://www.exeinfo.byethost18.com/plugins.htm)
+
+- PEiD (discontinued)
+
+- [ProtectionID](https://web.archive.org/web/20180921050146/https://pid.gamecopyworld.com/)
+  - Many other features
+
+  [ProtectionId not available - Issue #1261 - Winetricks/winetricks](https://github.com/Winetricks/winetricks/issues/1261)

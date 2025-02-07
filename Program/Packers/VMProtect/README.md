@@ -1,4 +1,6 @@
 # [VMProtect](https://vmpsoft.com/)
+[vmpsoft (Ivan Permyakov)](https://github.com/vmpsoft)
+
 > VMProtect has its legitimate uses in the software development community, especially in games and enterprise applications, but it has also been broadly adopted by malware developers to protect malicious payloads - with [multiple](https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Trojan:Win32/VMProtect.A&ThreatID=2147819161) [cybersecurity](https://www.f-secure.com/v-descs/vmprotect.shtml) [companies](https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/trojan.win32.vmprotect.e/) [automatically](https://www.malwarebytes.com/blog/detections/trojan-malpack-vmp) [detecting](https://www.fortiguard.com/encyclopedia/virus/10043399) VMProtect-enveloped software as a potential threat.
 > 
 > Threat actors such as [APT31](https://www.ptsecurity.com/ww-en/analytics/pt-esc-threat-intelligence/apt31-cloud-attacks/), [ZINC (Diamond Sleet, Lazarus)](https://www.microsoft.com/en-us/security/blog/2022/09/29/zinc-weaponizing-open-source-software/), the [Hacking Team](https://otx.alienvault.com/pulse/5e6668757ffe37a447a9a9e7), the [Darkside](https://istrosec.com/blog/darkside-ransomware/) and [Rorschach](https://research.checkpoint.com/2023/rorschach-a-new-sophisticated-and-fast-ransomware/) ransomware gangs, the [PrivateLoader MaaS](https://any.run/cybersecurity-blog/privateloader-analyzing-the-encryption-and-decryption-of-a-modern-loader/), and [others](https://bazaar.abuse.ch/browse/tag/VMProtect/), have all used it.
@@ -104,6 +106,21 @@
 闲鱼
 
 [index of /Windows\_Tools/Decompiler/VMProtect/ - 永恒心锁-分享互联网](https://cunchu.yhxs3344.net/Windows_Tools/Decompiler/VMProtect/)
+
+## SDK
+Rust: [CertainLach/vmprotect: Unofficial Rust SDK for VMProtect](https://github.com/CertainLach/vmprotect)
+
+## Signature
+- Duplicated `KERNEL32.dll` imports
+- No rich header
+
+[Detect-It-Easy/db/PE/VMProtect.2.sg](https://github.com/horsicq/Detect-It-Easy/blob/master/db/PE/VMProtect.2.sg)
+- [VMProtect \[native\] detection upgrade](https://github.com/horsicq/Detect-It-Easy/commit/be0d41a7ca1b3b7ccccf2ca0bbc5fcd01c1e389f)
+
+[Detect-It-Easy/db/PE/VMProtect\_NET.2.sg](https://github.com/horsicq/Detect-It-Easy/blob/master/db/PE/VMProtect_NET.2.sg)
+- [VMProtect signature update](https://github.com/horsicq/Detect-It-Easy/commit/2c3226018910ed6e8c6175c0eac83130bcb63773)
+  
+  Co-authored with vmpsoft?
 
 ## Packer
 [\[讨论\]VMP全保护带VM脱壳演示-加壳脱壳-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-283102.htm)

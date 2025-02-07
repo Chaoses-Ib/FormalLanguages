@@ -20,6 +20,10 @@
 
 [What in you opinion, is the strongest exe protection solution? : ReverseEngineering](https://www.reddit.com/r/ReverseEngineering/comments/h26cm/what_in_you_opinion_is_the_strongest_exe/)
 
+- [czs108/Windows-PE-Packer: 🗜️ A packer for Windows x86 executable files written in C and Intel x86 Assembly. The new file after packing can obstruct reverse engineering.](https://github.com/czs108/Windows-PE-Packer)
+- [hid3rx/PEPacker](https://github.com/hid3rx/PEPacker)
+
+Rust:
 - [guardian-rs: x86-64 code/pe virtualizer](https://github.com/felix-rs/guardian-rs)
 
 ## Unpacking

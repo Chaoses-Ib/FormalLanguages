@@ -15,6 +15,8 @@
 
 UPX 可以看作是智能存储需求下的初代解决方案。
 
+`upx: Mile.Aria2.exe: CantPackException: GUARD_CF enabled PE files are not supported (use --force to disable)`
+
 [delphi - Why does my application use more memory after I compress it with UPX, and what can I do about it? - Stack Overflow](https://stackoverflow.com/questions/9219244/why-does-my-application-use-more-memory-after-i-compress-it-with-upx-and-what-c)
 
 [You can compress with upx (at the cost of increased startup time in the order of... | Hacker News](https://news.ycombinator.com/item?id=21907511)

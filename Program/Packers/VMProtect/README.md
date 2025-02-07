@@ -29,6 +29,7 @@
   [+] PE: Added support of MAP files for Free Pascal and MinGW
   [+] Added the ability to create segments with random symbols using mask ‘?’
   ```
+  [VMP加壳授权软件 VMProtect Ultimate 3.6.0 Build 1406 旗舰版正版泄露 - 精品软件每日更新 - 永乐汉化后期资源网 - Powered by Discuz!](http://www.ylhh.net/forum.php?mod=viewthread&tid=1863)
 
 - v3.8.1
   ```
@@ -67,11 +68,42 @@
   .NET: Added Stack Trace Decoder
   ```
 
+- v3.9.2 2024-12-07
+
+  IMPROVEMENTS
+  - .NET: Improved code virtualization
+  - .NET: Improved support of ByRef-like structs
+  - PE: Improved support of binaries compiled with MinGW
+  - Intel: Improved disassembling of SWITCH
+
+  NEW FEATURES
+  - .NET: Added virtualization of MKREFANY and REFANYVAL
+  - PE: Added support of virtual DLLs for Windows 11 24H2
+
+- v3.9.3 2025-01-15
+  ```
+  FIXES
+  Intel: Fixed critical vulnerability in the licensing system of Ultimate that allows to change decrypted serial number in the memory
+
+  IMPROVEMENTS
+  .NET: Improved code virtualization
+
+  NEW FEATURES
+  .Intel: Added disassembling of RDGSBASE, RDFSBASE, WRGSBASE and WRFSBASE
+  PE: Added obfuscation of RTTI names for binaries compiled with MSVC when using the "Strip Debug Information" option
+  ```
+
+[VMProtect Software » News](https://vmpsoft.com/news)
+- https://vmpsoft.com/uploads/VMProtectDemo.exe ([Wayback Machine](https://web.archive.org/web/20250000000000*/https://vmpsoft.com/uploads/VMProtectDemo.exe))
+
 [VMProtect Software Protection » Blog](http://vdown.cn/vmpsoft/en/blog/)
+- https://pan.baidu.com/s/1pL2Z9wf
 
 [VMProtect 3.8.7 скачать бесплатно](https://softoroom.org/topic92378.html)
 
 闲鱼
+
+[index of /Windows\_Tools/Decompiler/VMProtect/ - 永恒心锁-分享互联网](https://cunchu.yhxs3344.net/Windows_Tools/Decompiler/VMProtect/)
 
 ## Packer
 [\[讨论\]VMP全保护带VM脱壳演示-加壳脱壳-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-283102.htm)
@@ -163,7 +195,7 @@ void LicensingManager::DecryptBuffer(uint8_t *buffer)
 
 [\[原创\]VMP3.2授权分析-软件逆向-看雪](https://bbs.kanxue.com/thread-247442.htm)
 
-[\[原创\]VMProtect本地授权锁的分析与破解(基于Q\*量子网络验证例子)-软件逆向-看雪](https://bbs.kanxue.com/thread-285076.htm)
+[\[原创\]VMProtect本地授权锁的分析与破解(基于Q\*量子网络验证例子)-软件逆向-看雪](https://bbs.kanxue.com/thread-285076.htm) ([微信公众号](https://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458588572&idx=1&sn=f7ad4ebbe10787b233f29e316423ebc0))
 
 ## Anti-debugging
 [VMP源码分析：反调试与绕过方法-加壳脱壳-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-282244.htm)

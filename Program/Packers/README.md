@@ -26,6 +26,10 @@
 Rust:
 - [guardian-rs: x86-64 code/pe virtualizer](https://github.com/felix-rs/guardian-rs)
 
+[\[Discuss\] vmprotect, themida, enigma](https://www.unknowncheats.me/forum/anti-cheat-bypass/504979-vmprotect-themida-enigma.html)
+
+[\[Question\] VMProtect + Nuitka](https://www.unknowncheats.me/forum/anti-cheat-bypass/668906-vmprotect-nuitka.html)
+
 ## Unpacking
 ### Original entry point
 - 单步跟踪法

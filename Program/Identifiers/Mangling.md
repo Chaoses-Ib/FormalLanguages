@@ -190,5 +190,6 @@ Rust:
 - [rust-lang/rustc-demangle: Rust symbol demangling](https://github.com/rust-lang/rustc-demangle)
   - [demangle()](https://github.com/rust-lang/rustc-demangle/blob/f053741061bd1686873a467a7d9ef22d2f1fb876/src/lib.rs#L92-L146)
     - `.llvm.`, `_ZN`/`ZN`/`__ZN`, `_R`/`R`/`__R`
+  - Wasm: 38 KiB
   - [rustfilt: Demangle Rust symbols](https://github.com/luser/rustfilt)
 - [Demangle Rust symbols - Issue #371 - rui314/mold](https://github.com/rui314/mold/issues/371)

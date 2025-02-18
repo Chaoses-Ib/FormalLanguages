@@ -87,6 +87,7 @@ IRs:
 - RetDec
 
 - [GTIRB: Intermediate Representation for Binary analysis and transformation](https://github.com/GrammaTech/gtirb)[^schulteGTIRBIntermediateRepresentation2020]
+  - [Ddisasm](../../Rewriting/README.md#reassemblable-disassemblers)
 
   > The GrammaTech Intermediate Representation for Binaries (GTIRB) is a machine code analysis and rewriting data structure. It is intended to facilitate the communication of binary IR between programs performing binary disassembly, analysis, transformation, and pretty printing. GTIRB is modeled on LLVM-IR, and seeks to serve a similar functionality of encouraging communication and interoperability between tools.
 

@@ -42,15 +42,25 @@ e9patch 这种只进行 jmp 修改的兼容性最好，但是只能用来加代�
 What are the differences between IRs for binary rewriting and for [binary analysis](../Analysis/IR/README.md#binary-analysis)?
 
 ## Reassemblable disassemblers
+Reassemblable disassemblers, reassemblers
+
 > disassembly to assembly code that can be readily reassembled
 
-- ddisasm
+用起来相对方便，缺点是链接出错就完全用不了了。
+
+- [Datalog Disassembly (Ddisasm)](https://github.com/GrammaTech/ddisasm)[^flores-montoyaDatalogDisassembly2020]
+  - Asm/GTIRB
+  - Docker
 - Retrowrite
 - Uroboros
 - Ramblr[^wangRamblrMakingReassembly2017a]
-- Angr
+- angr
+  - [angr/analyses/reassembler.py](https://github.com/angr/angr/blob/master/angr/analyses/reassembler.py)
 
   [Binary rewriting - Issue #1118 - angr/angr](https://github.com/angr/angr/issues/1118)
+
+  [Reassembler example? - Issue #417 - angr/angr](https://github.com/angr/angr/issues/417)
+- IDA?
 
 ## LLVM rewriting
 > lift binaries to LLVM IR
@@ -76,3 +86,4 @@ What are the differences between IRs for binary rewriting and for [binary analys
 [^schulteBroadComparativeEvaluation2022]: Schulte, E., Brown, M. D., & Folts, V. (2022). A Broad Comparative Evaluation of x86-64 Binary Rewriters. Proceedings of the 15th Workshop on Cyber Security Experimentation and Test, 129–144. https://doi.org/10.1145/3546096.3546112
 [^hiserZiprHighImpactRobust2023]: Hiser, J. D., Nguyen-Tuong, A., & Davidson, J. W. (2023). Zipr: A High-Impact, Robust, Open-source, Multi-platform, Static Binary Rewriter (No. arXiv:2312.00714; Version 1). arXiv. https://doi.org/10.48550/arXiv.2312.00714
 [^wangRamblrMakingReassembly2017a]: Wang, R., Shoshitaishvili, Y., Bianchi, A., Machiry, A., Grosen, J., Grosen, P., Kruegel, C., & Vigna, G. (2017). Ramblr: Making Reassembly Great Again. Proceedings 2017 Network and Distributed System Security Symposium. Network and Distributed System Security Symposium, San Diego, CA. https://doi.org/10.14722/ndss.2017.23225
+[^flores-montoyaDatalogDisassembly2020]: Flores-Montoya, A., & Schulte, E. (2020). Datalog Disassembly. 1075–1092. https://www.usenix.org/conference/usenixsecurity20/presentation/flores-montoya

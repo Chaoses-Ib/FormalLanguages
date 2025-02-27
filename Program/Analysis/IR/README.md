@@ -8,6 +8,9 @@
 ## Compiler
 - LLVM IR
   - [McSema: Framework for lifting x86, amd64, aarch64, sparc32, and sparc64 program binaries to LLVM bitcode](https://github.com/lifting-bits/mcsema) (discontinued)
+  - [r3bb1t/bin\_lift: Rust library for lifting raw binary data to LLVM IR](https://github.com/r3bb1t/bin_lift) (Zydis2llvmIr)
+
+- [pliron: Programming Languages Intermediate Representation](https://github.com/vaivaswatha/pliron)
 
 ## Binary analysis
 [Modern Binary Analysis with ILs](https://binary.ninja/presentations/Modern%20Binary%20Analysis%20with%20ILs%20with%20notes.pdf) (2019)

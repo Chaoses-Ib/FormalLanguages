@@ -33,6 +33,15 @@ Rust:
 
     - [xml\_schema\_generator: A collection of helper functions to read a given XML string or stream using quick\_xml and generating a Struct (as String) that you can use in your Rust program to serialize or deserialize XML of the same format](https://github.com/Thomblin/xml_schema_generator)
 
+  - [escape](https://docs.rs/quick-xml/latest/quick_xml/escape/fn.escape.html)
+    - Only `<`, `>`, `&`, `'`, `"` are escaped
+    - [Question about changing un/escape behavior - Issue #734 - tafia/quick-xml](https://github.com/tafia/quick-xml/issues/734)
+    - [Serializing CDATA - Issue #353 - tafia/quick-xml](https://github.com/tafia/quick-xml/issues/353)
+    - Cannot fully customize escape behavior
+      - [QuoteLevel in quick\_xml::se - Rust](https://docs.rs/quick-xml/latest/quick_xml/se/enum.QuoteLevel.html)
+      - [How to ignore double quotation mark when do serialization？ - Issue #362 - tafia/quick-xml](https://github.com/tafia/quick-xml/issues/362)
+      - [Support for disabling automatic escaping in `to xml` - Issue #11525 - nushell/nushell](https://github.com/nushell/nushell/issues/11525)
+
   [XML parsing in Rust | Mainmatter](https://mainmatter.com/blog/2020/12/31/xml-and-rust/)
 
 - [xml-rs: An XML library in Rust](https://github.com/kornelski/xml-rs)
@@ -48,3 +57,13 @@ Rust:
 - [sxd-document: An XML library in Rust](https://github.com/shepmaster/sxd-document)
 
 - [xmltree-rs: Reads an XML file into a simple tree structure](https://github.com/eminence/xmltree-rs)
+
+C++:
+- [TinyXML](https://www.cs.cmu.edu/~preethi/src/tinyxml/docs/)
+  - https://web.archive.org/web/20221201092519/http://www.grinninglizard.com/tinyxmldocs/index.html
+  - Escape: `EncodeString()`
+    - `<`, `>`, `&`, `'`, `"`, any char < 32
+      - Ser: `\n` -> `&#x0A;`, de: `\n` -> ` `
+    - > Additionally, any character can be specified by its Unicode code point: The syntax `&#xA0;` or `&#160;` are both to the non-breaking space characher.
+
+  [TinyXML2: A simple, small, efficient, C++ XML parser that can be easily integrated into other programs.](https://github.com/leethomason/tinyxml2)

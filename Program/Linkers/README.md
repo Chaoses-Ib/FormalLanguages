@@ -3,6 +3,25 @@
 
 [rems-project/linksem: Semantic model for aspects of ELF static linking and DWARF debug information](https://github.com/rems-project/linksem)
 
+## Unresolved symbols
+- GCC
+
+  [c++ - How to make gcc or ld report undefined symbols but not fail? - Stack Overflow](https://stackoverflow.com/questions/1568540/how-to-make-gcc-or-ld-report-undefined-symbols-but-not-fail)
+
+  [c - Why can't ld ignore an unused unresolved symbol? - Stack Overflow](https://stackoverflow.com/questions/70807464/why-cant-ld-ignore-an-unused-unresolved-symbol)
+
+- MSVC: [/FORCE (Force file output)](https://learn.microsoft.com/en-us/cpp/build/reference/force-force-file-output?view=msvc-170)
+
+  > Tells the linker to create an executable even if symbols are undefined or multiply defined.
+
+  [c++ - how to ignore LNK2005 & LNK1169? - Stack Overflow](https://stackoverflow.com/questions/4085050/how-to-ignore-lnk2005-lnk1169)
+
+Rust:
+```toml
+[target.'cfg(all(target_os = "windows", target_env = "msvc"))']
+rustflags = ["-C", "link-arg=/FORCE"]
+```
+
 ## Function sections
 - GCC/Clang: `-ffunction-sections`
 

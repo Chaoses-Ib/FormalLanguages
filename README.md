@@ -118,6 +118,7 @@
 ## Data Exchange Languages
 - [Data Comparison](Data/Comparison.md)
 - [Text](Data/Text/README.md)
+  - [Binary-to-text Encodings](Data/Text/Binary.md)
   - [Delimiter-Separated Values](<Data/Text/Delimiter-Separated Values.md>)
   - [JavaScript Object Notation (JSON)](Data/Text/JSON/README.md)
     - [JSON Schema](Data/Text/JSON/Schema.md)

@@ -7,6 +7,8 @@
 
 [PE File Format :: TheDoom](https://k0deless.github.io/posts/pe-file-format/)
 
+[Inside Windows: An In-Depth Look into the Win32 Portable Executable File Format, Part 2 | Microsoft Learn](https://learn.microsoft.com/en-us/archive/msdn-magazine/2002/march/inside-windows-an-in-depth-look-into-the-win32-portable-executable-file-format-part-2)
+
 [A dive into the PE file format - Introduction - 0xRick's Blog](https://0xrick.github.io/win-internals/pe1/)
 - [part 1: Overview](https://0xrick.github.io/win-internals/pe2/)
 - [part 2: DOS Header, DOS Stub and Rich Header](https://0xrick.github.io/win-internals/pe3/)

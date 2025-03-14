@@ -2,7 +2,7 @@
 A **regex engine** is an implementations of regex functionality.[^wiki]
 
 ## Implementations
-C++:
+### C++
 - [Hyperscan: High-performance regular expression matching library](https://github.com/intel/hyperscan/)
 
   [Introduction to Hyperscan](https://www.intel.com/content/www/us/en/developer/articles/technical/introduction-to-hyperscan.html)
@@ -20,8 +20,10 @@ C++:
 - [Oniguruma](https://github.com/kkos/oniguruma)
   - Rust: [Rust Onig: Rust bindings for the Oniguruma regex library](https://github.com/rust-onig/rust-onig)
 
-Rust:
+### Rust
 - [regex: An implementation of regular expressions for Rust. This implementation uses finite automata and guarantees linear time matching on all inputs.](https://github.com/rust-lang/regex)
+  - [string-patterns](https://github.com/neilg63/string-patterns)
+  - [stringmatch: Allow the use of regular expressions or strings wherever you need string comparison](https://github.com/stevepryde/stringmatch)
   - Web
     - [Redux regex playground](https://rregex.dev/)
     - [Rustexp](https://rustexp.lpil.uk/)
@@ -29,8 +31,26 @@ Rust:
   > If your regex or parts of it does not use any special features, the matching is delegated to the regex crate. That means it has linear runtime. But if you use “fancy” features such as backreferences or look-around, an engine with backtracking needs to be used. In that case, the regex can be slow and take exponential time to run because of what is called “catastrophic backtracking”. This depends on the regex and the input.
 
   - Web: [Rustexp](https://rustexp.lpil.uk/)
+- [matchers](https://github.com/hawkw/matchers)
+  - Stream
 
-.NET:
+- [lightningscanner-rs: A lightning-fast memory pattern scanner, capable of scanning gigabytes of data per second](https://github.com/localcc/lightningscanner-rs)
+- [patternscan: Searches for a contiguous array of bytes determined by a wild-carded pattern](https://github.com/lewisclark/patternscan)
+  - Lightweight
+- [aobscan: AOBscan is a library for multi-threaded AOB memory scanning](https://github.com/sonodima/aobscan)
+  - Data/Program
+  - Parallel
+- [aob-rs](https://github.com/Ryan-rsm-McKenzie/aob-rs)
+- [pelite::pattern](https://docs.rs/pelite/latest/pelite/pattern/index.html)
+  - PE
+  - Powerful but [the syntax](https://docs.rs/pelite/latest/pelite/pattern/fn.parse.html) is weird. Writing [`[Atom]`](https://docs.rs/pelite/latest/pelite/pattern/enum.Atom.html) directly may be better and also more powerful.
+  - [pelite/src/bin/findsig.rs](https://github.com/CasualX/pelite/blob/master/src/bin/findsig.rs)
+
+  Used by many game security tools.
+- [scanner-rs: Binary signature scanner in Rust.](https://github.com/pombredanne/scanner-rs) (discontinued)
+  - pelite
+
+### .NET
 - [System.Text.RegularExpressions](https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions)
   
   [.NET Regular Expressions - .NET | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions)

@@ -56,13 +56,15 @@ Approaches:
 
 - Import Lookup Table (ILT) / Import Name Table (INT)
 
-  > Each DWORD in its array is either:
+  Each u32/u64 in this array is either:
   > - A RVA to an `IMAGE_IMPORT_BY_NAME` struct, which in turn point to an ascii string: the function name.
-  > - Or if the first bit is 1, this DWORD is the ordinal of the function to import.
+  > - Or if the first bit is 1, this integer is the ordinal of the function to import.
 
 - Import Address Table (IAT)
 
   > On disk, the IAT is identical to the ILT, however during bounding when the binary is being loaded into memory, the entries of the IAT get overwritten with the addresses of the functions that are being imported.
+
+  What if IAT is not the same as ILT on disk?
 
 > Normally you have 3 ways of calling an API:
 ```x86asm
@@ -87,6 +89,35 @@ Call     Reg32
 [How DLL Imports Work | Ruminations](https://blog.aaronballman.com/2011/10/how-dll-imports-work/)
 
 [portable executable - What's the difference between "Import Table address" and "Import Address Table address" in Date Directories of PE? - Stack Overflow](https://stackoverflow.com/questions/3801571/whats-the-difference-between-import-table-address-and-import-address-table-a)
+
+### Libraries
+PeLite:
+```rust
+println!(
+    "[(IAT, ILT)]: {:X?}",
+    pe.iat().unwrap().iter().collect::<Vec<_>>()
+);
+
+println!(
+    "[IDT{{DLL, IAT.len(), ILT.len()}}]: {:?}",
+    pe.imports().unwrap().iter().collect::<Vec<_>>()
+);
+
+for idt in pe.imports().unwrap().iter() {
+    println!("DLL: {:?}", idt.dll_name().unwrap());
+    for ((ilt, iat_rva), iat) in idt
+        .int()
+        .unwrap()
+        .zip((idt.image().FirstThunk..).step_by(match idt {
+            pelite::Wrap::T32(_) => 4,
+            pelite::Wrap::T64(_) => 8,
+        }))
+        .zip(idt.iat().unwrap())
+    {
+        println!("(ILT, &IAT, IAT): {:?} {iat_rva:X} {iat:X?}", ilt.unwrap());
+    }
+}
+```
 
 ## C++
 [DLL Import and Export Functions | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/c-language/dll-import-and-export-functions?view=msvc-170)

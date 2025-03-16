@@ -43,6 +43,8 @@
     - [IDA](Program/Analysis/Tools/IDA/README.md)
     - [Binary Ninja](Program/Analysis/Tools/Binary%20Ninja/README.md)
     - [WinDbg](Program/Analysis/Tools/WinDbg/README.md)
+- [Exceptions](Program/Exceptions/README.md)
+  - [Structured Exception Handling (SEH)](Program/Exceptions/SEH.md)
 - [Compilers](Program/Compilers/README.md)
   - Optimization
     - [Interprocedural Optimization](Program/Compilers/Optimization/Interprocedural.md)

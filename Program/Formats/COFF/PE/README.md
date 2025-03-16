@@ -142,6 +142,9 @@ Rust:
 - [AsmResolver: A library for creating, reading and editing PE files and .NET modules.](https://github.com/Washi1337/AsmResolver)
 - [PeNet: Portable Executable (PE) library written in .Net](https://github.com/secana/PeNet)
 
+Python:
+- [pefile: A Python module to read and work with PE (Portable Executable) files](https://github.com/erocarrera/pefile)
+
 ## Tools
 - [Detect It Easy: Program for determining types of files for Windows, Linux and MacOS.](https://github.com/horsicq/Detect-It-Easy) (DIE)
   - `scoop install detect-it-easy`

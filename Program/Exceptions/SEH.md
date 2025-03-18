@@ -161,11 +161,19 @@ typedef struct _UNWIND_INFO {
 >
 > You can also use chained info to group volatile register saves. The compiler may delay saving some volatile registers until it is outside of the function entry prolog. You can record them by having primary unwind info for the portion of the function before the grouped code, and then setting up chained info with a non-zero size of prolog, where the unwind codes in the chained info reflect saves of the nonvolatile registers. In that case, the unwind codes are all instances of `UWOP_SAVE_NONVOL`. A grouping that saves nonvolatile registers by using a PUSH or modifies the RSP register by using an additional fixed stack allocation is not supported.
 
+- `RUNTIME_FUNCTION` with an unchained `UNWIND_INFO` must be at the start of a function?
+
+  May be not the start of an user function, but a catch handler.
+
+- Only used by MSVC, not Clang/rustc?
+
+<del>
+
 chain 只是用来多个代码块共享 unwind info 的，不一定是一个函数的不同块，比如这里就两个函数 chain 到一起了：
 
 ![](images/SEH/chain.png)
 
-Only used by MSVC, not Clang?
+</del>
 
 ## C++
 `ExceptionData`:
@@ -216,6 +224,37 @@ struct IPtoStateMap
 
 APIs:
 - `RtlDispatchException`
-- [`RtlVirtualUnwind`](https://learn.microsoft.com/en-us/windows/win32/api/winnt/nf-winnt-rtlvirtualunwind)
+- [`RtlVirtualUnwind`](#rtlvirtualunwind)
 - [`RtlInstallFunctionTableCallback`](https://learn.microsoft.com/en-us/windows/win32/api/winnt/nf-winnt-rtlinstallfunctiontablecallback)
 - [`RtlAddFunctionTable`](https://learn.microsoft.com/en-us/windows/win32/api/winnt/nf-winnt-rtladdfunctiontable)
+
+### [`RtlVirtualUnwind`](https://learn.microsoft.com/en-us/windows/win32/api/winnt/nf-winnt-rtlvirtualunwind)
+```rust
+// XP SP1
+fn RtlVirtualUnwind() {
+  // If the next instruction is a return, then control is currently in
+  // an epilogue and execution of the epilogue should be emulated.
+  // Otherwise, execution is not in an epilogue and the prologue should
+  // be unwound.
+  if (NextByte[0] == RET_OP) {
+    todo!()
+    return NULL;
+  }
+
+  // Control left the specified function outside an epilogue. Unwind the
+  // subject function and any chained unwind information.
+  FunctionEntry = RtlpUnwindPrologue() {
+    while todo!() {
+      match UnwindOp {
+        todo!()
+      }
+    }
+  }
+
+  // If control left the specified function outside of the prologue and
+  // the function has a handler that matches the specified type, then
+  // return the address of the language specific exception handler.
+  // Otherwise, return NULL.
+  todo!()
+}
+```

@@ -40,6 +40,8 @@ v9.0-RC1+240925:
 2024-12-17 [IDA 9.0sp1 | Hex-Rays Docs](https://docs.hex-rays.com/release-notes/9_0sp1)
 - https://t.me/c1670316433/27760
 
+2025-02-26 [IDA 9.1 | Hex-Rays Docs](https://docs.hex-rays.com/release-notes/9_1)
+
 ## API
 Rust: [binarly-io/idalib: Idiomatic Rust bindings for the IDA SDK, enabling the development of standalone analysis tools using IDA v9.0's idalib](https://github.com/binarly-io/idalib)
 - No doc comments

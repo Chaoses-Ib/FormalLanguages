@@ -70,6 +70,18 @@ Implementations:
 
 FETCH > IDA > Ghidra > Nucleus > Binary Ninja > Angr > Dyninst > Radare2 > BAP:[^pangOptimalUseException2021]  
 ![](images/Detection/FETCH.png)
+- [F1 scores](FETCH-f1.py)
+  ```
+  FETCH: 0.9961
+  NUCLEUS: 0.7874
+  GHIDRA: 0.7755
+  IDA PRO: 0.7737
+  BINARY NINJA: 0.7185
+  ANGR: 0.6416
+  BAP: 0.2626
+  DYNINST: 0.2584
+  RADARE2: 0.0821
+  ```
 
 FETCH > Ghidra > IDA[^kimHowdSecurityBenefit2022]
 

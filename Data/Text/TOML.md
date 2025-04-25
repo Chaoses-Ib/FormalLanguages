@@ -82,3 +82,42 @@ name = "plantain"
   ]
 }
 ```
+
+## Libraries
+.NET:
+- [Tomlyn: Tomlyn is a TOML parser, validator and authoring library for .NET Framework and .NET Core](https://github.com/xoofx/Tomlyn)
+
+Python:
+- [tomli: A lil' TOML parser](https://github.com/hukkin/tomli)
+  - [tomllib --- Parse TOML files --- Python 3 documentation](https://docs.python.org/3/library/tomllib.html) (3.11)
+    - Read-only
+
+    ```python
+    import tomllib
+    
+    with open('pyproject.toml', 'rb') as f:
+        toml = tomllib.load(f)
+    ```
+- [tomli-w: A lil' TOML writer (counterpart to https://github.com/hukkin/tomli)](https://github.com/hukkin/tomli-w)
+- [python-poetry/tomlkit: Style-preserving TOML library for Python](https://github.com/python-poetry/tomlkit)
+  - tomlq
+    - yq
+- [toml: Python lib for TOML](https://github.com/uiri/toml)
+
+## Tools
+[→Tools](README.md#tools)
+
+- Python
+  - [→Libraries](#libraries)
+  - [yq](https://kislyuk.github.io/yq/)
+  - [mrijken/toml-cli](https://github.com/mrijken/toml-cli)
+- [taplo: A TOML toolkit written in Rust](https://github.com/tamasfe/taplo)
+  - [Introduction | Taplo](https://taplo.tamasfe.dev/cli/introduction.html)
+  - `scoop install taplo`
+- [tomlq: A tool for getting data from TOML files on the command line](https://github.com/cryptaliagy/tomlq)
+- [gnprice/toml-cli](https://github.com/gnprice/toml-cli) (discontinued)
+
+PowerShell:
+- [jborean93/PSToml: PowerShell TOML Parser and Writer](https://github.com/jborean93/PSToml)
+
+[jq command line tool for manipulating toml files? - Issue #645 - toml-lang/toml](https://github.com/toml-lang/toml/issues/645)

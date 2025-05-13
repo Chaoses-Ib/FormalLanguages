@@ -32,13 +32,3 @@ Rust:
 ## Backends
 - C++
   - [LLIL Transpiler: transpile llil to c++ for execution and testing](https://github.com/Vector35/llil_transpiler)
-
-## Passes
-- [jamesmth/llvm-project: Fork of LLVM for LTO pass plugins support.](https://github.com/jamesmth/llvm-project)
-- [llvm-passgen: A small tool for quickly generating LLVM passes](https://github.com/woodruffw/llvm-passgen)
-
-Rust:
-- [llvm-plugin-rs: Out-of-tree LLVM passes in Rust](https://github.com/jamesmth/llvm-plugin-rs)
-  - Inkwell
-  - [ ] `ECOSYSTEM.md`
-- [Custom LLVM Pass : r/rust](https://www.reddit.com/r/rust/comments/tyfb2n/custom_llvm_pass/)

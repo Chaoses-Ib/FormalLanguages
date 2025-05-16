@@ -49,6 +49,7 @@
   - Optimization
     - [Interprocedural Optimization](Program/Compilers/Optimization/Interprocedural.md)
   - [LLVM](Program/Compilers/LLVM/README.md)
+    - [IR](Program/Compilers/LLVM/IR/README.md)
     - [Plugins](Program/Compilers/LLVM/Plugins.md)
   - [GNU Compiler Collection](Program/Compilers/GCC/README.md)
   - [Microsoft Visual C++](Program/Compilers/MSVC/README.md)

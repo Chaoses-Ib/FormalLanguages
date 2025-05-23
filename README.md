@@ -121,17 +121,19 @@
 - [Memory Management](Program/Processors/x86/Memory/README.md)
   - [Memory Alignment](Program/Processors/x86/Memory/Alignment.md)
 
-## Data Exchange Languages
+## [Data Exchange Languages](Data/README.md)
 - [Data Comparison](Data/Comparison.md)
 - [Text](Data/Text/README.md)
   - [Binary-to-text Encodings](Data/Text/Binary.md)
   - [Delimiter-Separated Values](<Data/Text/Delimiter-Separated Values.md>)
   - [JavaScript Object Notation (JSON)](Data/Text/JSON/README.md)
+    - [Binary JSON](Data/Text/JSON/Binary.md)
     - [JSON Schema](Data/Text/JSON/Schema.md)
     - [JSON Type Definition](Data/Text/JSON/Definition.md)
     - [JSON Streaming](Data/Text/JSON/Streaming.md)
   - [TOML](Data/Text/TOML.md)
   - [YAML](Data/Text/YAML.md)
+- [MessagePack](Data/MessagePack.md)
 - [Protocol Buffers (Protobuf)](Data/Protobuf.md)
 - [Apache Arrow](Data/Arrow.md)
 

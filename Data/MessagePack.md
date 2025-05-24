@@ -5,6 +5,9 @@
 - Schema-less
   - Best schema-less binary format overall at the moment?
   - Keys will be repeated for array of objects
+- MIME: `application/vnd.msgpack`
+
+  [MIME type - Issue #194 - msgpack/msgpack](https://github.com/msgpack/msgpack/issues/194)
 
 [Hacker News](https://news.ycombinator.com/item?id=4981376), [2025-01](https://news.ycombinator.com/item?id=42663047)
 > Anyone who has tried to store binary data in JSON knows that MessagePack does indeed have a use case. And anyone who is working with browsers knows that JSON/JS is the king there.
@@ -34,10 +37,18 @@
 ### JS
 - [kriszyp/msgpackr: Ultra-fast MessagePack implementation with extension for record and structural cloning / msgpack.org\[JavaScript/NodeJS\]](https://github.com/kriszyp/msgpackr)
   - Fastest
+  - `undefined` will be encoded to `D4 00 00` (empty fixext 1), while `null` will be encoded to `C0` (nil)
+  - `pack()` is buggy with HMR, may include previous results
   - [Could be made more treeshakeable - Issue #65 - kriszyp/msgpackr](https://github.com/kriszyp/msgpackr/issues/65)
+  - [performance reduction (Node.js vs Browser) - Issue #52 - kriszyp/msgpackr](https://github.com/kriszyp/msgpackr/issues/52)
 - [msgpack/msgpack-javascript: @msgpack/msgpack - MessagePack for JavaScript / msgpack.org\[ECMA-262/JavaScript/TypeScript\]](https://github.com/msgpack/msgpack-javascript)
 - [ygoe/msgpack.js: A minimal yet complete MessagePack implementation for JavaScript. msgpack.org\[JavaScript\]](https://github.com/ygoe/msgpack.js) (`@ygoe/msgpack`, inactive)
 - [kawanet/msgpack-lite: Fast Pure JavaScript MessagePack Encoder and Decoder / msgpack.org\[JavaScript\]](https://github.com/kawanet/msgpack-lite) (discontinued)
+
+## Tools
+- [msgpack visualizer](https://sugendran.github.io/msgpack-visualizer/)
+  - Unknown type 0xd4
+- [Online msgpack converter](https://msgpack.solder.party/)
 
 ## CBOR
 [Wikipedia](https://en.wikipedia.org/wiki/CBOR)

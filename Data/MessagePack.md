@@ -5,16 +5,29 @@
 - Schema-less
   - Best schema-less binary format overall at the moment?
   - Keys will be repeated for array of objects
+- Binary, multiple encoding approaches and allowing extensions makes cross-implementation interop problematic
+  - Leads to decoders prefer to be permissive
+  - One workaround is to embed JSON strings for complex structures
 - MIME: `application/vnd.msgpack`
 
   [MIME type - Issue #194 - msgpack/msgpack](https://github.com/msgpack/msgpack/issues/194)
+- File extension
+  - `.msgpack`, used by uv, pandas
+  - `.mpk`
+
+  [\[Discussion\] Preferred file extension? - Issue #291 - msgpack/msgpack](https://github.com/msgpack/msgpack/issues/291)
 
 [Hacker News](https://news.ycombinator.com/item?id=4981376), [2025-01](https://news.ycombinator.com/item?id=42663047)
 > Anyone who has tried to store binary data in JSON knows that MessagePack does indeed have a use case. And anyone who is working with browsers knows that JSON/JS is the king there.
 
 > Within the space of {schema-ful, schemaless} x {binary, text}, protobuf, {BSON, MessagePack}, JSON each occupy a distinct position. The position (schema-ful, text) is not very meaningful combination in practice and not covered by these, whereas the position (schema-less, binary) is a valid practical use case supported by {BSON, MessagePack}. For example, you don't know the schema before-hand but still want to minimize data size.
 
+[\[Proposal\] Native CBOR or MessagePack support](https://discourse.wicg.io/t/proposal-native-cbor-or-messagepack-support/2011/)
+
 ## Libraries
+### C++
+[MPack: Feature Comparisons](https://ludocode.github.io/mpack/md_docs_features.html)
+
 ### Rust
 - [msgpack-rust: MessagePack implementation for Rust / msgpack.org\[Rust\]](https://github.com/3Hren/msgpack-rust) (`rmp`, inactive)
   - Problematic
@@ -38,6 +51,8 @@
 - [kriszyp/msgpackr: Ultra-fast MessagePack implementation with extension for record and structural cloning / msgpack.org\[JavaScript/NodeJS\]](https://github.com/kriszyp/msgpackr)
   - Fastest
   - `undefined` will be encoded to `D4 00 00` (empty fixext 1), while `null` will be encoded to `C0` (nil)
+    - `encodeUndefinedAsNil`
+  - Support `Uint8Array`, but not `Uint32Array` even with `moreTypes: true`? Length will be the byte length (but integers only take far less bytes).
   - `pack()` is buggy with HMR, may include previous results
   - [Could be made more treeshakeable - Issue #65 - kriszyp/msgpackr](https://github.com/kriszyp/msgpackr/issues/65)
   - [performance reduction (Node.js vs Browser) - Issue #52 - kriszyp/msgpackr](https://github.com/kriszyp/msgpackr/issues/52)
@@ -46,14 +61,28 @@
 - [kawanet/msgpack-lite: Fast Pure JavaScript MessagePack Encoder and Decoder / msgpack.org\[JavaScript\]](https://github.com/kawanet/msgpack-lite) (discontinued)
 
 ## Tools
+- [infotopie.nl/open-source/msgpack-explorer](http://www.infotopie.nl/open-source/msgpack-explorer)
+- [ludocode/msgpack-tools: Command-line tools for converting between MessagePack and JSON / msgpack.org\[UNIX Shell\]](https://github.com/ludocode/msgpack-tools)
+- [BeamNG/msgpackInspector: MessagePack binary viewer](https://github.com/BeamNG/msgpackInspector) (discontinued)
+
+Web:
 - [msgpack visualizer](https://sugendran.github.io/msgpack-visualizer/)
+  - Base64 input only
   - Unknown type 0xd4
 - [Online msgpack converter](https://msgpack.solder.party/)
+  - Hex input only
 
-## CBOR
+## [CBOR](https://cbor.io/)
 [Wikipedia](https://en.wikipedia.org/wiki/CBOR)
-  
+
 [CBOR relationship with msgpack - Issue #258 - msgpack/msgpack](https://github.com/msgpack/msgpack/issues/258)
 > In 2013, when we gave up trying to drag msgpack into a standardization process, we used the opportunity to clean up the msgpack format, so CBOR is not byte-for-byte compatible to msgpack. (It is close enough that some early CBOR implementations were derived from msgpack implementations.)
+
+[Hacker News](https://news.ycombinator.com/item?id=10995726)
+> msgpack has a confusion between text and binary data baked into it that will probably never be resolved, and CBOR deliberately fixes that.
+>
+> It also seems to have a better implementation of streaming data than msgpack. In msgpack, streaming is something you have to implement outside of the format itself, possibly by concatenating together many msgpack representations. CBOR has a way to say "here comes a streaming list, I'll tell you when it's done".
+
+Used by Qt.
 
 [Indeed. MessagePack should be replaced with CBOR in new protocols, as CBOR is a ... | Hacker News](https://news.ycombinator.com/item?id=14067747)

@@ -35,6 +35,7 @@ An **overlay (附加数据段)** is the auxiliary data attached after the logica
 [^overlay-upx-linux]: [UPX - a powerful executable packer / Discussion / Help: Overlay data problem in linux/elf386 binaries](https://sourceforge.net/p/upx/discussion/6806/thread/79e2a6b8/)
 
 ## Libraries
+- LLVM/Object
 - [LIEF: Library to Instrument Executable Formats](https://github.com/lief-project/LIEF)
   - Formats: ELF, PE, MachO, OAT, DEX, VDEX, ART
   - Languages: [C++](https://lief.re/doc/stable/api/cpp/index.html), [Python](https://lief.re/doc/stable/api/python/index.html), [Rust](https://lief.re/doc/stable/api/rust/index.html), [C](https://lief.re/doc/stable/api/c/index.html) (limited)

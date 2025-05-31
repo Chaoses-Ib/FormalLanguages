@@ -4,7 +4,7 @@
 - Parameterization
   - Swift
 
-[MergeFunctions pass, how it works --- LLVM 21.0.0git documentation](https://llvm.org/docs/MergeFunctions.html)
+[MergeFunctions pass, how it works --- LLVM documentation](https://llvm.org/docs/MergeFunctions.html)
 
 ## Algorithms
 - F3M: Fast Focused Function Merging[^stirlingF3MFastFocused2022]

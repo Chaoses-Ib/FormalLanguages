@@ -1,5 +1,12 @@
 # IR
+[LLVM Language Reference Manual --- LLVM documentation](https://llvm.org/docs/LangRef.html)
+
+- SSA
+  - > Only *reachable* IR has to be *well-formed*, e.g., wrt. SSA properties
+
 [A Gentle Introduction to LLVM IR - mcyoung](https://mcyoung.xyz/2023/08/01/llvm-ir/)
+
+[Mapping High Level Constructs to LLVM IR --- Mapping High Level Constructs to LLVM IR documentation](https://mapping-high-level-constructs-to-llvm-ir.readthedocs.io/en/latest/index.html)
 
 - LLVM 1.0
   - Pascal-style syntax
@@ -34,6 +41,11 @@ Constrained FP
 Unifying MLIR?
 
 [2025 EuroLLVM - LLVM IR -- Past, Present and Future](https://www.youtube.com/watch?v=gIQEZ3QJz1w)
+
+## Syntax
+- `@`: global symbols
+- `%`: local symbols / basic block names
+- `:`: basic block name suffix in definition
 
 ## Manifest constraints and analysis results
 - Attributes, metadata

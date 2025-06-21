@@ -48,15 +48,26 @@
 - [otake84/messagepack-rs: messagepack-rs is pure Rust MessagePack implementation.](https://github.com/otake84/messagepack-rs) (discontinued)
 
 ### JS
-- [kriszyp/msgpackr: Ultra-fast MessagePack implementation with extension for record and structural cloning / msgpack.org\[JavaScript/NodeJS\]](https://github.com/kriszyp/msgpackr)
+- [msgpackr: Ultra-fast MessagePack implementation with extension for record and structural cloning / msgpack.org\[JavaScript/NodeJS\]](https://github.com/kriszyp/msgpackr) ([npm](https://www.npmjs.com/package/msgpackr))
   - Fastest
   - `undefined` will be encoded to `D4 00 00` (empty fixext 1), while `null` will be encoded to `C0` (nil)
     - `encodeUndefinedAsNil`
   - Support `Uint8Array`, but not `Uint32Array` even with `moreTypes: true`? Length will be the byte length (but integers only take far less bytes).
-  - `pack()` is buggy with HMR, may include previous results
-  - [Could be made more treeshakeable - Issue #65 - kriszyp/msgpackr](https://github.com/kriszyp/msgpackr/issues/65)
-  - [performance reduction (Node.js vs Browser) - Issue #52 - kriszyp/msgpackr](https://github.com/kriszyp/msgpackr/issues/52)
-- [msgpack/msgpack-javascript: @msgpack/msgpack - MessagePack for JavaScript / msgpack.org\[ECMA-262/JavaScript/TypeScript\]](https://github.com/msgpack/msgpack-javascript)
+  - `pack()` returns an view of a global buffer by default instead of an array, may cause some libraries (like [Axios](https://github.com/Chaoses-Ib/Networks/blob/main/Application/HTTP/Libraries/JS/README.md#axios)) to include previous results and paddings
+  - Size: 28.9 KB, Gzip: 10.3 KB
+    - `encode()`: 21 KB
+    - [Could be made more treeshakeable - Issue #65](https://github.com/kriszyp/msgpackr/issues/65)
+  - [performance reduction (Node.js vs Browser) - Issue #52](https://github.com/kriszyp/msgpackr/issues/52)
+
+  [Comparison with dpack - Issue #38](https://github.com/kriszyp/msgpackr/issues/38)
+
+  [dear sir ,do you know protobuf.js?have you compared msgpackr with protobuf.js? - Issue #124](https://github.com/kriszyp/msgpackr/issues/124)
+
+- [msgpack/msgpack-javascript: @msgpack/msgpack - MessagePack for JavaScript / msgpack.org\[ECMA-262/JavaScript/TypeScript\]](https://github.com/msgpack/msgpack-javascript) ([npm](https://www.npmjs.com/package/@msgpack/msgpack))
+  - Size: 21.8 KB, Gzip: 6 KB
+    - Encode: 10 KB
+  - Less active and weekly downloads than msgpackr
+
 - [ygoe/msgpack.js: A minimal yet complete MessagePack implementation for JavaScript. msgpack.org\[JavaScript\]](https://github.com/ygoe/msgpack.js) (`@ygoe/msgpack`, inactive)
 - [kawanet/msgpack-lite: Fast Pure JavaScript MessagePack Encoder and Decoder / msgpack.org\[JavaScript\]](https://github.com/kawanet/msgpack-lite) (discontinued)
 

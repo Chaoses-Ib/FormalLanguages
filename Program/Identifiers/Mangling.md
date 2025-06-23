@@ -10,8 +10,8 @@ Tools:
 - C++
   - GCC: Start with `_Z`, `__Z`, `___Z` or `____Z`
   - Clang
-  - MSVC: Start with `?` or `@?`
-    - RTTI: Start with `.`
+  - [MSVC](https://learn.microsoft.com/en-us/cpp/build/reference/decorated-names?view=msvc-170): Start with `?` or `@?`
+    - RTTI: Start with `.`, but `undname` can only demangle without the `.`
 
     [Visual C++ name mangling - Wikiversity](https://en.m.wikiversity.org/wiki/Visual_C%2B%2B_name_mangling)
     - No arguments in name-only names
@@ -131,6 +131,11 @@ Tools:
 [Anyone use "pretty" name mangling in their language implementation? : r/ProgrammingLanguages](https://www.reddit.com/r/ProgrammingLanguages/comments/12m738n/anyone_use_pretty_name_mangling_in_their_language/)
 
 ## Mangling
+C++:
+- Compiling
+
+  If mangled name -> symbol name is lossy, at least some symbol names cannot be mangled without context information.
+
 Rust:
 - [What about manually mangling rust symbols (NOT demangling) : r/rust](https://www.reddit.com/r/rust/comments/1ay6bop/what_about_manually_mangling_rust_symbols_not/)
 
@@ -159,9 +164,10 @@ C++:
     - > My [benchmarks](https://github.com/Ryan-rsm-McKenzie/undname-rs/tree/main/benches) show `undname` performs slightly faster than `msvc-demangler`, while having a much greater level of support for the wide variety of mangled string formats available in wild. It also supports most of the flags you can pass to `UnDecorateSymbolName`, so it is a fairly frictionless drop-in replacement for existing applications wishing to migrate from Dbghelp.
     - Wasm: 90 KiB
     - [Larger build size than msvc-demangler - Issue #1](https://github.com/Ryan-rsm-McKenzie/undname-rs/issues/1)
+    - [`InvalidFunctionClass` error - Issue #4](https://github.com/Ryan-rsm-McKenzie/undname-rs/issues/4)
 
   - [msvc-demangler-rust: A rust library that demangles / undecorates C++ symbols mangled by MSVC](https://github.com/mstange/msvc-demangler-rust) (inactive)
-    - > `msvc-demangler` is missing support for a wide variety of mangled strings, and I legitimately need support for these things. Take the mangled name `.?AVtype_info@@` for example. Microsoft's `undname` can demangle it as follows: `undname 0x2000 ?AVtype_info@@` \=> `class type_info`. However `msvc-demangler` is completely incapable of demangling them. For those who are not in the know, Microsoft's implementation of [std::type\_info::name](https://en.cppreference.com/w/cpp/types/type_info/name) works by passing strings just like these directly to `UnDecorateSymbolName`, so they're very common to find in image files. It's startling to see a demangler *not* support these strings.
+    - > `msvc-demangler` is missing support for a wide variety of mangled strings, and I legitimately need support for these things. Take the mangled name `.?AVtype_info@@` for example. Microsoft's `undname` can demangle it as follows: `undname 0x2000 ?AVtype_info@@` => `class type_info`. However `msvc-demangler` is completely incapable of demangling them. For those who are not in the know, Microsoft's implementation of [`std::type_info::name`](https://en.cppreference.com/w/cpp/types/type_info/name) works by passing strings just like these directly to `UnDecorateSymbolName`, so they're very common to find in image files. It's startling to see a demangler *not* support these strings.
     - Wasm: 68 KiB
 
   There are no names only can be handled by msvc-demangler in my test:
@@ -181,8 +187,12 @@ C++:
 - Windows: [UnDecorateSymbolName()](https://learn.microsoft.com/en-us/windows/win32/api/dbghelp/nf-dbghelp-undecoratesymbolnamew)
   - > `UnDecorateSymbolName` is notoriously buggy. It does not play nicely with mangled strings from all sources (e.g. it behaves differently depending on whether the mangled string comes from an image file, or from a pdb), it often misses things that are encoded in the mangled string (e.g. Microsoft's `undname` demangles `?x@@3QEAHEA` as `int * __ptr64 __ptr64 x`, when the correct demangling is `int *const x`), and its flags sometimes do not play well with each other.
   - > Dbghelp is notoriously one of the remaining single-threaded Win32 apis, and it is very hard/impossible to synchronize access across crates.
+  - Demangling RTTI (`?AV`) names requires `UNDNAME_NO_ARGUMENTS` (0x2000) to work
 
-  Tools: `undname`
+    [Support for `UNDNAME_NO_ARGUMENTS` - Issue #71 - mstange/msvc-demangler-rust](https://github.com/mstange/msvc-demangler-rust/issues/71)
+
+  Tools: `undname` (MSVC)
+  - `undname [flags] fname [fname...]`
 
 - Web: [GCC and MSVC C++ Demangler](https://demangler.com/)
 

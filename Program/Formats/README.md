@@ -52,6 +52,19 @@ An **overlay (附加数据段)** is the auxiliary data attached after the logica
 
 C++:
 - Binary File Descriptor library (BFD) ([Wikipedia](https://en.wikipedia.org/wiki/Binary_File_Descriptor_library))
+- Detect It Easy
+  - CMake + Qt
+  - [horsicq/Formats: Binary formats](https://github.com/horsicq/Formats)
+    - [PE](https://github.com/horsicq/Formats/blob/master/exec/xpe.cpp): 1.3 万行，724 个函数全写在一个类上，连证书字段序列化都有
+    - [horsicq/XExtractor](https://github.com/horsicq/XExtractor)
+  - [horsicq/XScanEngine](https://github.com/horsicq/XScanEngine)
+    - [horsicq/SpecAbstract](https://github.com/horsicq/SpecAbstract)
+      - [horsicq/StaticScan: Static scan.](https://github.com/horsicq/StaticScan)
+  - [horsicq/signatures](https://github.com/horsicq/signatures)
+  - [horsicq/die\_script](https://github.com/horsicq/die_script)
+  - [horsicq/XInfoDB](https://github.com/horsicq/XInfoDB)
+  - [horsicq/die\_library](https://github.com/horsicq/die_library)
+    - Rust: [die-rust: Native Rust bindings for @horsicq's Detect-It-Easy](https://github.com/elastic/die-rust)
 
 Rust:
 - [goblin: An impish, cross-platform binary parsing crate, written in Rust](https://github.com/m4b/goblin)
@@ -72,3 +85,14 @@ Rust:
 Python:
 - LIEF
 - [FileBytes: Library to read and edit files in the following formats: Executable and Linking Format (ELF), Portable Executable (PE), MachO and OAT (Android Runtime)](https://github.com/sashs/filebytes)
+
+## Tools
+- [Detect It Easy: Program for determining types of files for Windows, Linux and MacOS.](https://github.com/horsicq/Detect-It-Easy) (DIE)
+  - [horsicq/DIE-engine: DIE engine](https://github.com/horsicq/DIE-engine)
+  - Qt
+  - `scoop install detect-it-easy`
+  - 识别编译器版本效果不错
+  - Nauz File Detector
+    - Newer than the standalone version?
+
+- [Nauz File Detector: Linker/Compiler/Tool detector for Windows, Linux and MacOS.](https://github.com/horsicq/Nauz-File-Detector) (NFD)

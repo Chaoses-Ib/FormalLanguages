@@ -141,6 +141,7 @@ Rust:
 
 ## Demangling
 - [symbolic-demangle: Demangling support for various languages and compilers.](https://github.com/getsentry/symbolic/tree/master/symbolic-demangle)
+  - Rust
   - C++ (GCC, clang and MSVC), Rust (legacy/v0), Objective C/C++, Swift (5.2)
   - `cpp_demangle`, `msvc-demangler`, `rustc-demangle`
 - [rz-libdemangle: Rizin Library to demangle symbols](https://github.com/rizinorg/rz-libdemangle)
@@ -150,6 +151,9 @@ Rust:
   - Tools: binutils, gdb, perf
 - [llvm-undname](https://github.com/llvm/llvm-project/blob/main/llvm/tools/llvm-undname/llvm-undname.cpp)
   - C++, Rust (legacy/v0)
+- [horsicq/XCppfilt](https://github.com/horsicq/XCppfilt)
+  - C++, Rust, Java, ...
+  - [horsicq/XDemangle](https://github.com/horsicq/XDemangle)
 
 C++:
 - [pharos-demangle: Demangles C++ symbol names genarated by Microsoft Visual C++ in order to retrieve the original C++ declarations.](https://github.com/cmu-sei/pharos-demangle)

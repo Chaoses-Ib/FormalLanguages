@@ -215,6 +215,7 @@ C++:
 - [libpdb: Parser for Microsoft Program Database (PDB) files](https://github.com/shareef12/libpdb)
 - [libmspdb: Parsing library for the Microsoft Program Database files](https://github.com/IntroVirt/libmspdb)
 - [LIEF::pdb](https://lief.re/doc/stable/extended/pdb/index.html)
+- [horsicq/XWinPDB](https://github.com/horsicq/XWinPDB)
 
 Rust:
 - [pdb: A parser for Microsoft PDB (Program Database) debugging information](https://github.com/getsentry/pdb)

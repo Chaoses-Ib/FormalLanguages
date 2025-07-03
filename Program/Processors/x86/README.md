@@ -63,5 +63,9 @@ AMD64 Architecture Programmer’s Manual:
 - Volume 4: 128-Bit and 256-Bit Media Instructions
 - Volume 5: 64-Bit Media and x87 Floating-point Instructions
 
+## Tools
+- [horsicq/XOpcodeCalc: Opcode calculator / ASM calculator](https://github.com/horsicq/XOpcodeCalc)
+
+
 [^dasguptaCompleteFormalSemantics2019]: Dasgupta, S., Park, D., Kasampalis, T., Adve, V. S., & Roşu, G. (2019). A complete formal semantics of x86-64 user-level instruction set architecture. Proceedings of the 40th ACM SIGPLAN Conference on Programming Language Design and Implementation, 1133–1148. https://doi.org/10.1145/3314221.3314601
 [^goelSimulationFormalVerification2014]: Goel, S., Hunt, W. A., Kaufmann, M., & Ghosh, S. (2014). Simulation and Formal Verification of x86 Machine-Code Programs that make System Calls. Proceedings of the 14th Conference on Formal Methods in Computer-Aided Design, 91–98.

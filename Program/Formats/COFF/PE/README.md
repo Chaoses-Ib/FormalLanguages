@@ -146,15 +146,9 @@ Python:
 - [pefile: A Python module to read and work with PE (Portable Executable) files](https://github.com/erocarrera/pefile)
 
 ## Tools
-- [Detect It Easy: Program for determining types of files for Windows, Linux and MacOS.](https://github.com/horsicq/Detect-It-Easy) (DIE)
-  - `scoop install detect-it-easy`
-  - 识别编译器版本效果不错
-  - Nauz File Detector
-    - Newer than the standalone version?
+[→Executable formats tools](../../README.md#tools)
 
 - [XPEViewer: PE file viewer/editor for Windows, Linux and MacOS.](https://github.com/horsicq/XPEViewer)
-
-- [Nauz File Detector: Linker/Compiler/Tool detector for Windows, Linux and MacOS.](https://github.com/horsicq/Nauz-File-Detector) (NFD)
 
 - [Exeinfo PE](https://github.com/ExeinfoASL/ASL)
   - `scoop install exeinfo-pe` (`exeinfope`)

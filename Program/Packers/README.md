@@ -30,6 +30,14 @@ Rust:
 
 [\[Question\] VMProtect + Nuitka](https://www.unknowncheats.me/forum/anti-cheat-bypass/668906-vmprotect-nuitka.html)
 
+## Signatures
+- [Detect-It-Easy/db/PE/\_\_GenericHeuristicAnalysis\_By\_DosX.7.sg at a5cf18cc9814211fe868a20cac447ec491cb5d90 - horsicq/Detect-It-Easy](https://github.com/horsicq/Detect-It-Easy/blob/a5cf18cc9814211fe868a20cac447ec491cb5d90/db/PE/__GenericHeuristicAnalysis_By_DosX.7.sg#L310)
+  - Strange sections
+    - `PE.getNumberOfSections() > (!isClrNET() ? 6 : 10) || !PE.section[".text"]`
+    - `sectionName[0] !== "." && sectionName.length < 3`
+    - ``const badChars = '_-=+~!@#$%^&*()"№;%:?*():;,/\\|\'`<>.0123456789';``
+    - [Except MinGW](https://github.com/horsicq/Detect-It-Easy/blob/a5cf18cc9814211fe868a20cac447ec491cb5d90/db/PE/__GenericHeuristicAnalysis_By_DosX.7.sg#L2670-L2682)
+
 ## Unpacking
 ### Original entry point
 - 单步跟踪法

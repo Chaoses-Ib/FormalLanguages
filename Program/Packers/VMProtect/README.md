@@ -111,13 +111,31 @@
 Rust: [CertainLach/vmprotect: Unofficial Rust SDK for VMProtect](https://github.com/CertainLach/vmprotect)
 
 ## Signature
+[→Packer signatures](../README.md#signatures)
+
 - Watermark
   
   [一种新的辨认VMP3的方法-软件逆向-看雪](https://bbs.kanxue.com/thread-279903.htm)
   - `50F01FFDFD8??7926???B4??C2???07?4?????C?C??F?D2?6??19CBF0?9912?717??3635CA8A?7?0???F?C?D7D7??9E5?1?84E4???24??D45?5?C?04B9E?D?2?15?89??6?784?????D9??1?1?E??03?????446?6???3EC941E?6A??4?5????????8?C??8???2???0C8EB?C1?D?4?`
   - *10 (10 or 8 + 2 in runtime)
   - [DetectVMP3: A POC to detect the exist of VMProtect 3 protection by search feature watermark.](https://github.com/DNLINYJ/DetectVMP3)
+
+  ["0x50, 0xF0, 0x1F, 0xFD, 0xFD"](https://github.com/search?q=%220x50%2C%200xF0%2C%200x1F%2C%200xFD%2C%200xFD%22&ref=opensearch&type=code) 能搜出利用 VMP 过的漏洞驱动的项目
 - Duplicated `KERNEL32.dll` imports
+- Handlers: old version only
+
+  [devirtualizeme32\_vmp\_3.0.9\_v2/vmp\_rules.yar at master - etormadiv/devirtualizeme32\_vmp\_3.0.9\_v2](https://github.com/etormadiv/devirtualizeme32_vmp_3.0.9_v2/blob/master/vmp_rules.yar)
+- Section name
+
+  [2024/Mikesxrs/INFO\_VMPROTECT\_PACKER.yar at 10b162702cdbecb0752ee4cba6c5a3085d2cdcf9 - 100DaysofYARA/2024](https://github.com/100DaysofYARA/2024/blob/10b162702cdbecb0752ee4cba6c5a3085d2cdcf9/Mikesxrs/INFO_VMPROTECT_PACKER.yar)
+- MZ
+
+  [filtered-yara-rules/vmprotect.yara at a5bcb5e2490f502b680de82371b4f0b4b342fa96 - vulnerabivoro/filtered-yara-rules](https://github.com/vulnerabivoro/filtered-yara-rules/blob/a5bcb5e2490f502b680de82371b4f0b4b342fa96/vmprotect.yara)
+
+  [analyzer/yara/rules/packersections.yar at 4cc12c944daeb91e6c22312f74337c11be312357 - qeeqbox/analyzer](https://github.com/qeeqbox/analyzer/blob/4cc12c944daeb91e6c22312f74337c11be312357/yara/rules/packersections.yar#L545-L573)
+- RTTI
+
+  [CAPE/data/yara/CAPE/VMProtectStub.yar at 0bb54b6f6182a799a93d2ec11b9b956c42775d53 - rizaust/CAPE](https://github.com/rizaust/CAPE/blob/0bb54b6f6182a799a93d2ec11b9b956c42775d53/data/yara/CAPE/VMProtectStub.yar#L4)
 - No rich header
 
 [Detect-It-Easy/db/PE/VMProtect.2.sg](https://github.com/horsicq/Detect-It-Easy/blob/master/db/PE/VMProtect.2.sg)
@@ -127,6 +145,8 @@ Rust: [CertainLach/vmprotect: Unofficial Rust SDK for VMProtect](https://github.
 - [VMProtect signature update](https://github.com/horsicq/Detect-It-Easy/commit/2c3226018910ed6e8c6175c0eac83130bcb63773)
   
   Co-authored with vmpsoft?
+
+[DefenderYara/Trojan/Win32/Delf/Trojan\_Win32\_Delf\_CZ.yar at 63fedb45b4243e50a3f85e9e4e3e45bb6f1a6b6f - roadwy/DefenderYara](https://github.com/roadwy/DefenderYara/blob/63fedb45b4243e50a3f85e9e4e3e45bb6f1a6b6f/Trojan/Win32/Delf/Trojan_Win32_Delf_CZ.yar#L14)
 
 ## Packer
 [\[讨论\]VMP全保护带VM脱壳演示-加壳脱壳-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-283102.htm)

@@ -39,6 +39,7 @@
   - [Tracing](Program/Analysis/Tracing.md)
   - [Performance Analysis](Program/Analysis/Performance/README.md)
     - [Profiling](Program/Analysis/Performance/Profiling.md)
+  - [YARA](Program/Analysis/YARA.md)
   - [Tools](Program/Analysis/Tools/README.md)
     - [IDA](Program/Analysis/Tools/IDA/README.md)
     - [Binary Ninja](Program/Analysis/Tools/Binary%20Ninja/README.md)

@@ -100,6 +100,16 @@ Samples:
 - Windows
 - [aaaddress1/RunPE-In-Memory: Run a Exe File (PE Module) in memory (like an Application Loader)](https://github.com/aaaddress1/RunPE-In-Memory)
 
+## Extracting
+- `IMAGE_DOS_SIGNATURE` (`MZ`)
+- `IMAGE_NT_HEADERS_SIGNATURE` (`PE\x00\x00`)
+- `IMAGE_NT_OPTIONAL_HDR32_MAGIC` / `IMAGE_NT_OPTIONAL_HDR64_MAGIC`
+
+Rust:
+- [pdbg-rules](https://github.com/16Hexa/pdbg-rules)
+- [exe-rs::find_embedded_images](https://github.com/frank2/exe-rs/blob/9dc3fbc89db832f6ce6bf9dd85e7587e7ab5ea61/src/lib.rs#L85-L145)
+  - Brute force
+
 ## Libraries
 [→Executable formats libraries](../../README.md#libraries)
 
@@ -115,18 +125,25 @@ Rust:
 - [PeLite: Lightweight, memory-safe, zero-allocation library for reading and navigating PE binaries.](https://github.com/CasualX/pelite) (inactive)
   - Usable, but the API is fucked up.
   - Wasm: 6 KiB
+    - [PeKit](https://casualhacks.net/pekit/)
   - PE32 and PE64 are different types, but there is a [Wrap](https://docs.rs/pelite/latest/pelite/enum.Wrap.html).
 
     [Add pelite::Wrap to the top level crate documentation - Issue #250 - CasualX/pelite](https://github.com/CasualX/pelite/issues/250)
   - What's the difference between `PeFile<'a>` and `PeView<'a>`?
 
     `PeFile` is unmapped (on disk), `PeView` is mapped (loaded in memory).
-  - Unaligned: [backengineering/pelite](https://github.com/backengineering/pelite)
+  - Everything must be aligned
+  
+    [Misaligned address when trying to access Import section of some PEs - Issue #246 - CasualX/pelite](https://github.com/CasualX/pelite/issues/246)
+    > The design of pelite demands that everything is aligned so that I can give references to the underlying data instead of making copies. This makes pelite a 'zero allocation' parser which is one of my goals.
+
+    Unaligned: [backengineering/pelite](https://github.com/backengineering/pelite)
 
 - [exe-rs: The PE Executable Library, but for Rust!](https://github.com/frank2/exe-rs) (inactive)
   - Modifying: `add_section()`, `fix_image_size()`...
   - No `CV_INFO_PDB70`
   - Wasm: 13 KiB
+  - GPL-3
 
 - [pe-parser: PE Parsing, but blazing fast](https://github.com/IsaacMarovitz/pe-parser)
 
@@ -137,6 +154,8 @@ Rust:
   > They also don't seem to parse the bitflag characteristics or time stamps for you, either.
   > 
   > Really it comes down to a manner of preference and whether you prefer to stay more true to the original 'C' style or adapt it to be Rustier
+
+- [MaulingMonkey/format-exe: Unstable APIs for parsing windows-style portable executable files](https://github.com/MaulingMonkey/format-exe)
 
 .NET:
 - [AsmResolver: A library for creating, reading and editing PE files and .NET modules.](https://github.com/Washi1337/AsmResolver)
@@ -160,3 +179,6 @@ Python:
   - Many other features
 
   [ProtectionId not available - Issue #1261 - Winetricks/winetricks](https://github.com/Winetricks/winetricks/issues/1261)
+
+Web:
+- [PeKit](https://casualhacks.net/pekit/)

@@ -45,6 +45,7 @@ A **regex engine** is an implementations of regex functionality.[^wiki]
   - PE
   - Powerful but [the syntax](https://docs.rs/pelite/latest/pelite/pattern/fn.parse.html) is weird. Writing [`[Atom]`](https://docs.rs/pelite/latest/pelite/pattern/enum.Atom.html) directly may be better and also more powerful.
   - [pelite/src/bin/findsig.rs](https://github.com/CasualX/pelite/blob/master/src/bin/findsig.rs)
+  - [Pattern scanner not searching all code regions - Issue #283](https://github.com/CasualX/pelite/issues/283)
 
   Used by many game security tools.
 - [scanner-rs: Binary signature scanner in Rust.](https://github.com/pombredanne/scanner-rs) (discontinued)

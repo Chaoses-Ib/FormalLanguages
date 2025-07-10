@@ -22,3 +22,31 @@
 - [yaml-cpp: A YAML parser and emitter in C++](https://github.com/jbeder/yaml-cpp)
   - YAML 1.2
   - vcpkg
+  - [Add emitting of json - Issue #941](https://github.com/jbeder/yaml-cpp/issues/941)
+    - [mircodz/tojson: header only library to convert yaml and xml files to nlohmann::json](https://github.com/mircodz/tojson)
+
+    [Emitting JSON with yaml-cpp? - Stack Overflow](https://stackoverflow.com/questions/43902941/emitting-json-with-yaml-cpp)
+
+### Rust
+- unsafe-libyaml
+  - [dtolnay/serde-yaml: Strongly typed YAML library for Rust](https://github.com/dtolnay/serde-yaml) (discontinued)
+    - [acatton/serde-yaml-ng: Strongly typed YAML library for Rust, serde compatible. This is an independant continuation of serde-yaml from dtolnay.](https://github.com/acatton/serde-yaml-ng)
+    - [bourumir-wyngs/serde-yaml-bw: Strongly typed YAML library for Rust maintained by Bourumir Wyngs](https://github.com/bourumir-wyngs/serde-yaml-bw)
+    - [cafkafk/serde-norway: Strongly typed YAML library for Rust](https://github.com/cafkafk/serde-norway) (discontinued)
+    - [zim32/serde\_yaml2: Serde integration for yaml\_rust2 crate](https://github.com/zim32/serde_yaml2)
+    - [sebastienrousseau/serde\_yml: Strongly typed YAML library for Rust. (a fork of Serde YAML) 🦀](https://github.com/sebastienrousseau/serde_yml) (discontinued)
+      - AI
+
+      > I worked with the owner of serde\_yml to fix some of that crate's problems. And he did accept some of my suggestions. But ultimately I lost confidence in it. The worst part wasn't even the AI-generated crap. That at least can be removed. The worst part, for me, was the obfuscated git history. The fact that he blew away serde\_yaml's history when he forked, and then made so many major changes without descriptive commit messages, means that it's very difficult to tell what has changed, and almost impossible to tell why. So I'm trying to switch to [serde-yaml-ng](https://github.com/acatton/serde-yaml-ng) now.
+
+- [Ethiraric/yaml-rust2: A pure Rust YAML implementation.](https://github.com/Ethiraric/yaml-rust2)
+- [saphyr-rs/saphyr: A set of crates dedicated to parsing YAML.](https://github.com/saphyr-rs/saphyr)
+  - [serde support - Issue #1](https://github.com/saphyr-rs/saphyr/issues/1)
+    - [Add serde from/to string impl by james-allan-lloyd - Pull Request #53](https://github.com/saphyr-rs/saphyr/pull/53)
+
+[We lost serde-yaml, what's the next one? : r/rust](https://www.reddit.com/r/rust/comments/1bo5dle/we_lost_serdeyaml_whats_the_next_one/)
+
+[Serde-yaml deprecation. alternatives? - help - The Rust Programming Language Forum](https://users.rust-lang.org/t/serde-yaml-deprecation-alternatives/108868)
+
+[Address serde-yaml deprecation - Issue #1770 - kube-rs/kube](https://github.com/kube-rs/kube/issues/1770)
+

@@ -4,8 +4,10 @@
 
 ## Grammar
 - [Parsing Expression Grammar](Grammar/Parsing%20Expression.md)
-- Parsing
+- [Parsing](Grammar/Parsing/README.md)
+  - [Lexing](Grammar/Parsing/Lexing.md)
   - [Parser Generators](Grammar/Parsing/Generators.md)
+  - [Parser Combinators](Grammar/Parsing/Combinators.md)
   - [ANTLR](Grammar/Parsing/ANTLR/README.md)
     - [The Definitive ANTLR 4 Reference](Grammar/Parsing/ANTLR/Reference.md)
     - [Lexers](Grammar/Parsing/ANTLR/Lexers.md)

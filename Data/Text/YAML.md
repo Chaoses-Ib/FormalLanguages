@@ -6,6 +6,16 @@
 [YAML Test Matrix Overview](https://matrix.yaml.info/)
 > YAML 的生态很糟糕。不仅很多库是 YAML 1.1 的，不容易知道每个使用 YAML 的地方是否按 YAML 1.2 解析，而且几乎没有完全符合 YAML 1.2 标准的库。这个网站展示了各种语言的 YAML 库分别能通过多少 YAML 1.2 的测试样例，可以看到错误是很多的。
 
+## [Mappings](https://yaml.org/spec/1.2.2/#mapping)
+> The content of a *mapping* node is an unordered set of *key/value* node *pairs*, with the restriction that each of the keys is [unique](https://yaml.org/spec/1.2.2/#node-comparison). YAML places no further restrictions on the nodes. In particular, keys may be arbitrary nodes, the same node may be used as the value of several key/value pairs and a mapping could even contain itself as a key or a value.
+
+- Keys: Any printable characters and spaces
+  - At least leading and trailing spaces are not included
+
+  [validation - Allowed characters in map key identifier in YAML? - Stack Overflow](https://stackoverflow.com/questions/9065136/allowed-characters-in-map-key-identifier-in-yaml)
+
+  ['T.I.L. YAML keys allow for spaces in them' by Marcus Noble](https://marcusnoble.co.uk/2021-05-11-t-i-l-yaml-keys-allow-for-spaces-in-them/)
+
 ## JSON
 [JSON ⊂ YAML?](https://github.com/USTC-Hackergame/hackergame2023-writeups/blob/master/official/JSON%20%E2%8A%82%20YAML/README.md)
 - 很多主流的 YAML 库仍然是 YAML 1.1 的，它没有这个性质
@@ -50,3 +60,6 @@
 
 [Address serde-yaml deprecation - Issue #1770 - kube-rs/kube](https://github.com/kube-rs/kube/issues/1770)
 
+## Tools
+- [Transform YAML into JSON - Online YAML Tools](https://onlineyamltools.com/convert-yaml-to-json)
+- [YAMLlint - The YAML Validator](https://www.yamllint.com/)

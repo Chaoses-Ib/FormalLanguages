@@ -43,6 +43,11 @@ Only `NUL`, `LF`, `CR`, and `=` are escaped.
   [Hacker News](https://news.ycombinator.com/item?id=13049329)
 
 ## Base64
+Rust:
+- base64
+
+[→binary-rs](binary-rs/src/main.rs)
+
 JS:
 - Browsers ([MDN](https://developer.mozilla.org/en-US/docs/Glossary/Base64))
 

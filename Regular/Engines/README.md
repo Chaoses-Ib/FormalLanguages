@@ -22,6 +22,11 @@ A **regex engine** is an implementations of regex functionality.[^wiki]
 
 ### Rust
 - [regex: An implementation of regular expressions for Rust. This implementation uses finite automata and guarantees linear time matching on all inputs.](https://github.com/rust-lang/regex)
+  - [regex-lite](https://github.com/rust-lang/regex/tree/master/regex-lite) ([Docs.rs](https://docs.rs/regex-lite/latest/regex_lite/))
+    - Binary size: 94 KB, much smaller than `regex`'s 565+ KB.
+      - Wasm: +53 KiB
+    - [Ironing out `regex-lite` - Issue #961](https://github.com/rust-lang/regex/issues/961)
+    - [Compile-time regex for smaller WASM binary size - Issue #913](https://github.com/rust-lang/regex/issues/913)
   - [string-patterns](https://github.com/neilg63/string-patterns)
   - [stringmatch: Allow the use of regular expressions or strings wherever you need string comparison](https://github.com/stevepryde/stringmatch)
   - Web

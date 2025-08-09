@@ -149,6 +149,7 @@
 
 ## [Regular Expressions](Regular/README.md)
 - [Engines](Regular/Engines/README.md)
+  - [NFA](Regular/Engines/NFA.md)
   - [API](Regular/Engines/API.md)
 
 ## [Template Languages](Template/README.md)

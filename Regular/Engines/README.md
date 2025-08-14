@@ -68,6 +68,8 @@ Implementations:
   - NFA: Thompson's construction
     - `Literal` will be compiled to a sequence of byte `Transition`s
   - `meta`: OnePass DFA, Backtrack NFA, PikeVM NFA
+  - Unicode
+    - [UnicodeSetsMode support (`v` flag mode, `\q`) - Issue #1142](https://github.com/rust-lang/regex/issues/1142)
   - [regex-lite](https://github.com/rust-lang/regex/tree/master/regex-lite) ([Docs.rs](https://docs.rs/regex-lite/latest/regex_lite/))
     - NFA: Thompson's construction
       - Every literal `char` will be compiled to `Hir::Char` or `hir::Class` (`Vec<hir::ClassRange>`) if case insensitive
@@ -93,6 +95,8 @@ Implementations:
   - Stream
 
 Others:
+- [ib-matcher: A multilingual, flexible and fast string and regex matcher, supports 拼音匹配 and ローマ字検索](https://github.com/Chaoses-Ib/ib-matcher)
+- [→Logos](../../Grammar/Parsing/Lexing.md#rust)
 - [lightningscanner-rs: A lightning-fast memory pattern scanner, capable of scanning gigabytes of data per second](https://github.com/localcc/lightningscanner-rs)
 - [patternscan: Searches for a contiguous array of bytes determined by a wild-carded pattern](https://github.com/lewisclark/patternscan)
   - Lightweight

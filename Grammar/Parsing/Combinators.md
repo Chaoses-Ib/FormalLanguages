@@ -40,6 +40,8 @@
 
   [Chumsky 0.10, a library for writing user-friendly and maintainable parsers, has been released : r/rust](https://www.reddit.com/r/rust/comments/1jyfs8v/chumsky_010_a_library_for_writing_userfriendly/)
 
+- [yap: Yet Another Parser library for Rust. A lightweight, dependency free, parser combinator inspired set of utility methods to help with parsing strings and slices.](https://github.com/jsdw/yap) (inactive)
+
 [Should I revisit my choice to use nom? : r/rust](https://www.reddit.com/r/rust/comments/129qohw/should_i_revisit_my_choice_to_use_nom/)
 > I've written a lot of compilers (and many of those in Rust), and I've consistently found that parser generators are only good for proofs of concept or experiments. When I write a serious parser/compiler, I almost always end up doing so by hand.
 

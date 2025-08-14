@@ -148,6 +148,7 @@
 - [Apache Arrow](Data/Arrow.md)
 
 ## [Regular Expressions](Regular/README.md)
+- [glob()-style Pattern Matching](Regular/glob.md)
 - [Engines](Regular/Engines/README.md)
   - [NFA](Regular/Engines/NFA.md)
   - [API](Regular/Engines/API.md)

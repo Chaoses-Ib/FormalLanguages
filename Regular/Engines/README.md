@@ -70,6 +70,7 @@ Implementations:
   - `meta`: OnePass DFA, Backtrack NFA, PikeVM NFA
   - Unicode
     - [UnicodeSetsMode support (`v` flag mode, `\q`) - Issue #1142](https://github.com/rust-lang/regex/issues/1142)
+  - [automata: `Input::haystack` return with original lifetime by Chaoses-Ib - Pull Request #1277](https://github.com/rust-lang/regex/pull/1277)
   - [regex-lite](https://github.com/rust-lang/regex/tree/master/regex-lite) ([Docs.rs](https://docs.rs/regex-lite/latest/regex_lite/))
     - NFA: Thompson's construction
       - Every literal `char` will be compiled to `Hir::Char` or `hir::Class` (`Vec<hir::ClassRange>`) if case insensitive

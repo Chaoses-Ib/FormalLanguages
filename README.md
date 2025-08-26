@@ -3,6 +3,7 @@
 - [Reversible Computing](Models/Reversible.md)
 
 ## Grammar
+- [Syntax Trees](Grammar/Trees.md)
 - [Parsing Expression Grammar](Grammar/Parsing%20Expression.md)
 - [Parsing](Grammar/Parsing/README.md)
   - [Lexing](Grammar/Parsing/Lexing.md)

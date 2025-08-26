@@ -1,5 +1,11 @@
 # Lexing
 ## Rust
+- [`m_lexer`: A simple extensible regex based lexer in Rust.](https://github.com/matklad/m_lexer)
+  - Based on `regex`/`regex-lite`, low performance
+  - [Dependents](https://crates.io/crates/m_lexer/reverse_dependencies): rowan (dev)
+
+    [making use of `logos` instead of `m_lexer` in #examples by dzmitry-lahoda - Pull Request #147 - rust-analyzer/rowan](https://github.com/rust-analyzer/rowan/pull/147)
+
 ### [Logos: Create ridiculously fast Lexers](https://github.com/maciejhirsz/logos)
 - Lexer generator
 

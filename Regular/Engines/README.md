@@ -59,12 +59,15 @@ Implementations:
 
 - [RE2: A fast, safe, thread-friendly alternative to backtracking regular expression engines](https://github.com/google/re2)
 
+  [How to use RE2 in a C++ entry of a regexp implementations comparison benchmark - Issue #314](https://github.com/google/re2/issues/314)
+
 - [Oniguruma](https://github.com/kkos/oniguruma)
   - Rust: [Rust Onig: Rust bindings for the Oniguruma regex library](https://github.com/rust-onig/rust-onig)
 
 ### Rust
 [`regex-automata`](https://docs.rs/regex-automata/) based:
 - [regex: An implementation of regular expressions for Rust. This implementation uses finite automata and guarantees linear time matching on all inputs.](https://github.com/rust-lang/regex)
+  - Akin to RE2
   - NFA: Thompson's construction
     - `Literal` will be compiled to a sequence of byte `Transition`s
   - `meta`: OnePass DFA, Backtrack NFA, PikeVM NFA
@@ -96,7 +99,7 @@ Implementations:
   - Stream
 
 Others:
-- [ib-matcher: A multilingual, flexible and fast string and regex matcher, supports 拼音匹配 and ローマ字検索](https://github.com/Chaoses-Ib/ib-matcher)
+- [ib-matcher: A multilingual, flexible and fast string, glob and regex matcher. Support 拼音匹配 and ローマ字検索.](https://github.com/Chaoses-Ib/ib-matcher)
 - [→Logos](../../Grammar/Parsing/Lexing.md#rust)
 - [lightningscanner-rs: A lightning-fast memory pattern scanner, capable of scanning gigabytes of data per second](https://github.com/localcc/lightningscanner-rs)
 - [patternscan: Searches for a contiguous array of bytes determined by a wild-carded pattern](https://github.com/lewisclark/patternscan)
@@ -117,6 +120,8 @@ Others:
 
 ### .NET
 - [System.Text.RegularExpressions](https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions)
+  - Backtracking NFA
+  - [→Derivatives](../Derivatives.md)
   
   [.NET Regular Expressions - .NET | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions)
   - Web: [.NET Regex Tester - Regex Storm](http://regexstorm.net/tester)

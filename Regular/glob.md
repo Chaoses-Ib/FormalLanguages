@@ -19,8 +19,11 @@
 
 ## Libraries
 ### Rust
-- [ib-matcher: A multilingual, flexible and fast string and regex matcher, supports 拼音匹配 and ローマ字検索](https://github.com/Chaoses-Ib/ib-matcher)
-  - `?`, `*`, `**`
+- [ib-matcher: A multilingual, flexible and fast string, glob and regex matcher. Support 拼音匹配 and ローマ字検索.](https://github.com/Chaoses-Ib/ib-matcher)
+  - `?`, `*`, `[]`, `**`
+  - Anchors
+  - Two seperators (`//`) and complement separator (`\`)
+
 - [glob: Support for matching file paths against Unix shell style patterns.](https://github.com/rust-lang/glob)
   - [`Pattern`](https://docs.rs/glob/latest/glob/struct.Pattern.html)
   - [`MatchOptions`](https://docs.rs/glob/latest/glob/struct.MatchOptions.html)

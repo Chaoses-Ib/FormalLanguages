@@ -1,6 +1,8 @@
 # NFA
 [→Kinds](README.md#kinds)
 
+- A Unified Construction of the Glushkov, Follow, and Antimirov Automata[^allauzenUnifiedConstructionGlushkov2006]
+
 ## Thompson's construction
 [Wikipedia](https://en.wikipedia.org/wiki/Thompson%27s_construction)
 
@@ -23,6 +25,14 @@ Used by RE2, Rust `regex`.
 
   > Dual Glushkov NFA is the variant of Glushkov NFA, and it has the strong property that all the outgoing transitions to a state of it have the same labels. We propose the new matching method Look Ahead Matching that suited to Dual Glushkov NFA structure. This method executes NFA simulation with reading two input symbols at the one time. We use information of next symbol to narrow down the active states on NFA simulation. It costs additional working memory to apply Look Ahead Matching to ordinal Thompson NFA. However, we can use this method with no additional memory space if use it with Dual Glushkov NFA. Experiments also indicate that the combination of Dual Glushkov NFA with Look Ahead Matching outperforms the other methods on NFAs converted from practical regular expressions.[^kuraiFastRegularExpression2014]
 
+## Look-around
+- Oracle-NFA[^mamourasEfficientMatchingRegular2024]
+
+  [O(m \* n) lookaround - rust-lang/regex - Discussion #1153](https://github.com/rust-lang/regex/discussions/1153)
+  - [Add support for unbounded look-behind expressions by Multimodcrafter - Pull Request #1266 - rust-lang/regex](https://github.com/rust-lang/regex/pull/1266)
+
 
 [^thompsonProgrammingTechniquesRegular1968]: Thompson, K. (1968). Programming Techniques: Regular expression search algorithm. Communications of the ACM, 11(6), 419–422. https://doi.org/10.1145/363347.363387
 [^kuraiFastRegularExpression2014]: Kurai, R., Yasuda, N., Arimura, H., Nagayama, S., & Minato, S. (2014). Fast Regular Expression Matching Based On Dual Glushkov NFA. Stringology, 3–16. https://www.stringology.org/papers/PSC2014.pdf#page=11
+[^allauzenUnifiedConstructionGlushkov2006]: Allauzen, C., & Mohri, M. (2006). A Unified Construction of the Glushkov, Follow, and Antimirov Automata. In R. Královič & P. Urzyczyn (Eds.), Mathematical Foundations of Computer Science 2006 (pp. 110–121). Springer. https://doi.org/10.1007/11821069_10
+[^mamourasEfficientMatchingRegular2024]: Mamouras, K., & Chattopadhyay, A. (2024). Efficient Matching of Regular Expressions with Lookaround Assertions. Proc. ACM Program. Lang., 8(POPL), 92:2761-92:2791. https://doi.org/10.1145/3632934

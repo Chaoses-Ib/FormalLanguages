@@ -49,7 +49,7 @@ Implementations:
 
   [Introduction to Hyperscan](https://www.intel.com/content/www/us/en/developer/articles/technical/introduction-to-hyperscan.html)
 
-  《深入浅出 Hyperscan：高性能正则表达式算法原理与设计》
+  《深入浅出 Hyperscan：高性能正则表达式算法原理与设计》[^ShenRuQianChuHyperscanGaoXingNengZhengZeBiaoDaShiSuanFaYuanLiYuSheJi2021]
 
   - Rust: [rust-hyperscan: Hyperscan bindings for Rust with Multiple Pattern and Streaming Scan](https://github.com/flier/rust-hyperscan)
 
@@ -70,6 +70,8 @@ Implementations:
   - Akin to RE2
   - NFA: Thompson's construction
     - `Literal` will be compiled to a sequence of byte `Transition`s
+  - DFA
+    - [Building a lexer programatically - rust-lang/regex - Discussion #1100](https://github.com/rust-lang/regex/discussions/1100)
   - `meta`: OnePass DFA, Backtrack NFA, PikeVM NFA
   - Unicode
     - [UnicodeSetsMode support (`v` flag mode, `\q`) - Issue #1142](https://github.com/rust-lang/regex/issues/1142)
@@ -139,3 +141,4 @@ Benchmarks:
 
 [^wiki]: [Regular expression - Wikipedia](https://en.wikipedia.org/wiki/Regular_expression#History)
 [^friedlMasteringRegularExpressions2006]: Friedl, J. E. F. (2006). Mastering regular expressions (3rd ed). O’Reilly.
+[^ShenRuQianChuHyperscanGaoXingNengZhengZeBiaoDaShiSuanFaYuanLiYuSheJi2021]: 深入浅出 Hyperscan：高性能正则表达式算法原理与设计. (2021). 人民邮电出版社. https://book.douban.com/subject/35576640/

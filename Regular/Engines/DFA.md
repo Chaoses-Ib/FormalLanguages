@@ -8,5 +8,11 @@
   - When exceeding `cache_capacity`, the `cache` is cleared and reused.
   - Optionally, when clear count exceeding `minimum_cache_clear_count`, an error is returned.
 
+## Tagged DFA
+- A closer look at TDFA[^borsottiCloserLookTDFA2022]
+
+  [TDFA-based submatch extraction - rust-lang/regex - Discussion #1024](https://github.com/rust-lang/regex/discussions/1024)
+
 
 [^karperEfficientRegularExpressions2014]: Karper, A. (2014). Efficient regular expressions that produce parse trees. epubli GmbH. https://scg.unibe.ch/assets/archive/masters/Karp14a.pdf
+[^borsottiCloserLookTDFA2022]: Borsotti, A., & Trafimovich, U. (2022). A closer look at TDFA (No. arXiv:2206.01398). arXiv. https://doi.org/10.48550/arXiv.2206.01398

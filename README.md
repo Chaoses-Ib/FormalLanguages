@@ -155,6 +155,7 @@
   - [NFA](Regular/Engines/NFA.md)
   - [DFA](Regular/Engines/DFA.md)
   - [Hybrid](Regular/Engines/Hybrid.md)
+  - [Transpilers](Regular/Engines/Transpilers.md)
   - [API](Regular/Engines/API.md)
 
 ## [Template Languages](Template/README.md)

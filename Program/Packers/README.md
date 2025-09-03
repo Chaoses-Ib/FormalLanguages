@@ -5,6 +5,8 @@
 
 [packing-box/awesome-executable-packing: A curated list of awesome resources related to executable packing](https://github.com/packing-box/awesome-executable-packing)
 
+[ProtectMyTooling: Multi-Packer wrapper letting us daisy-chain various packers, obfuscators and other Red Team oriented weaponry. Featured with artifacts watermarking, IOCs collection & PE Backdooring. You feed it with your implant, it does a lot of sneaky things and spits out obfuscated executable.](https://github.com/mgeeky/ProtectMyTooling)
+
 ## Compressors
 - [UPX](UPX/README.md)
 - [runestubbe/Crinkler](https://github.com/runestubbe/Crinkler)

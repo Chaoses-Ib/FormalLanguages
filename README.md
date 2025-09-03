@@ -80,6 +80,7 @@
     - [DWARF](Program/Formats/Debugging/DWARF.md)
   - [Memory Dumps](Program/Formats/Dumps/README.md)
 - [Binary Rewriting](Program/Rewriting/README.md)
+  - [Instruction Rewriting](Program/Rewriting/Instruction.md)
 - Packers
   - [UPX](Program/Packers/UPX/README.md)
   - [ASPack](Program/Packers/ASPack/README.md)
@@ -104,6 +105,7 @@
       - [CFG Art](Program/Security/Obfuscation/Control/CFG%20Art.md)
     - [ISA-level Obfuscation](Program/Security/Obfuscation/ISA/README.md)
       - [M/o/Vfuscator](Program/Security/Obfuscation/ISA/MoVfuscator.md)
+  - [Diversity](Program/Security/Diversity.md)
 - [→Concurrent Computing](https://github.com/Chaoses-Ib/ConcurrentComputing)
 - [→Computer Software](https://github.com/Chaoses-Ib/ComputerSoftware)
 

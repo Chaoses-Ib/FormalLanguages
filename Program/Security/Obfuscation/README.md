@@ -96,6 +96,9 @@ Rust:
 - [goldberg: A Rust-based obfuscation macro library!](https://github.com/frank2/goldberg)
 - [rust-obfuscator: Automatic Rust Obfuscator and Macro Library](https://github.com/dronavallipranav/rust-obfuscator)
 - [debugoff: Linux anti-debugging and anti-analysis rust library](https://github.com/0xor0ne/debugoff)
+- x86-64
+  - [guardian-rs: x86-64 code/pe virtualizer](https://github.com/vmctx/guardian-rs)
+  - [x64-virtualizer-rs: x86-64 virtualizing obfuscator written in Rust](https://github.com/cursey/x64-virtualizer-rs)
 
 [Malware development part 6 - advanced obfuscation with LLVM and template metaprogramming -- 0xPat blog -- Red/purple teamer](https://0xpat.github.io/Malware_development_part_6/)
 

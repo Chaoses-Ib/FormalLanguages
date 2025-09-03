@@ -34,7 +34,8 @@ A programming language is any set of rules that converts strings, or graphical p
 [Embedded scripting languages](https://github.com/dbohdan/embedded-scripting-languages)
 
 Languages:
-- [→Assembly Language](https://github.com/Chaoses-Ib/ComputerHardware#instruction-set-architectures)
+- [→Processors](https://github.com/Chaoses-Ib/Processors)
+  - [→Assembly Language](https://github.com/Chaoses-Ib/Processors#instructions)
 - [→C](https://github.com/Chaoses-Ib/Cpp#languages)
   - C
   - C++
@@ -52,6 +53,7 @@ Languages:
 - [→Web](https://github.com/Chaoses-Ib/Web#javascript)
   - JavaScript
   - TypeScript
+  - WebAssembly
 - AutoHotkey
 - [→易语言](https://github.com/Chaoses-Ib/EPL)
 - [→MATLAB](https://github.com/Chaoses-Ib/ComputationalMathematics/tree/main#matlab)

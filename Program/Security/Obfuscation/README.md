@@ -18,6 +18,10 @@ The quality of an obfuscating transformation is evaluated according to four crit
 
 混淆性能、抗反混淆性能、透明性、开销
 
+Quality measures[^ebadMeasuringSoftwareObfuscation2021]
+
+> General obfuscation methods (e.g., lexical obfuscation, control obfuscation) implemented in mainstream obfuscation tools are heuristic and have little security guarantee. Recently in 2013, Garg et al. have achieved a breakthrough in secure program obfuscation with a graded encoding mechanism and they have shown that it can fulfill a compelling security property, i.e., indistinguishability. Nevertheless, the mechanism incurs too much overhead for practical usage. Besides, it focuses on obfuscating computation models (e.g., circuits) rather than real codes. In this paper, we aim to explore secure and usable obfuscation approaches from the literature. Our main finding is that currently we still have no such approaches made secure and usable. The main reason is we do not have adequate evaluation metrics concerning both security and performance. On one hand, existing code-oriented obfuscation approaches generally evaluate the increased obscurity rather than security guarantee. On the other hand, the performance requirement for model-oriented obfuscation approaches is too weak to develop practical program obfuscation solutions.[^xuSecureUsableProgram2017]
+
 ## Control-flow obfuscation
 - Control-flow flattening
 
@@ -105,3 +109,5 @@ Rust:
 
 [^survey]: Balakrishnan, Arini, and Chloe Schulze. “Code Obfuscation Literature Survey,” n.d., 10.
 [^protect]: Christian S. Collberg and Clark Thomborson. Watermarking, tamper-prooﬁng, and obfuscation - tools for software protection. In IEEE Transactions on Software Engineering, volume 28, pages 735–746, August 2002.
+[^xuSecureUsableProgram2017]: Xu, H., Zhou, Y., Kang, Y., & Lyu, M. R. (2017). On Secure and Usable Program Obfuscation: A Survey (No. arXiv:1710.01139). arXiv. https://doi.org/10.48550/arXiv.1710.01139
+[^ebadMeasuringSoftwareObfuscation2021]: Ebad, S. A., Darem, A. A., & Abawajy, J. H. (2021). Measuring Software Obfuscation Quality–A Systematic Literature Review. IEEE Access, 9, 99024–99038. https://doi.org/10.1109/ACCESS.2021.3094517

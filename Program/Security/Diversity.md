@@ -24,6 +24,7 @@ Applications:
 - Loop Level
 - Function Level
   - Stack Layout Randomization
+    - Callee-saved register save slot reordering[^craneReadactorPracticalCode2015]
   - Function Parameter Randomization
   - Inlining, Outlining, and Splitting
   - Control Flow Flattening
@@ -58,3 +59,4 @@ Applications:
 
 [^larsenSoKAutomatedSoftware2014]: Larsen, P., Homescu, A., Brunthaler, S., & Franz, M. (2014). SoK: Automated Software Diversity. 2014 IEEE Symposium on Security and Privacy, 276–291. https://doi.org/10.1109/SP.2014.25
 [^jacksonDiversifyingSoftwareStack2013]: Jackson, T., Homescu, A., Crane, S., Larsen, P., Brunthaler, S., & Franz, M. (2013). Diversifying the Software Stack Using Randomized NOP Insertion. In S. Jajodia, A. K. Ghosh, V. S. Subrahmanian, V. Swarup, C. Wang, & X. S. Wang (Eds.), Moving Target Defense II (pp. 151–173). Springer. https://doi.org/10.1007/978-1-4614-5416-8_8
+[^craneReadactorPracticalCode2015]: Crane, S., Liebchen, C., Homescu, A., Davi, L., Larsen, P., Sadeghi, A.-R., Brunthaler, S., & Franz, M. (2015). Readactor: Practical Code Randomization Resilient to Memory Disclosure. 2015 IEEE Symposium on Security and Privacy, 763–780. https://doi.org/10.1109/SP.2015.52

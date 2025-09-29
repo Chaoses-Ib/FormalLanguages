@@ -6,6 +6,9 @@
 Symbols:
 - [Imports](../../../Formats/README.md#imports)
 
+## Detection
+> Since many different string obfuscation techniques exist, both in the form of commercial tools and as custom implementations, it is close to impossible to construct a training set that is representative of all possible obfuscations. We instead propose a generative approach based on the Naive Bayes method. We first model the distribution of natural-language strings, using a large corpus of strings from 235 languages, and then base our classification on a measure of the confidence with which a language can be assigned to a string. Crucially, this allows us to completely eliminate the need for obfuscated training samples. In our experiments, this new method significantly outperformed both an n-gram based random forest classifier and an entropy-based classifier, in terms of accuracy and generalizability.[^mohammadinodooshanRobustDetectionObfuscated2019]
+
 ## LLVM
 - [tsarpaul/llvm-string-obfuscator: LLVM String Obfuscator](https://github.com/tsarpaul/llvm-string-obfuscator)
 - Hikari-LLVM15
@@ -130,3 +133,6 @@ for line in range(65536):
 - [include-crypt-bytes: Rust macro to embed encrypted files in compiled binary](https://github.com/breakpointninja/include-crypt-bytes)
 - [goldberg: A Rust-based obfuscation macro library!](https://github.com/frank2/goldberg)
 - [rust-obfuscator: Automatic Rust Obfuscator and Macro Library](https://github.com/dronavallipranav/rust-obfuscator)
+
+
+[^mohammadinodooshanRobustDetectionObfuscated2019]: Mohammadinodooshan, A., Kargén, U., & Shahmehri, N. (2019). Robust Detection of Obfuscated Strings in Android Apps. Proceedings of the 12th ACM Workshop on Artificial Intelligence and Security, 25–35. https://doi.org/10.1145/3338501.3357373

@@ -18,6 +18,10 @@
 - [part 6: PE Base Relocations](https://0xrick.github.io/win-internals/pe7/)
 - [lab1: Writing a PE Parser](https://0xrick.github.io/win-internals/pe8/)
 
+[Loading a DLL from memory » ~magog/public](https://www.joachim-bauch.de/tutorials/loading-a-dll-from-memory/)
+
+[Exploring How Packers Mangle Files While Sticking to the PE Format](https://nexusmaximus.github.io/PE_FF_Exploration)
+
 [Portable executable explained throught rust code](https://itehax.com/blog/portable-executable-explained-throught-rust-code) ([GitHub](https://github.com/itehax/pe_parser), [r/rust](https://www.reddit.com/r/rust/comments/182pwcc/rust_and_winapi_pe_explained_throught_rust_code/))
 
 Samples:
@@ -93,8 +97,39 @@ Samples:
 [VA (Virtual Address) & RVA (Relative Virtual Address) - Stack Overflow](https://stackoverflow.com/questions/2170843/va-virtual-address-rva-relative-virtual-address)
 
 ## Sections
+- Executable sections
+  - The section pointed by `AddressOfEntryPoint` is always executable, even without `IMAGE_SCN_MEM_EXECUTE` and `IMAGE_SCN_CNT_CODE`
+  - `IMAGE_SCN_CNT_CODE` vs. `IMAGE_SCN_MEM_EXECUTE`: Only `IMAGE_SCN_MEM_EXECUTE` is effective
+
+    `IMAGE_SCN_CNT_CODE` references:
+    > Nop this section, because SteveWo doesn't know what he's doing
+
+  [windows - How to recognize PE sections containing code? - Reverse Engineering Stack Exchange](https://reverseengineering.stackexchange.com/questions/11311/how-to-recognize-pe-sections-containing-code)
+
+  [reverse engineering - executable sections flag - Stack Overflow](https://stackoverflow.com/questions/3912129/executable-sections-flag)
+
+  [Loader Behavior (locating the .text section)](https://microsoft.public.win32.programmer.kernel.narkive.com/IT5UlrN0/loader-behavior-locating-the-text-section)
+
+  [PE Trick #1: A Codeless PE Binary File That Runs -- Alex Ionescu's Blog](https://www.alex-ionescu.com/pe-trick-1-a-codeless-pe-binary-file-that-runs/)
+
+- Initialized/uninitialized data sections
+  - > Unix-like systems and Windows initialize the bss section to zero
+  - > Once it gets the Initialized Data section, it calls the helper
+    > function `GetReplacementLocations()` to get the offset from the base of the 
+    > section. It then calculates the Virtual Address at which the replacement
+    > should occur.
+  - `SizeOfInitializedData` / `SizeOfUninitializedData` is the total raw size of initialized/uninitialized data sections.
+  - Entry point section doesn't imply `IMAGE_SCN_CNT_INITIALIZED_DATA`
+
+  [windows - About copy dll-section to memory - Stack Overflow](https://stackoverflow.com/questions/18307980/about-copy-dll-section-to-memory)
+
+  [flat assembler - A question about '.bss" section](https://board.flatassembler.net/topic.php?t=9561)
+
 - [/SECTION (Specify Section Attributes)](https://learn.microsoft.com/en-us/cpp/build/reference/section-specify-section-attributes?view=msvc-170)
 - [/ALIGN (Section alignment)](https://learn.microsoft.com/en-us/cpp/build/reference/align-section-alignment?view=msvc-170)
+  - 8192 bytes at most?
+
+[\[Bug ld/30145\] No way to specify PE `IMAGE_SCN_*` characteristics](https://lists.gnu.org/archive/html/bug-binutils/2023-04/msg00091.html)
 
 ## Loaders
 - Windows

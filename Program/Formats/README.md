@@ -1,6 +1,15 @@
 # Executable Formats
 [Wikipedia](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format)
 
+## Segments
+- Code segments ([Wikipedia](https://en.wikipedia.org/wiki/Code_segment))
+- Data segments ([Wikipedia](https://en.wikipedia.org/wiki/Data_segment))
+  - Block starting symbol segment (`.bss`) ([Wikipedia](https://en.wikipedia.org/wiki/.bss))
+
+[→PE sections](COFF/PE/README.md#sections)
+
+[exe - Object Files/Executables: What's the difference between a segment and a section? - Stack Overflow](https://stackoverflow.com/questions/49718576/object-files-executables-whats-the-difference-between-a-segment-and-a-section)
+
 ## Imports
 C++:
 - [lazy\_importer: library for importing functions from dlls in a hidden, reverse engineer unfriendly way](https://github.com/JustasMasiulis/lazy_importer)

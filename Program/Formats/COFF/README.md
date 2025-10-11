@@ -16,3 +16,5 @@
   "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
   dumpbin "main.obj" /ALL
   ```
+
+- [yaml2obj --- LLVM documentation](https://llvm.org/docs/yaml2obj.html)

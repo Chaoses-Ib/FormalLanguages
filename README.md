@@ -33,6 +33,7 @@
     - [Compilation](Program/Data/Strings/Compilation.md)
     - [Inline](Program/Data/Strings/Inline.md)
     - [Obfuscation](Program/Data/Strings/Obfuscation/README.md)
+  - [Extraction](Program/Data/Extraction.md)
   - [Obfuscation](Program/Data/Obfuscation.md)
 - [Program Analysis](Program/Analysis/README.md)
   - Functions
@@ -73,6 +74,7 @@
   - [Common Object File Format (COFF)](Program/Formats/COFF/README.md)
     - [Object Files](Program/Formats/COFF/Object/README.md)
     - [Protable Executable](Program/Formats/COFF/PE/README.md)
+      - [Rich Header](Program/Formats/COFF/PE/Rich.md)
       - [Resources](Program/Formats/COFF/PE/Resources.md)
   - [Debugging Information](Program/Formats/Debugging/README.md)
     - [MAP](Program/Formats/Debugging/MAP.md)

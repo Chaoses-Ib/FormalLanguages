@@ -215,5 +215,7 @@ Python:
 
   [ProtectionId not available - Issue #1261 - Winetricks/winetricks](https://github.com/Winetricks/winetricks/issues/1261)
 
+- [PE-Analyzer.rs: Simple Project that Extracts PE Information.](https://github.com/Whitecat18/PE-Analyzer.rs)
+
 Web:
 - [PeKit](https://casualhacks.net/pekit/)

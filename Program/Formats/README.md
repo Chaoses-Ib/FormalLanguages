@@ -80,6 +80,7 @@ Rust:
   - Formats: ELF, PE, MachO
   - Zero-copy, but not lazy at all
   - Always `log`
+  - [bininfo-rs: Gather File information](https://github.com/marirs/bininfo-rs)
   
   PE:
   - `cargo add goblin --no-default-features --features std,pe32,pe64`

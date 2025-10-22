@@ -126,6 +126,8 @@
 - [MessagePack](Data/MessagePack.md)
 - [Protocol Buffers (Protobuf)](Data/Protobuf.md)
 - [Apache Arrow](Data/Arrow.md)
+- [Stream](Data/Stream/README.md)
+  - [Rust](Data/Stream/README.md)
 
 ## [Regular Expressions](Regular/README.md)
 - [glob()-style Pattern Matching](Regular/glob.md)

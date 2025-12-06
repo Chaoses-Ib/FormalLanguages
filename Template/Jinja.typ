@@ -1,0 +1,94 @@
+#import "@local/ib:0.1.0": *
+#title[Jinja]
+#a-badge[https://en.wikipedia.org/wiki/Jinja_(template_engine)]
+
+- Used by:
+  - Web
+    - Flask
+    - Jupyter
+      - Solara
+  - Automation
+    - Ansible
+    - Home Assistant
+  - PyTorch
+  - NLP/LLM
+    - HuggingFace
+    - ComfyUI
+
+#a[Universal Jinja: a crazy idea for a Python-ready front end | Hacker News][https://news.ycombinator.com/item?id=14776780]
+- #quote[Ugh, Jinja is not an "excellent" templating language. It's a terrible broken mix of pythonisms and arbitrary-feeling restrictions and oddly missing pieces. It becomes hard to read very quickly and some of the looping idioms are just nuts. Sorry I don't have anything constructive to say here but I'm genuinely taken aback that there are apparently big fans of Jinja.]
+- #quote[I feel like Jinja was an especially bad fit for Ansible, but as a templating language I feel like it's main strength is it's better than D'jango templates... but that doesn't matter much outside the D'Jango world.]
+
+= Jinja
+#a-badge[https://github.com/pallets/jinja]
+#a-badge(body: [Documentation])[https://jinja.palletsprojects.com/]
+
+#quote[Jinja is a fast, expressive, extensible templating engine.]
+
+#a[Template Designer Documentation --- Jinja Documentation][https://jinja.palletsprojects.com/en/stable/templates/]
+
+#a[Jinja Templating in Python | Guide (With Examples)][https://ioflood.com/blog/jinja/]
+
+= #a[MiniJinja][https://github.com/mitsuhiko/minijinja]
+#a-badge[https://docs.rs/minijinja]
+
+#quote[A powerful but minimal dependency template engine for Rust compatible with Jinja/Jinja2]
+
+- Written by the same author as Jinja2
+- #quote[It's not as type-safe as askama but it's flexible, and has call blocks for macros. Easy to extend with your own filters/functions as well.]
+- Bindings for JS, Python, C
+- Used by HuggingFace
+- Hot reload
+  - #a[`minijinja_autoreload`][https://github.com/mitsuhiko/minijinja/tree/main/minijinja-autoreload]
+    - `notify`
+  - #a[Dynja: Jinja pseudo-engine focused on DevEx and Performance][https://github.com/rdbo/dynja] (inactive)
+
+#a[MiniJinja: Learnings from Building a Template Engine in Rust | Armin Ronacher's Thoughts and Writings][https://lucumr.pocoo.org/2024/8/27/minijinja/]
+
+== APIs
+- #a[```rs Environment```][https://docs.rs/minijinja/latest/minijinja/struct.Environment.html]
+- #a[```rs Template```][https://docs.rs/minijinja/latest/minijinja/struct.Template.html]
+  - #a[`syntax`][https://docs.rs/minijinja/latest/minijinja/syntax/index.html]
+  - #a[```rs fn render<S: Serialize>(&self, ctx: S) -> Result<String, Error>```][https://docs.rs/minijinja/latest/minijinja/struct.Template.html#method.render]
+    - #quote[The ```rs Value``` type implements ```rs Serialize``` and can be efficiently passed to `render`. It does not undergo actual serialization.]
+    - Although `render` is actually done with ```rs Value``` (via ```rs from_serialize()```), there is no interface to pass ```rs Value``` directly (but ```rs Value``` implements ```rs Serialize```).
+- #a[`value`][https://docs.rs/minijinja/latest/minijinja/value/index.html]
+  - #a[```rs fn from_serialize<T: Serialize>(value: T) -> Value```][https://docs.rs/minijinja/latest/minijinja/value/struct.Value.html#method.from_serialize]
+    - Can be directly used with #a[```rs figment::value::Dict```][https://docs.rs/figment/latest/figment/value/type.Dict.html].
+  - #a[```rs Object```][https://docs.rs/minijinja/latest/minijinja/value/trait.Object.html#map-as-context]
+    - ```rs impl<V> Object for HashMap<String, V>
+      where V: Into<Value> + Clone + Send + Sync + Debug + 'static
+      ```
+
+== Tools
+- #a[`minijinja-cli`][https://github.com/mitsuhiko/minijinja/tree/main/minijinja-cli]
+  - ```sh cargo install minijinja-cli```
+  - Scoop: ```pwsh scoop install hoilc_scoop-lemon/minijinja-cli```
+  - ```cmd powershell -ExecutionPolicy ByPass -c "irm https://github.com/mitsuhiko/minijinja/releases/latest/download/minijinja-cli-installer.ps1 | iex"```
+- #a[MiniJinja Playground][https://mitsuhiko.github.io/minijinja-playground/]
+
+= File extensions
+- `.jinja` (official)
+- `.j2`
+- `.jinja2`
+
+Or `templates/*` (official).
+
+#a[Update recommendation re file extensions - Issue #547 - pallets/jinja][https://github.com/pallets/jinja/issues/547]
+
+#a[python - Is there an idiomatic file extension for Jinja templates? - Stack Overflow][https://stackoverflow.com/questions/29590931/is-there-an-idiomatic-file-extension-for-jinja-templates]
+#quote(block: true)[
+I wanted to add an additional answer in 2020, as recently the Jinja2 project decided to drop the '2' from the name... meaning it's now just "Jinja".
+
+Ansible still uses `.j2` in a lot of documentation, but seeing as the official Jinja template engine documentation now recommends `.jinja` if you want to use something other than non-Jinja-specific file extensions (see #a[docs here][https://jinja.palletsprojects.com/en/2.11.x/templates/#template-file-extension], or #a[when the change was added][https://github.com/pallets/jinja/pull/1083/files#diff-0f54a58b39617a700a0b750e7a8bf07eR60-R71]), I think people will start moving that way (and dropping the use of `.j2` or `.jinja2`).
+]
+
+= Editors
+- GitHub
+  - If ends with `.jinja`/`.j2`, only Jinja self's syntax will be highlighted.
+
+VS Code:
+- #a[Better Jinja: Syntax highlighting for jinja(2) including HTML, Markdown, YAML, Ruby and LaTeX templates][https://github.com/samuelcolvin/jinjahtml-vscode]
+  - #a[hongquan/Dragon Jinja][https://github.com/hongquan/jinjahtml-vscode]
+- #a[jinja-lsp: Language Server for jinja][https://github.com/uros-5/jinja-lsp]
+- #a[noamzaks/jinja-ls: Feature-rich language server for Jinja.][https://github.com/noamzaks/jinja-ls]

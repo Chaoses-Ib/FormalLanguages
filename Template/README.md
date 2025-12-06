@@ -77,6 +77,8 @@ The result document is both a valid document and a template, which can then be c
 
   [Jinja Templating in Python | Guide (With Examples)](https://ioflood.com/blog/jinja/)
 
+- [sqlalchemy/Mako: Mako Templates for Python](https://github.com/sqlalchemy/mako)
+
 - [Cog](https://cog.readthedocs.io/) ([GitHub](https://github.com/nedbat/cog/tree/main))
 
 

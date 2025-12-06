@@ -141,6 +141,7 @@
 
 ## [Template Languages](Template/README.md)
 - [printf Format](Template/printf%20Format.md)
+- [Jinja](Template/Jinja.typ)
 
 ## [→Markup Languages](https://github.com/Chaoses-Ib/MarkupLanguages)
 - [→Extensible Markup Language (XML)](https://github.com/Chaoses-Ib/MarkupLanguages#extensible-markup-language-xml)

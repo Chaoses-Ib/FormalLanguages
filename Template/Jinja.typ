@@ -29,6 +29,47 @@
 
 #a[Jinja Templating in Python | Guide (With Examples)][https://ioflood.com/blog/jinja/]
 
+== Logic
+- `true`, `false`, `none`
+- `not`, `and`, `or`
+- `is`, `is not`
+- `in`, `not in`
+
+#a[Jinja2 template variable if None Object set a default value - Stack Overflow][https://stackoverflow.com/questions/19614027/jinja2-template-variable-if-none-object-set-a-default-value]
+
+#a[Jinja templates inconsistencies with None/null value - Issue #65913 - home-assistant/core][https://github.com/home-assistant/core/issues/65913]
+
+== Blocks
+- ```jinja self.{block}()```
+  ```jinja
+  {% block test %}abc{% endblock %}
+  {{ self.test() }}
+  ```
+  ```
+  abc
+  abc
+  ```
+
+- Block assignments (v2.8)
+  ```jinja
+  {% set test %}abc{% endset %}
+  {{ test }}
+  ```
+  ```
+  abc
+  ```
+
+- Macros
+  ```jinja
+  {% macro test() %}abc{% endmacro %}
+  {{ test() }}
+  ```
+  ```
+  abc
+  ```
+
+#a[flask - Reuse a block of code in several places in jinja2 - Stack Overflow][https://stackoverflow.com/questions/21275375/reuse-a-block-of-code-in-several-places-in-jinja2]
+
 = #a[MiniJinja][https://github.com/mitsuhiko/minijinja]
 #a-badge[https://docs.rs/minijinja]
 
@@ -70,6 +111,7 @@
 = File extensions
 - `.jinja` (official)
 - `.j2`
+  - MiniJinja official
 - `.jinja2`
 
 Or `templates/*` (official).
@@ -82,6 +124,8 @@ I wanted to add an additional answer in 2020, as recently the Jinja2 project dec
 
 Ansible still uses `.j2` in a lot of documentation, but seeing as the official Jinja template engine documentation now recommends `.jinja` if you want to use something other than non-Jinja-specific file extensions (see #a[docs here][https://jinja.palletsprojects.com/en/2.11.x/templates/#template-file-extension], or #a[when the change was added][https://github.com/pallets/jinja/pull/1083/files#diff-0f54a58b39617a700a0b750e7a8bf07eR60-R71]), I think people will start moving that way (and dropping the use of `.j2` or `.jinja2`).
 ]
+
+#a[Ignore `.jinja` as final extension in `default_auto_escape_callback` - Issue #826 - mitsuhiko/minijinja][https://github.com/mitsuhiko/minijinja/issues/826]
 
 = Editors
 - GitHub

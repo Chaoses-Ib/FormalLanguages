@@ -77,6 +77,8 @@
 
 - Written by the same author as Jinja2
 - #quote[It's not as type-safe as askama but it's flexible, and has call blocks for macros. Easy to extend with your own filters/functions as well.]
+- Binary size
+  - Wasm: z 538 (618) KiB, s 634 (735) KiB, 3 841 (984) KiB
 - Bindings for JS, Python, C
 - Used by HuggingFace
 - Hot reload

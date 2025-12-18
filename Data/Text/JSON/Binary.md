@@ -22,7 +22,7 @@
 
 ## Formats
 - JSON + [binary-to-text encoding](../Binary.md) (Base64) (+ Compression)
-- [MessagePack / CBOR](../../MessagePack.md)
+- [MessagePack / CBOR](../../MessagePack/README.md)
 - BSON ([Wikipedia](https://en.wikipedia.org/wiki/BSON))
   - From MongoDB
 

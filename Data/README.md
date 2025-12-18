@@ -12,7 +12,7 @@
 [Overwhelmed by the vast variety of serialization formats. Which to use when? - help - The Rust Programming Language Forum](https://users.rust-lang.org/t/overwhelmed-by-the-vast-variety-of-serialization-formats-which-to-use-when/88440)
 
 ## Languages
-- [→MessagePack / CBOR](MessagePack.md)
+- [→MessagePack / CBOR](MessagePack/README.md)
   - Schema-less
 - [→Protocol Buffers (Protobuf)](Protobuf.md)
 - [→Apache Arrow](Arrow.md)

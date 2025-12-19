@@ -1,4 +1,6 @@
-# Lexing
+#import "@local/ib:0.1.0": *
+#title[Lexers]
+#md(```
 ## Rust
 - [`m_lexer`: A simple extensible regex based lexer in Rust.](https://github.com/matklad/m_lexer)
   - Based on `regex`/`regex-lite`, low performance
@@ -12,8 +14,21 @@
   [Is there any way to create lexer without using Enum ? - Issue #149 - maciejhirsz/logos](https://github.com/maciejhirsz/logos/issues/149)
 
   [Concept of a lexer mode - Issue #419 - maciejhirsz/logos](https://github.com/maciejhirsz/logos/issues/419)
-- [Token disambiguation - Logos Handbook](https://logos.maciej.codes/token-disambiguation.html)
+```)
+- Crate features
+
+  `std` is often not needed:
+  ```sh
+  cargo add logos --no-default-features --features export_derive
+  ```
+- #a[Token disambiguation][https://logos.maciej.codes/token-disambiguation.html]
   - No catch-all token and have to manually deduce one.
+  - Unmatched char will still move ```rs span()``` (and change ```rs remainder()```).
+
+    To use them after lexing, either not use
+    ```rs while let Some(Ok(token)) = lex.next()```
+    or match all chars.
+#md(```
 - [Using callbacks - Logos Handbook](https://logos.maciej.codes/callbacks.html)
 - [Context-dependent lexing - Logos Handbook](https://logos.maciej.codes/context-dependent-lexing.html)
   - Akin to ANTLR's lexical modes
@@ -50,3 +65,4 @@ Used by:
 - [yoav-lavi/leita: A universal search query language that can transpile into specific search provider syntax](https://github.com/yoav-lavi/leita)
 - [lukechu10/derivative-machine: Simple symbolic differentiation](https://github.com/lukechu10/derivative-machine)
 - [ethereum/fe: Emerging smart contract language for the Ethereum blockchain.](https://github.com/ethereum/fe)
+```)

@@ -13,6 +13,7 @@
   - PyTorch
   - NLP/LLM
     - HuggingFace
+    - llama.cpp
     - ComfyUI
 
 #a[Universal Jinja: a crazy idea for a Python-ready front end | Hacker News][https://news.ycombinator.com/item?id=14776780]
@@ -109,6 +110,67 @@
   - Scoop: ```pwsh scoop install hoilc_scoop-lemon/minijinja-cli```
   - ```cmd powershell -ExecutionPolicy ByPass -c "irm https://github.com/mitsuhiko/minijinja/releases/latest/download/minijinja-cli-installer.ps1 | iex"```
 - #a[MiniJinja Playground][https://mitsuhiko.github.io/minijinja-playground/]
+
+= Rust
+== Askama
+#a-badge[https://github.com/askama-rs/askama]
+#a-badge[https://docs.rs/askama/]
+
+Template is compiled into code:
+```rs
+#[derive(askama::Template)]
+#[template(path = "hello.html")]  // Relative to `crate/templates`
+struct HelloTemplate<'a> {
+    name: &'a str,
+}
+HelloTemplate { name: "world" }.render().unwrap()
+```
+```rs
+impl<'a> askama::Template for HelloTemplate<'a> {
+    fn render_into_with_values<AskamaW: askama::helpers::core::fmt::Write + ?Sized>(
+        &self,
+        __askama_writer: &mut AskamaW,
+        __askama_values: &dyn askama::Values,
+    ) -> askama::Result<()> {
+        __askama_writer.write_str("Hello, ")?;
+        match (
+            &((&&askama::filters::AutoEscaper::new(&(self.name), askama::filters::Html))
+                .askama_auto_escape()?),
+        ) {
+            (__askama_expr2,) => {
+                (&&&askama::filters::Writable(__askama_expr2))
+                    .askama_write(__askama_writer, __askama_values)?;
+            }
+        }
+        Ok(())
+    }
+    const SIZE_HINT: usize = 10;
+}
+```
+- Compile-time template only.
+- Binary size can be much smaller than MiniJinja.
+- #a[Template syntax][https://askama.readthedocs.io/en/stable/template_syntax.html]
+  - #q[Has significant divergence from Jinja syntax in parts.]
+- Escape
+  - #q[error: no escaper defined for extension 'mytxt'.
+    You can define an escaper in the config file (named `askama.toml` by default).
+    The available extensions are: "", "askama", "htm", "html", "j2", "jinja", "jinja2", "md", "none", "rinja", "svg", "txt", "xml", "yml"]
+- Templates must be valid UTF-8 and produce UTF-8 when rendered.
+  - #q[error: unable to open template file 'hello': stream did not contain valid UTF-8]
+- #a[Performance][https://askama.readthedocs.io/en/stable/performance.html]
+
+= C++
+== minja.hpp
+#a-badge[https://github.com/ochafik/minja]
+
+#q[A minimalistic C++ Jinja templating engine for LLM chat templates.]
+- Used by:
+  - llama.cpp
+  - Jan (through cortex.cpp)
+  - GPT4All
+  - Docker Model Runner
+
+#a[chat: replace Jinja2Cpp with minja by cebtenzzre - Pull Request \#3433 - nomic-ai/gpt4all][https://github.com/nomic-ai/gpt4all/pull/3433]
 
 = File extensions
 - `.jinja` (official)

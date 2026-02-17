@@ -1,0 +1,426 @@
+impl<'s> ::logos::Logos<'s> for WildcardToken {
+    type Error = ();
+    type Extras = ();
+    type Source = str;
+    fn lex(
+        lex: &mut ::logos::Lexer<'s, Self>,
+    ) -> core::option::Option<core::result::Result<Self, <Self as ::logos::Logos<'s>>::Error>> {
+        use ::logos::internal::{
+            CallbackResult, CallbackRetVal, LexerInternal, SkipResult, SkipRetVal,
+        };
+        use ::logos::Logos;
+        use core::option::Option as _Option;
+        use core::result::Result as _Result;
+        type _Lexer<'s> = ::logos::Lexer<'s, WildcardToken>;
+        macro_rules! _fast_loop {
+            ($lex:ident, $test:ident, $offset:ident) => {
+                'fast_loop:{
+                    while let Some(arr) =  $lex.read:: < &[u8;
+                    8usize]>($offset){
+                        if$test(arr[0usize]){
+                            $offset+ = 0usize;
+                            break 'fast_loop;
+                        }if$test(arr[1usize]){
+                            $offset+ = 1usize;
+                            break 'fast_loop;
+                        }if$test(arr[2usize]){
+                            $offset+ = 2usize;
+                            break 'fast_loop;
+                        }if$test(arr[3usize]){
+                            $offset+ = 3usize;
+                            break 'fast_loop;
+                        }if$test(arr[4usize]){
+                            $offset+ = 4usize;
+                            break 'fast_loop;
+                        }if$test(arr[5usize]){
+                            $offset+ = 5usize;
+                            break 'fast_loop;
+                        }if$test(arr[6usize]){
+                            $offset+ = 6usize;
+                            break 'fast_loop;
+                        }if$test(arr[7usize]){
+                            $offset+ = 7usize;
+                            break 'fast_loop;
+                        }$offset+ = 8usize;
+                    }while let Some(byte) =  $lex.read:: <u8>($offset){
+                        if$test(byte){
+                            break 'fast_loop;
+                        }$offset+ = 1;
+                    }
+                }
+            };
+        }
+        macro_rules! _take_action {
+            ($lex:ident, $offset:ident, $context:ident, $state:ident) => {{
+                let action = _get_action($lex, $offset, $context);
+                match action {
+                    CallbackResult::Emit(tok) => {
+                        return Some(Ok(tok));
+                    }
+                    CallbackResult::Skip => {
+                        $lex.trivia();
+                        $offset = $lex.offset();
+                        $context = None;
+                        return state8($lex, $offset, $context);
+                    }
+                    CallbackResult::Error(err) => {
+                        return Some(Err(err));
+                    }
+                    CallbackResult::DefaultError => {
+                        return Some(Err(_make_error($lex)));
+                    }
+                }
+            }};
+        }
+        const _TABLE_0: [u8; 256] = [
+            1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8,
+            1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8,
+            1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 0u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8,
+            1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 0u8, 1u8, 1u8, 1u8, 1u8,
+            1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8,
+            1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8,
+            1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8,
+            1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 1u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8,
+            0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8,
+            0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8,
+            0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8,
+            0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8,
+            0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8,
+            0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8,
+            0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8,
+            0u8,
+        ];
+        #[inline]
+        fn _make_error<'s>(lex: &mut _Lexer<'s>) -> <WildcardToken as Logos<'s>>::Error {
+            <WildcardToken as Logos<'s>>::Error::default()
+        }
+        #[inline]
+        fn _get_action<'s>(
+            lex: &mut _Lexer<'s>,
+            offset: usize,
+            context: _Option<LogosLeaf>,
+        ) -> CallbackResult<'s, WildcardToken> {
+            match context {
+                None => {
+                    lex.end_to_boundary(offset.max(lex.offset() + 1));
+                    CallbackResult::Error(_make_error(lex))
+                }
+                Some(LogosLeaf::Leaf0) => CallbackResult::Emit(WildcardToken::Any),
+                Some(LogosLeaf::Leaf1) => CallbackResult::Emit(WildcardToken::Star),
+                Some(LogosLeaf::Leaf2) => CallbackResult::Emit(WildcardToken::Text),
+            }
+        }
+        #[derive(Clone, Copy)]
+        enum LogosLeaf {
+            Leaf0 = 0isize,
+            Leaf1 = 1isize,
+            Leaf2 = 2isize,
+        }
+        fn state0<'s>(
+            lex: &mut _Lexer<'s>,
+            mut offset: usize,
+            mut context: _Option<LogosLeaf>,
+        ) -> _Option<_Result<WildcardToken, <WildcardToken as Logos<'s>>::Error>> {
+            #[inline]
+            fn loop_test(byte: u8) -> bool {
+                _TABLE_0[byte as usize] & 1u8 == 0
+            }
+            _fast_loop!(lex, loop_test, offset);
+            lex.end(offset);
+            context = Some(LogosLeaf::Leaf2);
+            let other = lex.read::<u8>(offset);
+            if let Some(byte) = other {
+                #[derive(Copy, Clone)]
+                enum LogosNextState {
+                    ___,
+                    State1,
+                    State2,
+                    State3,
+                    State4,
+                    State5,
+                    State6,
+                    State7,
+                }
+                const TABLE: [LogosNextState; 256] = {
+                    use LogosNextState::*;
+                    [
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        State1, State1, State1, State1, State1, State1, State1, State1, State1,
+                        State1, State1, State1, State1, State1, State1, State1, State1, State1,
+                        State1, State1, State1, State1, State1, State1, State1, State1, State1,
+                        State1, State1, State1, State2, State3, State3, State3, State3, State3,
+                        State3, State3, State3, State3, State3, State3, State3, State4, State3,
+                        State3, State5, State6, State6, State6, State7, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___,
+                    ]
+                };
+                offset += 1;
+                match TABLE[byte as usize] {
+                    LogosNextState::State1 => {
+                        return state1(lex, offset, context);
+                    }
+                    LogosNextState::State2 => {
+                        return state2(lex, offset, context);
+                    }
+                    LogosNextState::State3 => {
+                        return state3(lex, offset, context);
+                    }
+                    LogosNextState::State4 => {
+                        return state4(lex, offset, context);
+                    }
+                    LogosNextState::State5 => {
+                        return state5(lex, offset, context);
+                    }
+                    LogosNextState::State6 => {
+                        return state6(lex, offset, context);
+                    }
+                    LogosNextState::State7 => {
+                        return state7(lex, offset, context);
+                    }
+                    LogosNextState::___ => {}
+                }
+                offset -= 1;
+            } else {
+            }
+            _take_action!(lex, offset, context, state)
+        }
+        fn state1<'s>(
+            lex: &mut _Lexer<'s>,
+            mut offset: usize,
+            mut context: _Option<LogosLeaf>,
+        ) -> _Option<_Result<WildcardToken, <WildcardToken as Logos<'s>>::Error>> {
+            let other = lex.read::<u8>(offset);
+            if let Some(byte) = other {
+                if (matches!(byte,128u8.. = 191u8)) {
+                    offset += 1;
+                    return state0(lex, offset, context);
+                }
+            } else {
+            }
+            _take_action!(lex, offset, context, state)
+        }
+        fn state2<'s>(
+            lex: &mut _Lexer<'s>,
+            mut offset: usize,
+            mut context: _Option<LogosLeaf>,
+        ) -> _Option<_Result<WildcardToken, <WildcardToken as Logos<'s>>::Error>> {
+            let other = lex.read::<u8>(offset);
+            if let Some(byte) = other {
+                if (matches!(byte,160u8.. = 191u8)) {
+                    offset += 1;
+                    return state1(lex, offset, context);
+                }
+            } else {
+            }
+            _take_action!(lex, offset, context, state)
+        }
+        fn state3<'s>(
+            lex: &mut _Lexer<'s>,
+            mut offset: usize,
+            mut context: _Option<LogosLeaf>,
+        ) -> _Option<_Result<WildcardToken, <WildcardToken as Logos<'s>>::Error>> {
+            let other = lex.read::<u8>(offset);
+            if let Some(byte) = other {
+                if (matches!(byte,128u8.. = 191u8)) {
+                    offset += 1;
+                    return state1(lex, offset, context);
+                }
+            } else {
+            }
+            _take_action!(lex, offset, context, state)
+        }
+        fn state4<'s>(
+            lex: &mut _Lexer<'s>,
+            mut offset: usize,
+            mut context: _Option<LogosLeaf>,
+        ) -> _Option<_Result<WildcardToken, <WildcardToken as Logos<'s>>::Error>> {
+            let other = lex.read::<u8>(offset);
+            if let Some(byte) = other {
+                if (matches!(byte,128u8.. = 159u8)) {
+                    offset += 1;
+                    return state1(lex, offset, context);
+                }
+            } else {
+            }
+            _take_action!(lex, offset, context, state)
+        }
+        fn state5<'s>(
+            lex: &mut _Lexer<'s>,
+            mut offset: usize,
+            mut context: _Option<LogosLeaf>,
+        ) -> _Option<_Result<WildcardToken, <WildcardToken as Logos<'s>>::Error>> {
+            let other = lex.read::<u8>(offset);
+            if let Some(byte) = other {
+                if (matches!(byte,144u8.. = 191u8)) {
+                    offset += 1;
+                    return state3(lex, offset, context);
+                }
+            } else {
+            }
+            _take_action!(lex, offset, context, state)
+        }
+        fn state6<'s>(
+            lex: &mut _Lexer<'s>,
+            mut offset: usize,
+            mut context: _Option<LogosLeaf>,
+        ) -> _Option<_Result<WildcardToken, <WildcardToken as Logos<'s>>::Error>> {
+            let other = lex.read::<u8>(offset);
+            if let Some(byte) = other {
+                if (matches!(byte,128u8.. = 191u8)) {
+                    offset += 1;
+                    return state3(lex, offset, context);
+                }
+            } else {
+            }
+            _take_action!(lex, offset, context, state)
+        }
+        fn state7<'s>(
+            lex: &mut _Lexer<'s>,
+            mut offset: usize,
+            mut context: _Option<LogosLeaf>,
+        ) -> _Option<_Result<WildcardToken, <WildcardToken as Logos<'s>>::Error>> {
+            let other = lex.read::<u8>(offset);
+            if let Some(byte) = other {
+                if (matches!(byte,128u8.. = 143u8)) {
+                    offset += 1;
+                    return state3(lex, offset, context);
+                }
+            } else {
+            }
+            _take_action!(lex, offset, context, state)
+        }
+        fn state8<'s>(
+            lex: &mut _Lexer<'s>,
+            mut offset: usize,
+            mut context: _Option<LogosLeaf>,
+        ) -> _Option<_Result<WildcardToken, <WildcardToken as Logos<'s>>::Error>> {
+            let other = lex.read::<u8>(offset);
+            if let Some(byte) = other {
+                #[derive(Copy, Clone)]
+                enum LogosNextState {
+                    ___,
+                    State0,
+                    State1,
+                    State2,
+                    State3,
+                    State4,
+                    State5,
+                    State6,
+                    State7,
+                    State9,
+                    State10,
+                }
+                const TABLE: [LogosNextState; 256] = {
+                    use LogosNextState::*;
+                    [
+                        State0, State0, State0, State0, State0, State0, State0, State0, State0,
+                        State0, State0, State0, State0, State0, State0, State0, State0, State0,
+                        State0, State0, State0, State0, State0, State0, State0, State0, State0,
+                        State0, State0, State0, State0, State0, State0, State0, State0, State0,
+                        State0, State0, State0, State0, State0, State0, State9, State0, State0,
+                        State0, State0, State0, State0, State0, State0, State0, State0, State0,
+                        State0, State0, State0, State0, State0, State0, State0, State0, State0,
+                        State10, State0, State0, State0, State0, State0, State0, State0, State0,
+                        State0, State0, State0, State0, State0, State0, State0, State0, State0,
+                        State0, State0, State0, State0, State0, State0, State0, State0, State0,
+                        State0, State0, State0, State0, State0, State0, State0, State0, State0,
+                        State0, State0, State0, State0, State0, State0, State0, State0, State0,
+                        State0, State0, State0, State0, State0, State0, State0, State0, State0,
+                        State0, State0, State0, State0, State0, State0, State0, State0, State0,
+                        State0, State0, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___, ___, ___, ___, ___, ___, ___, ___, ___, State1, State1, State1,
+                        State1, State1, State1, State1, State1, State1, State1, State1, State1,
+                        State1, State1, State1, State1, State1, State1, State1, State1, State1,
+                        State1, State1, State1, State1, State1, State1, State1, State1, State1,
+                        State2, State3, State3, State3, State3, State3, State3, State3, State3,
+                        State3, State3, State3, State3, State4, State3, State3, State5, State6,
+                        State6, State6, State7, ___, ___, ___, ___, ___, ___, ___, ___, ___, ___,
+                        ___,
+                    ]
+                };
+                offset += 1;
+                match TABLE[byte as usize] {
+                    LogosNextState::State0 => {
+                        return state0(lex, offset, context);
+                    }
+                    LogosNextState::State1 => {
+                        return state1(lex, offset, context);
+                    }
+                    LogosNextState::State2 => {
+                        return state2(lex, offset, context);
+                    }
+                    LogosNextState::State3 => {
+                        return state3(lex, offset, context);
+                    }
+                    LogosNextState::State4 => {
+                        return state4(lex, offset, context);
+                    }
+                    LogosNextState::State5 => {
+                        return state5(lex, offset, context);
+                    }
+                    LogosNextState::State6 => {
+                        return state6(lex, offset, context);
+                    }
+                    LogosNextState::State7 => {
+                        return state7(lex, offset, context);
+                    }
+                    LogosNextState::State9 => {
+                        return state9(lex, offset, context);
+                    }
+                    LogosNextState::State10 => {
+                        return state10(lex, offset, context);
+                    }
+                    LogosNextState::___ => {}
+                }
+                offset -= 1;
+            } else {
+                if lex.offset() == offset {
+                    return None;
+                }
+            }
+            _take_action!(lex, offset, context, state)
+        }
+        fn state9<'s>(
+            lex: &mut _Lexer<'s>,
+            mut offset: usize,
+            mut context: _Option<LogosLeaf>,
+        ) -> _Option<_Result<WildcardToken, <WildcardToken as Logos<'s>>::Error>> {
+            lex.end(offset);
+            context = Some(LogosLeaf::Leaf1);
+            let other = lex.read::<u8>(offset);
+            if let Some(byte) = other {
+            } else {
+            }
+            _take_action!(lex, offset, context, state)
+        }
+        fn state10<'s>(
+            lex: &mut _Lexer<'s>,
+            mut offset: usize,
+            mut context: _Option<LogosLeaf>,
+        ) -> _Option<_Result<WildcardToken, <WildcardToken as Logos<'s>>::Error>> {
+            lex.end(offset);
+            context = Some(LogosLeaf::Leaf0);
+            let other = lex.read::<u8>(offset);
+            if let Some(byte) = other {
+            } else {
+            }
+            _take_action!(lex, offset, context, state)
+        }
+        state8(lex, lex.offset(), None)
+    }
+}

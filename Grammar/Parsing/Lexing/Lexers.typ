@@ -1,14 +1,39 @@
 #import "@local/ib:0.1.0": *
 #title[Lexers]
+- #a[re2c: Lexer generator for C, C++, D, Go, Haskell, Java, JS, OCaml, Python, Rust, Swift, V and Zig.][https://github.com/skvadrik/re2c]
+  #a-badge[https://en.wikipedia.org/wiki/Re2c]
+  - #a[Playground][https://re2c.org/playground]
+
+= Rust
+- #a[0x2a-42/herring: Lexer generator for Rust][https://github.com/0x2a-42/herring]
+  - DFA
 #md(```
-## Rust
 - [`m_lexer`: A simple extensible regex based lexer in Rust.](https://github.com/matklad/m_lexer)
   - Based on `regex`/`regex-lite`, low performance
   - [Dependents](https://crates.io/crates/m_lexer/reverse_dependencies): rowan (dev)
 
     [making use of `logos` instead of `m_lexer` in #examples by dzmitry-lahoda - Pull Request #147 - rust-analyzer/rowan](https://github.com/rust-analyzer/rowan/pull/147)
 
-### [Logos: Create ridiculously fast Lexers](https://github.com/maciejhirsz/logos)
+```)
+
+== #a[Logos: Create ridiculously fast Lexers][https://logos.maciej.codes/]
+#a-badge[https://github.com/maciejhirsz/logos]
+
+```rust
+#[derive(Logos)]
+enum WildcardToken {
+    #[token("?")]
+    Any,
+
+    #[token("*")]
+    Star,
+
+    #[regex("[^*?]+")]
+    Text,
+}
+```
+
+#md(```
 - Lexer generator
 
   [Is there any way to create lexer without using Enum ? - Issue #149 - maciejhirsz/logos](https://github.com/maciejhirsz/logos/issues/149)
@@ -66,3 +91,29 @@ Used by:
 - [lukechu10/derivative-machine: Simple symbolic differentiation](https://github.com/lukechu10/derivative-machine)
 - [ethereum/fe: Emerging smart contract language for the Ethereum blockchain.](https://github.com/ethereum/fe)
 ```)
+
+=== v0.15
+For example:
+
+#raw(read("Logos/0.15.rs"), lang: "rust")
+
+=== #a[v0.16][https://github.com/maciejhirsz/logos/releases/tag/v0.16]
+Switched to `regex-automata` DFA with a custom engine.
+
+#a[Major overhaul to support actual regex semantics by robot-rover - Pull Request \#491 - maciejhirsz/logos][https://github.com/maciejhirsz/logos/pull/491]
+
+#a[State machine codegen - Logos Handbook][https://logos.maciej.codes/state-machine-codegen.html]
+#footnote[
+#a[Clarify codegen performance characteristics by robot-rover - Pull Request \#527 - maciejhirsz/logos][https://github.com/maciejhirsz/logos/pull/527]
+]
+- #q[Tail call code generation is faster because LLVM does not currently optimize switches within loops well.
+  The resulting machine code usually has each state jump back to the top of the loop, where the next state is looked up in a jump table.
+  In contrast, tail call generation usually results in an unconditional jump at the end of the state to the next state.
+  While the unconditional jump is slightly better in terms of instruction count,
+  the real advantage lies in the tail call code generation being much nicer to the branch predictor.]
+
+#a[Migration Guide - Logos Handbook][https://logos.maciej.codes/migrating.html#changes-in-0160]
+
+For example:
+
+#raw(read("Logos/0.16.rs"), lang: "rust")

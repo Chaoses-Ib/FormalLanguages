@@ -92,7 +92,7 @@
   - [The Enigma Protector](Program/Packers/Enigma/README.md)
   - [Themida](Program/Packers/Themida/README.md)
   - [VMProtect](Program/Packers/VMProtect/README.md)
-- [Hooking](Program/Hooking.md)
+- [Hooking](Program/Hooking/README.typ)
 - [Debugging](Program/Debugging/README.md)
 - [Virtualization](Program/Virtualization/README.md)
   - [→Processor Virtualization](https://github.com/Chaoses-Ib/Processors#virtualization)
